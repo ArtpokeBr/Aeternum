@@ -16,3 +16,7 @@ minecraftinstance.json
 patchouli_data.json
 usercache.json
 usernamecache.json
+config/AppliedEnergistics2/CustomRecipes.cfg
+config/AppliedEnergistics2/items.csv
+config/time.history
+astralsorcery/gatewayFilter/worldFilter.dat
