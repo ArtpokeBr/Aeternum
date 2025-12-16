@@ -1,0 +1,10 @@
+[
+  {
+    "internalOreName": "rockhounding_chemistry:uninspected_mineral",
+    "meta": 0,
+    "overlay": "undergroundbiomes:blocks/overlays/rockhounding_chemistry/uninspected_mineral",
+    "lightValue": -1,
+    "alphaOverlay": false,
+    "oreDirectories": []
+  }
+]
