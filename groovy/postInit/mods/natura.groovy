@@ -1,8 +1,6 @@
-import static postInit.classes.Crushing.*
-
 //Unifying Barley Flour ===========================================================================
 
-crafting.removeByOutput(item('natura:materials', 1))
+//crafting.removeByOutput(item('natura:materials', 1))
 mods.thermalexpansion.pulverizer.recipeBuilder()
     .input(item('natura:materials'))
     .output(item('natura:materials', 1) * 2)
