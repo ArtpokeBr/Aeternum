@@ -5519,6 +5519,18 @@
                   ]
                 }
               }
+            },
+            {
+              "name": "rockhounding_chemistry:chemical_dusts",
+              "metadata": 20,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "dustBismuth"
+                  ]
+                }
+              }
             }
           ]
         }
@@ -11891,6 +11903,18 @@
             {
               "name": "nuclearcraft:fission_dust",
               "metadata": 0,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "dustBismuth"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "rockhounding_chemistry:chemical_dusts",
+              "metadata": 20,
               "type": "legacy_item",
               "modules": {
                 "plannerator:tags": {
