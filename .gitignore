@@ -21,3 +21,5 @@ config/AppliedEnergistics2/items.csv
 config/time.history
 astralsorcery/gatewayFilter/worldFilter.dat
 config/astralsorcery/amulet_enchantments.cfg
+xaero/world-map/
+xaero/minimap/
