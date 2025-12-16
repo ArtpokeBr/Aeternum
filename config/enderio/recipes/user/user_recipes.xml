@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enderio:recipes xmlns:enderio="http://enderio.com/recipes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enderio.com/recipes recipes.xsd ">
+  <recipe name="Sagmill: Ender Pearl">
+    <disabled/>
+  </recipe>
+  <recipe name="Gear, Wood">
+    <disabled/>
+  </recipe>
+  <recipe name="Gear, ae2 messes things up">
+    <disabled/>
+  </recipe>
+  <recipe name="Gear, just to be sure">
+    <disabled/>
+  </recipe>
+  <recipe name="Gear, better save than sorry">
+    <disabled/>
+  </recipe>
+  <recipe name="Gear, Stone">
+    <disabled/>
+  </recipe>
+  <recipe name="Gear, Stone, Upgrade">
+    <disabled/>
+  </recipe>
+  <recipe name="Tweak: Stick from Wood">
+    <disabled/>
+  </recipe>
+  <recipe name="Tweak: Chest from Wood">
+    <disabled/>
+  </recipe>
+  <recipe name="Tweak: Wood Hopper">
+    <disabled/>
+  </recipe>
+  <!-- Mud recipe -->
+  <recipe name="Mud from Dirt">
+    <tanking type="FILL" logic="NONE">
+      <input name="dirt"/>
+      <fluid name="water" amount="100"/>
+      <output name="biomesoplenty:mud"/>
+    </tanking>
+  </recipe>
+  <!-- Mending Moss filling -->
+  <recipe name="Mending Moss filling 1">
+    <tanking type="FILL" logic="NONE">
+      <input name="tconstruct:materials:18"/>
+      <fluid name="xpjuice" amount="3280"/>
+      <output name="tconstruct:materials:19"/>
+    </tanking>
+  </recipe>
+  <recipe name="Mending Moss filling 2">
+    <tanking type="FILL" logic="NONE">
+      <input name="tconstruct:materials:18"/>
+      <fluid name="experience" amount="3280"/>
+      <output name="tconstruct:materials:19"/>
+    </tanking>
+  </recipe>
+  <recipe name="Mending Moss filling 3">
+    <tanking type="FILL" logic="NONE">
+      <input name="tconstruct:materials:18"/>
+      <fluid name="essence" amount="3280"/>
+      <output name="tconstruct:materials:19"/>
+    </tanking>
+  </recipe>
+  <!-- Replace Water to Mead -->
+  <recipe name="Nutrient Distilation">
+    <fermenting energy="50000">
+      <inputgroup>
+        <input name="itemSkull" multiplier="2.0"/>
+        <input name="minecraft:rotten_flesh" multiplier="1.5"/>
+        <input name="minecraft:chicken" multiplier="0.75"/>
+        <input name="minecraft:beef" multiplier="0.75"/>
+        <input name="minecraft:porkchop" multiplier="0.75"/>
+        <input name="minecraft:rabbit" multiplier="0.75"/>
+        <input name="minecraft:mutton" multiplier="0.75"/>
+      </inputgroup>
+      <inputgroup>
+        <input name="minecraft:sugar" multiplier="1.0"/>
+        <input name="minecraft:brown_mushroom" multiplier="1.5"/>
+        <input name="minecraft:red_mushroom" multiplier="1.5"/>
+        <input name="item:minecraft:nether_wart" multiplier="1.5"/>
+        <input name="minecraft:fermented_spider_eye" multiplier="2.0"/>
+      </inputgroup>
+      <inputfluid name="short.mead" multiplier="0.5"/>
+      <outputfluid name="nutrient_distillation"/>
+    </fermenting>
+  </recipe>
+  <!-- Replace Water to Milk -->
+  <recipe name="Hootch milk">
+    <fermenting energy="50000">
+      <inputgroup>
+        <input name="minecraft:poisonous_potato" multiplier="8.0"/>
+        <input name="minecraft:potato" multiplier="4.0"/>
+        <input name="minecraft:apple" multiplier="3.5"/>
+        <input name="minecraft:wheat" multiplier="3.0"/>
+        <input name="dustWheat" multiplier="3.0"/>
+        <input name="minecraft:wheat_seeds" multiplier="2.0"/>
+        <input name="minecraft:pumpkin_seeds" multiplier="1.6"/>
+        <input name="minecraft:melon_seeds" multiplier="1.6"/>
+        <input name="minecraft:beetroot_seeds" multiplier="1.4"/>
+      </inputgroup>
+      <inputgroup>
+        <input name="forestry:honeydew" multiplier="3.0"/>
+        <input name="minecraft:sugar" multiplier="1.0"/>
+        <input name="minecraft:melon" multiplier="0.2"/>
+      </inputgroup>
+      <inputfluid name="milk" multiplier="0.125"/>
+      <outputfluid name="hootch"/>
+    </fermenting>
+  </recipe>
+
+  <!-- Grinding Ball buffs
+  - Increased durability of all balls by 2x to account for required power for most of grinding recipes being lower, than SAG Mill's actual consumption (3200 RF < 5000 RF/t)
+  - For balls with Power Use less than 1x, additionally increased durability by (1 / Power Use)x to make them last as long as in vanilla EnderIO
+  - For balls with Power Use more than 1x, additionally increased durability by ((Power Use - 1) * 2)x to allow them to be still viable alongside with (Power Use < 1) balls and still have "more expensive -> more durable" progression
+  -->
+  <grindingball name="Flint" grinding="1.2" chance="1.25" power="0.85" durability="56000">
+    <item name="itemFlint"/>
+  </grindingball>
+  <grindingball name="Dark Steel Ball" grinding="1.35" chance="2.00" power="0.7" durability="357000">
+    <item name="ballDarkSteel"/>
+  </grindingball>
+  <grindingball name="Electrical Steel Ball" grinding="1.2" chance="1.65" power="0.8" durability="100000">
+    <item name="ballElectricalSteel"/>
+  </grindingball>
+  <grindingball name="Energetic Alloy Ball" grinding="1.6" chance="1.1" power="1.1" durability="192000">
+    <item name="ballEnergeticAlloy"/>
+  </grindingball>
+  <grindingball name="Vibrant Alloy Ball" grinding="1.75" chance="1.35" power="1.35" durability="216000">
+    <item name="ballVibrantAlloy"/>
+  </grindingball>
+  <grindingball name="Redstone Alloy Ball" grinding="1.00" chance="1.00" power="0.35" durability="171000">
+    <item name="ballRedstoneAlloy"/>
+  </grindingball>
+  <grindingball name="Conductive Iron Ball" grinding="1.35" chance="1.00" power="1.0" durability="80000">
+    <item name="ballConductiveIron"/>
+  </grindingball>
+  <grindingball name="Pulsating Iron Ball" grinding="1.0" chance="1.85" power="1.0" durability="200000">
+    <item name="ballPulsatingIron"/>
+  </grindingball>
+  <grindingball name="Soularium Ball" grinding="1.2" chance="2.15" power="0.9" durability="177000">
+    <item name="ballSoularium"/>
+  </grindingball>
+  <grindingball name="End Steel Ball" grinding="1.4" chance="2.4" power="0.7" durability="375000">
+    <item name="ballEndSteel"/>
+  </grindingball>
+  <grindingball name="Construction Alloy Ball" grinding="1.0" chance="0.33" power="0.25" durability="96000">
+    <item name="CONSTRUCTION_ALLOY_BALL"/>
+  </grindingball>
+  <grindingball name="Signalum Ball" grinding="1.2" chance="1.65" power="0.35" durability="571000">
+    <item name="SIGNALUM_BALL"/>
+  </grindingball>
+  <grindingball name="Enderium Ball" grinding="1.65" chance="1.45" power="1.25" durability="400000">
+    <item name="ENDERIUM_BALL"/>
+  </grindingball>
+  <grindingball name="Lumium Ball" grinding="1.1" chance="2.15" power="0.9" durability="222000">
+    <item name="LUMIUM_BALL"/>
+  </grindingball>
+  <grindingball name="Crystalline Alloy Ball" grinding="1.8" chance="1.4" power="1.45" durability="304000">
+    <item name="ballCrystallineAlloy"/>
+  </grindingball>
+  <grindingball name="Melodic Alloy Ball" grinding="2.0" chance="1.45" power="1.55" durability="840000">
+    <item name="ballMelodicAlloy"/>
+  </grindingball>
+  <grindingball name="Stellar Alloy Ball" grinding="2.3" chance="2.25" power="2.2" durability="1632000">
+    <item name="ballStellarAlloy"/>
+  </grindingball>
+  <grindingball name="Crystalline Pink Slime Ball" grinding="1.75" chance="1.55" power="1.55" durability="620000">
+    <item name="ballCrystallinePinkSlime"/>
+  </grindingball>
+  <grindingball name="Vivid Alloy Ball" grinding="1.75" chance="1.35" power="1.35" durability="598000">
+    <item name="ballVividAlloy"/>
+  </grindingball>
+</enderio:recipes>
