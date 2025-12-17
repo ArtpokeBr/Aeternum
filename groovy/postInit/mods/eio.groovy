@@ -26,3 +26,10 @@ mods.jei.ingredient.hide(item('enderio:item_material', 5))
 ore_dict.remove('itemSilicon', item('enderio:item_material', 5))
 
 //=================================================================================================
+
+//Lapis Dust Unification ==========================================================================
+
+mods.jei.ingredient.hide(item('enderio:item_material', 32))
+ore_dict.remove('dustLapis', item('enderio:item_material', 32))
+
+//=================================================================================================
