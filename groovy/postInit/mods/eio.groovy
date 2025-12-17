@@ -33,3 +33,17 @@ mods.jei.ingredient.hide(item('enderio:item_material', 32))
 ore_dict.remove('dustLapis', item('enderio:item_material', 32))
 
 //=================================================================================================
+
+//Tin Dust Unification ============================================================================
+
+mods.jei.ingredient.hide(item('enderio:item_material', 27))
+ore_dict.remove('dustTin', item('enderio:item_material', 27))
+
+//=================================================================================================
+
+//Copper Dust Unification =========================================================================
+
+mods.jei.ingredient.hide(item('enderio:item_material', 26))
+ore_dict.remove('dustCopper', item('enderio:item_material', 26))
+
+//=================================================================================================
