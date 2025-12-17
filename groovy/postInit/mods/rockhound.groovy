@@ -57,3 +57,14 @@ mods.thermalexpansion.smelter.recipeBuilder()
 .register()
 
 //=================================================================================================
+
+//Graphite Ingot Unification ======================================================================
+
+furnace.removeByOutput(item('rockhounding_chemistry:metal_items', 7))
+mods.thermalexpansion.furnace.removeByOutput(item('rockhounding_chemistry:metal_items', 7))
+crafting.removeByInput(item('rockhounding_chemistry:metal_items', 7))
+
+mods.jei.ingredient.hide(item('rockhounding_chemistry:metal_items', 7))
+ore_dict.remove('ingotGraphite', item('rockhounding_chemistry:metal_items', 7))
+
+//=================================================================================================
