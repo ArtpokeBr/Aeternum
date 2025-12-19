@@ -1,4 +1,4 @@
-//Botania Dyes with Other Methods
+//Botania Dyes with Other Methods =================================================================
 
 def botania_dyes = [
     [dye: item('botania:dye', 0), petal: item('botania:petal', 0)],
@@ -49,3 +49,14 @@ botania_dyes.each { recipe ->
     .register()
 
 }
+
+//=================================================================================================
+
+// Adding a usage to Project Vibrant Journey's Stuff ==============================================
+
+mods.botania.mana_infusion.recipeBuilder()
+    .input(item('pvj:unstable_essence'))
+    .output(item('minecraft:ghast_tear'))
+    .mana(750)
+    .catalyst(blockstate('botania:alchemycatalyst'))
+.register()
