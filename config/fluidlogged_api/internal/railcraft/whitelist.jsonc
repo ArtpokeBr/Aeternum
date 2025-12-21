@@ -1,0 +1,43 @@
+// DO NOT EDIT!
+[
+    {
+        "blockId": [
+            "railcraft:actuator",
+            "railcraft:chest_metals",
+            "railcraft:chest_void",
+            "railcraft:post_metal",
+            "railcraft:signal",
+            "railcraft:signal_box",
+            "railcraft:signal_dual"
+        ],
+        "canFluidFlow": true
+    },
+    {
+        "blockId": "railcraft:charge_trap",
+        "canFluidFlow": ["up", "north", "south", "east", "west"]
+    },
+    {
+        "blockId": [
+            "railcraft:engine_steam_high",
+            "railcraft:engine_steam_hobby",
+            "railcraft:engine_steam_low"
+        ],
+        "boxes": {"min": 0, "max": 4},
+        "canFluidFlow": ["up", "north", "south", "east", "west"]
+    },
+    {
+        "blockId": "railcraft:frame",
+        "boxes": {"min": 15, "max": 16},
+        "canFluidFlow": ["down", "north", "south", "east", "west"]
+    },
+    {
+        "blockId": "railcraft:post_metal_platform",
+        "boxes": {"min": 14, "max": 16},
+        "canFluidFlow": ["down", "north", "south", "east", "west"]
+    },
+    {
+        "blockId": "railcraft:worldspike_point",
+        "boxes": {"min": 0, "max": 5},
+        "canFluidFlow": ["up", "north", "south", "east", "west"]
+    }
+]

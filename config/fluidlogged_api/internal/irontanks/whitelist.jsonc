@@ -1,0 +1,17 @@
+// DO NOT EDIT!
+[
+    {
+        "blockId": [
+            "irontanks:copper_tank",
+            "irontanks:creative_tank",
+            "irontanks:diamond_tank",
+            "irontanks:emerald_tank",
+            "irontanks:gold_tank",
+            "irontanks:iron_tank",
+            "irontanks:obsidian_tank",
+            "irontanks:silver_tank",
+            "irontanks:void_tank"
+        ],
+        "canFluidFlow": true
+    }
+]

@@ -1,0 +1,12 @@
+// DO NOT EDIT!
+[
+    {
+        "blockId": [
+            "xnet:antenna",
+            "xnet:antenna_base",
+            "xnet:antenna_dish",
+            "xnet:cable"
+        ],
+        "canFluidFlow": true
+    }
+]

@@ -1,0 +1,22 @@
+// DO NOT EDIT!
+[
+    {
+        "blockId": [
+            "pvj:andesite_rocks",
+            "pvj:ardite_rocks",
+            "pvj:bones",
+            "pvj:cobblestone_rocks",
+            "pvj:diorite_rocks",
+            "pvj:granite_rocks",
+            "pvj:ice_formation",
+            "pvj:mossy_cobblestone_rocks",
+            "pvj:mystical_grill",
+            "pvj:red_sandstone_rocks",
+            "pvj:rock_formation",
+            "pvj:sandstone_rocks",
+            "pvj:seashells",
+            "pvj:stone_rocks"
+        ],
+        "canFluidFlow": true
+    }
+]

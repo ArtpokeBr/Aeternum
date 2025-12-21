@@ -1,0 +1,94 @@
+// DO NOT EDIT!
+[
+    {
+        "blockId": [
+            "cyclicmagic:block_anvil",
+            "cyclicmagic:block_anvil_magma",
+            "cyclicmagic:block_disenchanter",
+            "cyclicmagic:block_fishing",
+            "cyclicmagic:block_fragile",
+            "cyclicmagic:block_fragile_auto",
+            "cyclicmagic:block_fragile_weak",
+            "cyclicmagic:builder_pattern",
+            "cyclicmagic:bundled_pipe",
+            "cyclicmagic:cable_wireless",
+            "cyclicmagic:cable_wireless_energy",
+            "cyclicmagic:cable_wireless_fluid",
+            "cyclicmagic:energy_pipe",
+            "cyclicmagic:energy_pump",
+            "cyclicmagic:entity_detector",
+            "cyclicmagic:exp_pylon",
+            "cyclicmagic:item_pipe_sort",
+            "cyclicmagic:fan",
+            "cyclicmagic:fluid_pipe",
+            "cyclicmagic:fluid_pump",
+            "cyclicmagic:imbuer",
+            "cyclicmagic:item_pipe",
+            "cyclicmagic:item_pump",
+            "cyclicmagic:magnet_anti_block",
+            "cyclicmagic:plate_push_fast_angle",
+            "cyclicmagic:plate_push_med_angle",
+            "cyclicmagic:plate_push_slow_angle",
+            "cyclicmagic:plate_push_slowest_angle",
+            "cyclicmagic:plate_vector",
+            "cyclicmagic:spikes_diamond",
+            "cyclicmagic:spikes_iron",
+            "cyclicmagic:trash",
+            "cyclicmagic:void_anvil",
+            "cyclicmagic:water_candle"
+        ],
+        "canFluidFlow": true
+    },
+    {
+        "blockId": [
+            "cyclicmagic:block_enchanter",
+            "cyclicmagic:magnet_block",
+            "cyclicmagic:moon_sensor",
+            "cyclicmagic:plate_launch_extra",
+            "cyclicmagic:plate_launch_large",
+            "cyclicmagic:plate_launch_med",
+            "cyclicmagic:plate_launch_small",
+            "cyclicmagic:plate_push",
+            "cyclicmagic:plate_push_corner",
+            "cyclicmagic:plate_push_fast",
+            "cyclicmagic:plate_push_fast_corner",
+            "cyclicmagic:plate_push_slow",
+            "cyclicmagic:plate_push_slow_corner",
+            "cyclicmagic:plate_push_slowest",
+            "cyclicmagic:plate_push_slowest_corner"
+        ],
+        "canFluidFlow": ["up", "north", "south", "east", "west"]
+    },
+    {
+        "blockId": [
+            "cyclicmagic:block_screen",
+            "cyclicmagic:screen_target"
+        ],
+        "canFluidFlow": ["up", "down", "north", "east", "west"],
+        "states": {"facing": "north"}
+    },
+    {
+        "blockId": [
+            "cyclicmagic:block_screen",
+            "cyclicmagic:screen_target"
+        ],
+        "canFluidFlow": ["up", "down", "south", "east", "west"],
+        "states": {"facing": "south"}
+    },
+    {
+        "blockId": [
+            "cyclicmagic:block_screen",
+            "cyclicmagic:screen_target"
+        ],
+        "canFluidFlow": ["up", "down", "north", "south", "east"],
+        "states": {"facing": "east"}
+    },
+    {
+        "blockId": [
+            "cyclicmagic:block_screen",
+            "cyclicmagic:screen_target"
+        ],
+        "canFluidFlow": ["up", "down", "north", "south", "west"],
+        "states": {"facing": "west"}
+    }
+]

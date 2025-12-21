@@ -1,0 +1,65 @@
+// DO NOT EDIT!
+[
+    {
+        "blockId": [
+            "atum:ceramic_tile_black",
+            "atum:ceramic_tile_blue",
+            "atum:ceramic_tile_brown",
+            "atum:ceramic_tile_cyan",
+            "atum:ceramic_tile_gray",
+            "atum:ceramic_tile_green",
+            "atum:ceramic_tile_light_blue",
+            "atum:ceramic_tile_lime",
+            "atum:ceramic_tile_magenta",
+            "atum:ceramic_tile_orange",
+            "atum:ceramic_tile_pink",
+            "atum:ceramic_tile_purple",
+            "atum:ceramic_tile_red",
+            "atum:ceramic_tile_silver",
+            "atum:ceramic_tile_white",
+            "atum:ceramic_tile_yellow",
+            "atum:quern"
+        ]
+    },
+    {
+        "blockId": [
+            "atum:alabaster_carved_slab",
+            "atum:alabaster_pillar_slab",
+            "atum:alabaster_polished_slab",
+            "atum:alabaster_smooth_slab",
+            "atum:alabaster_tiled_slab",
+            "atum:ceramic_slab_black",
+            "atum:ceramic_slab_blue",
+            "atum:ceramic_slab_brown",
+            "atum:ceramic_slab_cyan",
+            "atum:ceramic_slab_gray",
+            "atum:ceramic_slab_green",
+            "atum:ceramic_slab_light_blue",
+            "atum:ceramic_slab_lime",
+            "atum:ceramic_slab_magenta",
+            "atum:ceramic_slab_orange",
+            "atum:ceramic_slab_pink",
+            "atum:ceramic_slab_purple",
+            "atum:ceramic_slab_red",
+            "atum:ceramic_slab_silver",
+            "atum:ceramic_slab_white",
+            "atum:ceramic_slab_yellow",
+            "atum:deadwood_slab",
+            "atum:dirty_bone_slab",
+            "atum:limestone_carved_slab",
+            "atum:limestone_chiseled_slab",
+            "atum:limestone_cracked_brick_slab",
+            "atum:limestone_cracked_slab",
+            "atum:limestone_large_slab",
+            "atum:limestone_small_slab",
+            "atum:limestone_smooth_slab",
+            "atum:palm_slab",
+            "atum:porphyry_carved_slab",
+            "atum:porphyry_pillar_slab",
+            "atum:porphyry_polished_slab",
+            "atum:porphyry_smooth_slab",
+            "atum:porphyry_tiled_slab"
+        ],
+        "states": {"type": ["bottom", "top"]}
+    }
+]

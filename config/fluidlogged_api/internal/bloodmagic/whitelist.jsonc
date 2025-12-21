@@ -1,0 +1,40 @@
+// DO NOT EDIT!
+[
+    {
+        "blockId": "bloodmagic:alchemy_table",
+        "boxes": {"min": 0, "max": 2},
+        "canFluidFlow": ["up", "north", "south", "east", "west"]
+    },
+    {
+        "blockId": [
+            "bloodmagic:blood_tank",
+            "bloodmagic:demon_crucible",
+            "bloodmagic:demon_crystal",
+            "bloodmagic:demon_pylon",
+            "bloodmagic:input_routing_node",
+            "bloodmagic:inversion_pillar",
+            "bloodmagic:item_routing_node",
+            "bloodmagic:master_routing_node",
+            "bloodmagic:output_routing_node",
+            "bloodmagic:soul_forge"
+        ],
+        "canFluidFlow": true
+    },
+    {
+        "blockId": "bloodmagic:demon_crystallizer",
+        "boxes": {"min": 15, "max": 16},
+        "canFluidFlow": ["down", "north", "south", "east", "west"]
+    },
+    {
+        "blockId": "bloodmagic:inversion_pillar_end",
+        "boxes": {"min": 0, "max": 2},
+        "canFluidFlow": ["up", "north", "south", "east", "west"],
+        "states": {"type": ["corrosive_bottom", "destructive_bottom", "raw_bottom", "steadfast_bottom", "vengeful_bottom"]}
+    },
+    {
+        "blockId": "bloodmagic:inversion_pillar_end",
+        "boxes": {"min": 14, "max": 16},
+        "canFluidFlow": ["down", "north", "south", "east", "west"],
+        "states": {"type": ["corrosive_top", "destructive_top", "raw_top", "steadfast_top", "vengeful_top"]}
+    }
+]

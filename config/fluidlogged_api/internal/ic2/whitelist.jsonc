@@ -1,0 +1,74 @@
+// DO NOT EDIT!
+[
+    {
+        "allowMissing": true,
+        "blockId": [
+            "ic2:fence",
+            "ic2:mining_pipe"
+        ],
+        "canFluidFlow": true
+    },
+    {
+        "allowMissing": true,
+        "blockId": "ic2:scaffold",
+        "boxes": [],
+        "canFluidFlow": ["north", "south", "east", "west"],
+        "states": {"type": ["wood", "iron"]}
+    },
+    {
+        "allowMissing": true,
+        "blockId": "ic2:sheet",
+        "boxes": {"min": 0, "max": 2},
+        "canFluidFlow": ["up", "north", "south", "east", "west"]
+    },
+    {
+        "allowMissing": true,
+        "blockId": "ic2:te",
+        "canFluidFlow": true,
+        "states": {"type": ["cable", "fluid_pipe"]}
+    },
+    {
+        "allowMissing": true,
+        "blockId": "ic2:te",
+        "boxes": {"min": 0, "max": 1},
+        "canFluidFlow": ["up", "north", "south", "east", "west"],
+        "states": {"facing": "up", "type": "luminator_flat"}
+    },
+    {
+        "allowMissing": true,
+        "blockId": "ic2:te",
+        "boxes": {"min": 15, "max": 16},
+        "canFluidFlow": ["down", "north", "south", "east", "west"],
+        "states": {"facing": "down", "type": "luminator_flat"}
+    },
+    {
+        "allowMissing": true,
+        "blockId": "ic2:te",
+        "canFluidFlow": ["up", "down", "north", "east", "west"],
+        "states": {"facing": "north", "type": "luminator_flat"}
+    },
+    {
+        "allowMissing": true,
+        "blockId": "ic2:te",
+        "canFluidFlow": ["up", "down", "south", "east", "west"],
+        "states": {"facing": "south", "type": "luminator_flat"}
+    },
+    {
+        "allowMissing": true,
+        "blockId": "ic2:te",
+        "canFluidFlow": ["up", "down", "north", "south", "east"],
+        "states": {"facing": "east", "type": "luminator_flat"}
+    },
+    {
+        "allowMissing": true,
+        "blockId": "ic2:te",
+        "canFluidFlow": ["up", "down", "north", "south", "west"],
+        "states": {"facing": "west", "type": "luminator_flat"}
+    },
+    {
+        "allowMissing": true,
+        "blockId": "ic2:te",
+        "canFluidFlow": true,
+        "states": {"type": "personal_chest"}
+    }
+]

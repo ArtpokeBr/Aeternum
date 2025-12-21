@@ -1,0 +1,8 @@
+// DO NOT EDIT!
+[
+    {
+        "blockId": "danknull:danknull_dock",
+        "boxes": {"min": 0, "max": 1},
+        "canFluidFlow": ["up", "north", "south", "east", "west"]
+    }
+]
