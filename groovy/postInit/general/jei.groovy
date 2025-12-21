@@ -5,7 +5,8 @@ def disabled_categories = [
     "forestry.bottler",
     "EIOTank",
     "EIOWC",
-    "thermalexpansion.transposer_extract"
+    "thermalexpansion.transposer_extract",
+    "thermaldynamics.covers"
 ]
 
 for (category in disabled_categories) {
