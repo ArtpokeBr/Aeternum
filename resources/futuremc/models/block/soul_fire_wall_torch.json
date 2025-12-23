@@ -1,0 +1,7 @@
+{
+    "parent": "block/torch_wall_2",
+    "textures": {
+        "bot_torch": "futuremc:block/soul_fire_torch",
+        "top_torch": "futuremc:block/soul_fire_torch_glow"
+    }
+}

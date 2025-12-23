@@ -1,0 +1,7 @@
+{
+  "parent": "additionallanterns:block/hanging_lantern",
+  "textures": {
+    "material": "futuremc:block/soul_fire_lantern",
+    "color": "futuremc:block/soul_fire_lantern_glow"
+  }
+}

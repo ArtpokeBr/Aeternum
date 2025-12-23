@@ -1,0 +1,7 @@
+{
+  "parent": "additionallanterns:block/lantern",
+  "textures": {
+    "material": "charm:blocks/iron_lantern",
+    "color": "charm:blocks/iron_lantern_glow"
+  }
+}

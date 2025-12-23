@@ -1,0 +1,7 @@
+{
+    "parent": "block/layered_cube_all_2",
+    "textures": {
+        "top_all": "charm:blocks/variable_redstone_lamp_on_glow",
+        "bot_all": "charm:blocks/variable_redstone_lamp_on"   
+    }
+}
