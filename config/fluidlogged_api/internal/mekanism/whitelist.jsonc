@@ -1,0 +1,13 @@
+// DO NOT EDIT!
+[
+    {
+        "blockId": [
+            "makenism:glowpanel",
+            "mekanism:transmitter"
+        ]
+    },
+    {
+        "blockId": "mekanism:machineblock",
+        "states": {"type": ["chargepad", "logistical_sorter", "personal_chest"]}
+    }
+]
