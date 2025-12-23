@@ -24,6 +24,22 @@ mods.mekanism.chemical_oxidizer.recipeBuilder()
 
 //Mekanism Osmium Unification =====================================================================
 
+//Tweaking Bedrock Miner Recipe as it should be the initial way to get Osmium.
+crafting.removeByOutput(item('bedrockores:bedrock_miner'))
+crafting.shapedBuilder()
+    .output(item('bedrockores:bedrock_miner'))
+    .shape('PLP',
+           'BCB',
+           'PDP')
+    .key([
+        C: item('enderio:item_material', 1), 
+        B: ore('blockRedstone'), 
+        D: item('thermalfoundation:material', 656), 
+        L: item('actuallyadditions:item_misc', 16),
+        P: ore('plateVanadium')
+    ])
+.register()
+
 //Mekanism Sensor Kit
 crafting.removeByOutput(item('energycontrol:item_kit', 16))
 crafting.shapedBuilder()

@@ -1,0 +1,67 @@
+[
+  {"dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": [0, 101], "heightMin": 1, "heightMax": 2, "state": {"name": "actuallyadditions:block_misc","properties": {"type": "ore_black_quartz"}}},
+  {"dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": [0, 101], "heightMin": 1, "heightMax": 2, "state": {"name": "immersiveengineering:ore","properties": {"type": "uranium"}}},
+  {"dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": [0, 101], "heightMin": 1, "heightMax": 2, "state": {"name": "minecraft:diamond_ore"}},
+  {"dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": [0, 101], "heightMin": 1, "heightMax": 2, "state": {"name": "minecraft:gold_ore"}},
+  {"dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": [0, 101], "heightMin": 1, "heightMax": 2, "state": {"name": "minecraft:iron_ore"}},
+  {"dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": [0, 101], "heightMin": 1, "heightMax": 2, "state": {"name": "minecraft:lapis_ore"}},
+  {"dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": [0, 101], "heightMin": 1, "heightMax": 2, "state": {"name": "minecraft:redstone_ore"}},
+  {"dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": [0, 101], "heightMin": 1, "heightMax": 2, "state": {"name": "thermalfoundation:ore","properties": {"type": "copper"}}},
+  {"dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": [0, 101], "heightMin": 1, "heightMax": 2, "state": {"name": "thermalfoundation:ore","properties": {"type": "lead"}}},
+  {"dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": [0, 101], "heightMin": 1, "heightMax": 2, "state": {"name": "thermalfoundation:ore","properties": {"type": "nickel"}}},
+  {"dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": [0, 101], "heightMin": 1, "heightMax": 2, "state": {"name": "thermalfoundation:ore","properties": {"type": "tin"}}},
+  {"enabled": false, "state": {"name": "forestry:resources","properties": {"resource": "copper"}}},
+  {"enabled": false, "state": {"name": "forestry:resources","properties": {"resource": "tin"}}},
+  {"enabled": false, "state": {"name": "ic2:resource","properties": {"type": "tin_ore"}}},
+  {"enabled": false, "state": {"name": "immersiveengineering:ore","properties": {"type": "aluminum"}}},
+  {"enabled": false, "state": {"name": "immersiveengineering:ore","properties": {"type": "copper"}}},
+  {"enabled": false, "state": {"name": "immersiveengineering:ore","properties": {"type": "lead"}}},
+  {"enabled": false, "state": {"name": "immersiveengineering:ore","properties": {"type": "nickel"}}},
+  {"enabled": false, "state": {"name": "immersiveengineering:ore","properties": {"type": "silver"}}},
+  {"enabled": false, "state": {"name": "mekanism:oreblock","properties": {"type": "copper"}}},
+  {"enabled": false, "state": {"name": "mekanism:oreblock","properties": {"type": "tin"}}},
+  {"enabled": false, "state": {"name": "thermalfoundation:ore","properties": {"type": "silver"}}},
+  
+  {
+    "state": {
+      "name": "mekanism:oreblock",
+      "properties": {
+        "type": "osmium"
+      }
+    },
+	  "dimensionFilter": "blacklist", "dimensionSelector": "id", "dimension": 101,
+    "weight": 100,
+    "widthMin": 7,
+    "widthMax": 8,
+    "countMin": 4,
+    "countMax": 8,
+    "yieldMin": 20,
+    "yieldMax": 250,
+    "heightMin": 1,
+    "heightMax": 2,
+    "group": "osmium",
+    "groupOrder": "mekanism"
+  },
+  {
+    "comment": ["dimension -11325 a.k.a 'Deep Dark' cant be recognized as valid dimension thus cant spawn Bedrock Ore in it."],
+    "state": {
+      "name": "draconicevolution:draconium_ore",
+      "properties": {
+        "type": "normal"
+      }
+    },
+    "widthMin": 3,
+    "widthMax": 5,
+    "countMin": 8,
+    "countMax": 12,
+    "yieldMin": 5,
+    "yieldMax": 10,
+    "heightMin": 1,
+    "heightMax": 2,
+    "group": "draconium",
+    "groupOrder": "draconicevolution",
+    "dimensionSelector": "id",
+    "dimension": -11325,
+    "extractionCooldownScale": 2
+  }
+]
