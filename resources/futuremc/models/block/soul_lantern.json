@@ -1,7 +1,0 @@
-{
-  "parent": "additionallanterns:block/lantern",
-  "textures": {
-    "material": "futuremc:block/soul_lantern",
-    "color": "futuremc:block/soul_lantern_glow"
-  }
-}

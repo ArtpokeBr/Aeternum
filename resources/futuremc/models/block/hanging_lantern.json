@@ -1,7 +1,0 @@
-{
-  "parent": "additionallanterns:block/hanging_lantern",
-  "textures": {
-    "material": "futuremc:block/lantern",
-    "color": "futuremc:block/lantern_glow"
-  }
-}
