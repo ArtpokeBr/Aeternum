@@ -22,6 +22,13 @@ mods.mekanism.chemical_oxidizer.recipeBuilder()
 
 //=================================================================================================
 
+//Mekanism Diamond Dust Unification ===============================================================
+
+mods.jei.ingredient.hide(item('mekanism:otherdust'))
+ore_dict.remove('dustDiamond', item('mekanism:otherdust'))
+
+//=================================================================================================
+
 //Mekanism Osmium Unification =====================================================================
 
 //Tweaking Bedrock Miner Recipe as it should be the initial way to get Osmium.
