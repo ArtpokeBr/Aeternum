@@ -21,3 +21,16 @@ mods.mekanism.chemical_oxidizer.recipeBuilder()
 .register()
 
 //=================================================================================================
+
+//Mekanism Osmium Unification =====================================================================
+
+//Mekanism Sensor Kit
+crafting.removeByOutput(item('energycontrol:item_kit', 16))
+crafting.shapedBuilder()
+    .output(item('energycontrol:item_kit', 16))
+    .shape('OT',
+           'PC')
+    .key([O: ore('ingotOsmium'), P: ore('paper'), C: ore('dyeGreen'), T: item('energycontrol:item_component', 3)])
+.register()
+
+//=================================================================================================
