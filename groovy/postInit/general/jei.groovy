@@ -1,12 +1,7 @@
 
 //Cleaning JEI Categories
 def disabled_categories = [
-    "Painter",
-    "forestry.bottler",
-    "EIOTank",
-    "EIOWC",
-    "thermalexpansion.transposer_extract",
-    "thermaldynamics.covers"
+    "forestry.bottler"
 ]
 
 for (category in disabled_categories) {
