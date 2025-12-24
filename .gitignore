@@ -27,3 +27,4 @@ config/buildcraft/detailed.properties
 config/jei/worldSettings.cfg
 optionsof.txt
 roots.log
+user-prefs.json
