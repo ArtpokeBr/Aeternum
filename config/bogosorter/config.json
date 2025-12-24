@@ -5,7 +5,7 @@
     "enableHotbarSwap": true,
     "sortSound": "minecraft:ui.button.click",
     "buttonColor": "#ffffffff",
-    "buttonEnabled": true
+    "buttonEnabled": false
   },
   "ItemSortRules": [
     {
