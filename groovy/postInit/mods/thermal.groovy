@@ -16,3 +16,10 @@ mods.thermalexpansion.factorizer.recipeBuilder()
 .register()
 
 //=================================================================================================
+
+//Sawdust Adjustments =============================================================================
+
+//Yeeting Pulverizer Sawdust Recipes cause some where bugged.
+mods.thermalexpansion.pulverizer.removeByOutput(item('thermalfoundation:material', 800))
+
+//=================================================================================================

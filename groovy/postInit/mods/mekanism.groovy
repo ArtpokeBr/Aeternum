@@ -29,6 +29,25 @@ ore_dict.remove('dustDiamond', item('mekanism:otherdust'))
 
 //=================================================================================================
 
+//Mekanism Sawdust Unification ====================================================================
+
+mods.jei.ingredient.hide(item('mekanism:sawdust'))
+ore_dict.remove('dustWood', item('mekanism:sawdust'))
+ore_dict.remove('pulpWood', item('mekanism:sawdust'))
+ore_dict.add('pulpWood', item('thermalfoundation:material', 800))
+
+mods.mekanism.sawmill.removeAll()
+crafting.removeByOutput(item('mekanism:machineblock2', 5))
+mods.jei.ingredient.hide(item('mekanism:machineblock2', 5))
+crafting.removeByOutput(item('mekanism:machineblock', 5).withNbt(['recipeType': 8]))
+mods.jei.ingredient.hide(item('mekanism:machineblock', 5).withNbt(['recipeType': 8]))
+crafting.removeByOutput(item('mekanism:machineblock', 6).withNbt(['recipeType': 8]))
+mods.jei.ingredient.hide(item('mekanism:machineblock', 6).withNbt(['recipeType': 8]))
+crafting.removeByOutput(item('mekanism:machineblock', 7).withNbt(['recipeType': 8]))
+mods.jei.ingredient.hide(item('mekanism:machineblock', 7).withNbt(['recipeType': 8]))
+
+//=================================================================================================
+
 //Mekanism Osmium Unification =====================================================================
 
 //Tweaking Bedrock Miner Recipe as it should be the initial way to get Osmium.
