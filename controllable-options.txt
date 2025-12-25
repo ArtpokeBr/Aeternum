@@ -1,0 +1,11 @@
+forceFeedback:true
+autoSelect:true
+renderMiniPlayer:true
+virtualMouse:true
+consoleHotbar:false
+cursorType:light
+controllerType:xbox
+invertLook:false
+deadZone:0.15
+rotationSpeed:25.0
+mouseSpeed:20.0
