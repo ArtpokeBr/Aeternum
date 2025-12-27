@@ -33,11 +33,11 @@ zenClass MixinEntityArchaeologist {
         addTrade('gold_ingot'                 , 2 , 6, 'emerald'                                            , 0, 1);
         addTrade('forestry:bronze_shovel'     , 0 , 1, 'emerald'                                            , 4, 10);
         addTrade('forestry:bronze_pickaxe'    , 0 , 1, 'emerald'                                            , 5, 13);
-        addTrade('cyclicmagic:dynamite_mining', 0 , 1, 'emerald'                                            , 2, 4);
+        // addTrade('cyclicmagic:dynamite_mining', 0 , 1, 'emerald'                                            , 2, 4);
         addTrade('ic2:dynamite'               , 0 , 1, 'emerald'                                            , 0, 1);
         addTrade('ic2:dynamite_sticky'        , 0 , 1, 'emerald'                                            , 0, 1);
-        addTrade('cyclicmagic:dynamite_safe'  , 0 , 1, 'emerald'                                            , 3, 6);
-        addTrade('cyclicmagic:ender_tnt_6'    , 0 , 1, 'emerald'                                            , 4, 8);
+        // addTrade('cyclicmagic:dynamite_safe'  , 0 , 1, 'emerald'                                            , 3, 6);
+        // addTrade('cyclicmagic:ender_tnt_6'    , 0 , 1, 'emerald'                                            , 4, 8);
         addTrade('tconstruct:throwball:1'     , 0 , 1, 'emerald'                                            , 3, 9);
     }
     
