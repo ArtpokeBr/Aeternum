@@ -33,4 +33,7 @@ optionsshaders.txt
 config/thaumicjei_itemstack_aspects.json
 journeymap/journeymap.log
 journeymap/data/
+journeymap/config/
 journeymap/server
+servers.dat
+loading-log.log
