@@ -1,3 +1,5 @@
+// mods_loaded: mysticalworld
+
 //Giving Amethyst a OreDict =======================================================================
 
 ore_dict.add("gemAmethyst", item('mysticalworld:amethyst_gem'));

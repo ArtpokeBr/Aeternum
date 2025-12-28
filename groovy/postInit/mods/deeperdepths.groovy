@@ -58,17 +58,17 @@ crafting.shapedBuilder()
 .register()
 
 //Roots Amethyst
-crafting.shapedBuilder()
-    .output(item('mysticalworld:amethyst_block'))
-    .shape('AAA',
-           'AAA',
-           'AAA')
-    .key([A: item('mysticalworld:amethyst_gem')])
-.register()
-crafting.shapelessBuilder()
-    .input([item('mysticalworld:amethyst_block')])
-    .output(item('mysticalworld:amethyst_gem') * 9)
-.register()
+// crafting.shapedBuilder()
+//     .output(item('mysticalworld:amethyst_block'))
+//     .shape('AAA',
+//            'AAA',
+//            'AAA')
+//     .key([A: item('mysticalworld:amethyst_gem')])
+// .register()
+// crafting.shapelessBuilder()
+//     .input([item('mysticalworld:amethyst_block')])
+//     .output(item('mysticalworld:amethyst_gem') * 9)
+// .register()
 
 //=================================================================================================
 
