@@ -37,3 +37,4 @@ journeymap/config/
 journeymap/server
 servers.dat
 loading-log.log
+config/cleanroom_load_timings.dat
