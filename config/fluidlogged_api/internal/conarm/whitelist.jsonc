@@ -1,0 +1,10 @@
+// DO NOT EDIT!
+[
+    {
+        "blockId": [
+            "conarm:armorforge",
+            "conarm:armorstation"
+        ],
+        "canFluidFlow": ["down", "north", "south", "east", "west"]
+    }
+]
