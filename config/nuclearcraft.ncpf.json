@@ -448,6 +448,486 @@
               "power": 4.0
             }
           }
+        },
+        {
+          "name": "oxygen_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "oxygen_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "oxygen_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "oxygen_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "hydrogen_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "hydrogen_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "hydrogen_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "hydrogen_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "helium_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "helium_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "helium_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "helium_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "nitrogen_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "nitrogen_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "nitrogen_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "nitrogen_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "fluorine_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "fluorine_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "fluorine_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "fluorine_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "methane_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "methane_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "methane_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "methane_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "carbon_dioxide_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "carbon_dioxide_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "carbon_dioxide_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "carbon_dioxide_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "carbon_monoxide_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "carbon_monoxide_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "carbon_monoxide_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "carbon_monoxide_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "ethene_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "ethene_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "ethene_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "ethene_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "ethyne_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "ethyne_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "ethyne_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "ethyne_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "fluoromethane_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "fluoromethane_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "fluoromethane_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "fluoromethane_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "ammonia_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "ammonia_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "ammonia_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "ammonia_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "diborane_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "diborane_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "diborane_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "diborane_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "sulfur_dioxide_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "sulfur_dioxide_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "sulfur_dioxide_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "sulfur_dioxide_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "sulfur_trioxide_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "sulfur_trioxide_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "sulfur_trioxide_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "sulfur_trioxide_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
+        },
+        {
+          "name": "sulfur_hexafluoride_hot",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "sulfur_hexafluoride_exhaust",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 32.0
+            }
+          }
+        },
+        {
+          "name": "sulfur_hexafluoride_exhaust",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "sulfur_hexafluoride_lq",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 2.0,
+              "power": 16.0
+            }
+          }
         }
       ],
       "modules": {
@@ -470,6 +950,166 @@
             },
             {
               "name": "low_quality_steam",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "oxygen_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "oxygen_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "hydrogen_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "hydrogen_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "helium_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "helium_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "nitrogen_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "nitrogen_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "fluorine_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "fluorine_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "methane_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "methane_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "carbon_dioxide_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "carbon_dioxide_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "carbon_monoxide_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "carbon_monoxide_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "ethene_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "ethene_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "ethyne_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "ethyne_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "fluoromethane_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "fluoromethane_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "ammonia_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "ammonia_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "diborane_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "diborane_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "sulfur_dioxide_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "sulfur_dioxide_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "sulfur_trioxide_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "sulfur_trioxide_lq",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "sulfur_hexafluoride_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "sulfur_hexafluoride_lq",
               "type": "legacy_fluid",
               "modules": {}
             }
