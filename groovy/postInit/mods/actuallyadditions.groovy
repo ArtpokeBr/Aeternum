@@ -13,3 +13,10 @@ ore_dict.remove('dustDiamond', item('actuallyadditions:item_dust', 2))
 
 //=================================================================================================
 
+//Coffee to Coffee Seeds.
+crafting.shapelessBuilder()
+    .input([item('actuallyadditions:item_coffee_beans')])
+    .output(item('actuallyadditions:item_coffee_seed'))
+.register()
+
+
