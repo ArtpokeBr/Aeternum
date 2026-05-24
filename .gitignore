@@ -43,3 +43,4 @@ visualores/
 config/rc_cache/
 journeymap/config/
 backups/
+local/ftbutilities/backups.json
