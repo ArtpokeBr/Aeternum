@@ -22,10 +22,37 @@ Dropt.list("railcraft_saltpeter_unification")
 
 //=================================================================================================
 
+//Unifying BOP's Gem Drops ========================================================================
+
+Dropt.list("bop_peridot_unification")
+  .add(Dropt.rule()
+      .matchBlocks(["biomesoplenty:gem_ore:2"])
+      .addDrop(Dropt.drop()
+          .items([<projectred-core:resource_item:202>], Dropt.range(1, 3, 2))
+      )
+  );
+
+Dropt.list("bop_ruby_unification")
+  .add(Dropt.rule()
+      .matchBlocks(["biomesoplenty:gem_ore:1"])
+      .addDrop(Dropt.drop()
+          .items([<projectred-core:resource_item:200>], Dropt.range(1, 3, 2))
+      )
+  );
+
+Dropt.list("bop_sapphire_unification")
+  .add(Dropt.rule()
+      .matchBlocks(["biomesoplenty:gem_ore:6"])
+      .addDrop(Dropt.drop()
+          .items([<projectred-core:resource_item:201>], Dropt.range(1, 3, 2))
+      )
+  );
+
+//=================================================================================================
+
 //Unifying Mekanism's Salt Block ==================================================================
 
 Dropt.list("mekanism_salt_unification")
-  //Salt
   .add(Dropt.rule()
       .matchBlocks(["mekanism:saltblock"])
       .addDrop(Dropt.drop()

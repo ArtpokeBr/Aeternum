@@ -26,32 +26,6 @@
     ]
   },
   {
-    "item" : "oreRuby",
-    "color" : 14,
-    "rarity" : [
-      {
-        "whitelist": "",
-        "blacklist": "minecraft:hell, minecraft:sky",
-        "depth_min": 0,
-        "depth_max": 255,
-        "weight": 2
-      }
-    ]
-  },
-  {
-    "item" : "orePeridot",
-    "color" : 5,
-    "rarity" : [
-      {
-        "whitelist": "",
-        "blacklist": "minecraft:hell, minecraft:sky",
-        "depth_min": 0,
-        "depth_max": 255,
-        "weight": 2
-      }
-    ]
-  },
-  {
     "item" : "oreTopaz",
     "color" : 1,
     "rarity" : [
@@ -87,19 +61,6 @@
         "depth_min": 0,
         "depth_max": 255,
         "weight": 1
-      }
-    ]
-  },
-  {
-    "item" : "oreSapphire",
-    "color" : 11,
-    "rarity" : [
-      {
-        "whitelist": "",
-        "blacklist": "minecraft:hell, minecraft:sky",
-        "depth_min": 0,
-        "depth_max": 255,
-        "weight": 2
       }
     ]
   },
