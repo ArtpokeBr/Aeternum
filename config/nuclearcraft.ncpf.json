@@ -688,6 +688,21 @@
               "power": 32.0
             }
           }
+        },
+        {
+          "name": "high_pressure_mercury",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_turbine:recipe_stats": {
+              "output": {
+                "name": "exhaust_mercury",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "coefficient": 3.0,
+              "power": 256.0
+            }
+          }
         }
       ],
       "modules": {
@@ -790,6 +805,11 @@
             },
             {
               "name": "sulfur_hexafluoride_exhaust",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "exhaust_mercury",
               "type": "legacy_fluid",
               "modules": {}
             }
@@ -1526,6 +1546,20 @@
           }
         },
         {
+          "name": "qmd:fission_reflector",
+          "metadata": 0,
+          "blockstate": {
+            "type": "tungsten_carbide"
+          },
+          "type": "legacy_block",
+          "modules": {
+            "nuclearcraft:overhaul_msr:reflector": {
+              "efficiency": 0.75,
+              "reflectivity": 0.75
+            }
+          }
+        },
+        {
           "name": "nuclearcraft:fission_shield",
           "metadata": 0,
           "blockstate": {
@@ -1555,6 +1589,39 @@
           "blockstate": {
             "active": true,
             "type": "boron_silver"
+          },
+          "type": "legacy_block"
+        },
+        {
+          "name": "nuclearcraft:fission_shield",
+          "metadata": 1,
+          "blockstate": {
+            "active": false,
+            "type": "gadolinium_samarium"
+          },
+          "type": "legacy_block",
+          "modules": {
+            "nuclearcraft:overhaul_msr:neutron_shield": {
+              "efficiency": 0.75,
+              "closed": {
+                "name": "nuclearcraft:fission_shield",
+                "metadata": 1,
+                "blockstate": {
+                  "active": true,
+                  "type": "boron_silver"
+                },
+                "type": "legacy_block"
+              },
+              "heat_per_flux": 10.0
+            }
+          }
+        },
+        {
+          "name": "nuclearcraft:fission_shield",
+          "metadata": 2,
+          "blockstate": {
+            "active": true,
+            "type": "gadolinium_samarium"
           },
           "type": "legacy_block"
         },
@@ -1626,6 +1693,66 @@
                         "modules": {}
                       },
                       "efficiency": 0.5
+                    }
+                  }
+                },
+                {
+                  "oredict": "waferSilicon",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:irradiator_stats": {
+                      "heat": 0.0,
+                      "output": {
+                        "oredict": "siliconNDoped",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 0.0
+                    }
+                  }
+                },
+                {
+                  "oredict": "ingotUranium234",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:irradiator_stats": {
+                      "heat": 0.0,
+                      "output": {
+                        "oredict": "ingotUranium235",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 4.07E-6
+                    }
+                  }
+                },
+                {
+                  "oredict": "dustProtactinium231",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:irradiator_stats": {
+                      "heat": 0.0,
+                      "output": {
+                        "oredict": "dustProtactinium233",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 3.05E-5
+                    }
+                  }
+                },
+                {
+                  "oredict": "ingotCobalt",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:irradiator_stats": {
+                      "heat": 0.0,
+                      "output": {
+                        "oredict": "ingotCobalt60",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 0.0
                     }
                   }
                 }
@@ -5762,6 +5889,21 @@
               "modules": {}
             },
             {
+              "oredict": "siliconNDoped",
+              "type": "oredict",
+              "modules": {}
+            },
+            {
+              "oredict": "ingotUranium235",
+              "type": "oredict",
+              "modules": {}
+            },
+            {
+              "oredict": "ingotCobalt60",
+              "type": "oredict",
+              "modules": {}
+            },
+            {
               "name": "nuclearcraft:ingot_block",
               "metadata": 8,
               "blockstate": {
@@ -5829,6 +5971,42 @@
               }
             },
             {
+              "name": "qmd:semiconductor",
+              "metadata": 1,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "siliconNDoped"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "nuclearcraft:uranium",
+              "metadata": 5,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotUranium235"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:isotope",
+              "metadata": 6,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotCobalt60"
+                  ]
+                }
+              }
+            },
+            {
               "name": "nuclearcraft:fission_dust",
               "metadata": 0,
               "type": "legacy_item",
@@ -5848,6 +6026,78 @@
                 "plannerator:tags": {
                   "tags": [
                     "dustBismuth"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:semiconductor",
+              "metadata": 3,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "waferSilicon"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:isotope",
+              "metadata": 4,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotUranium234"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:isotope",
+              "metadata": 5,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "dustProtactinium231"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:ingot",
+              "metadata": 4,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotCobalt"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "tconstruct:ingots",
+              "metadata": 0,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotCobalt"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "rockhounding_chemistry:metal_items",
+              "metadata": 10,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotCobalt"
                   ]
                 }
               }
@@ -7509,6 +7759,60 @@
                       "self_priming": false
                     }
                   }
+                },
+                {
+                  "oredict": "ingotMIX291Oxide",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_sfr:fuel_stats": {
+                      "heat": 2000,
+                      "output": {
+                        "oredict": "ingotDepletedMIX291Oxide",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 5.0,
+                      "criticality": 25,
+                      "time": 10000,
+                      "self_priming": true
+                    }
+                  }
+                },
+                {
+                  "oredict": "ingotMIX291Nitride",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_sfr:fuel_stats": {
+                      "heat": 1666,
+                      "output": {
+                        "oredict": "ingotDepletedMIX291Nitride",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 5.0,
+                      "criticality": 35,
+                      "time": 12004,
+                      "self_priming": true
+                    }
+                  }
+                },
+                {
+                  "oredict": "ingotMIX291ZA",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_sfr:fuel_stats": {
+                      "heat": 2222,
+                      "output": {
+                        "oredict": "ingotDepletedMIX291ZA",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 5.0,
+                      "criticality": 20,
+                      "time": 9001,
+                      "self_priming": true
+                    }
+                  }
                 }
               ]
             },
@@ -7625,6 +7929,20 @@
           }
         },
         {
+          "name": "qmd:fission_reflector",
+          "metadata": 0,
+          "blockstate": {
+            "type": "tungsten_carbide"
+          },
+          "type": "legacy_block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:reflector": {
+              "efficiency": 0.75,
+              "reflectivity": 0.75
+            }
+          }
+        },
+        {
           "name": "nuclearcraft:fission_shield",
           "metadata": 0,
           "blockstate": {
@@ -7654,6 +7972,39 @@
           "blockstate": {
             "active": true,
             "type": "boron_silver"
+          },
+          "type": "legacy_block"
+        },
+        {
+          "name": "nuclearcraft:fission_shield",
+          "metadata": 1,
+          "blockstate": {
+            "active": false,
+            "type": "gadolinium_samarium"
+          },
+          "type": "legacy_block",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:neutron_shield": {
+              "efficiency": 0.75,
+              "closed": {
+                "name": "nuclearcraft:fission_shield",
+                "metadata": 1,
+                "blockstate": {
+                  "active": true,
+                  "type": "boron_silver"
+                },
+                "type": "legacy_block"
+              },
+              "heat_per_flux": 10.0
+            }
+          }
+        },
+        {
+          "name": "nuclearcraft:fission_shield",
+          "metadata": 2,
+          "blockstate": {
+            "active": true,
+            "type": "gadolinium_samarium"
           },
           "type": "legacy_block"
         },
@@ -7725,6 +8076,66 @@
                         "modules": {}
                       },
                       "efficiency": 0.5
+                    }
+                  }
+                },
+                {
+                  "oredict": "waferSilicon",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_sfr:irradiator_stats": {
+                      "heat": 0.0,
+                      "output": {
+                        "oredict": "siliconNDoped",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 0.0
+                    }
+                  }
+                },
+                {
+                  "oredict": "ingotUranium234",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_sfr:irradiator_stats": {
+                      "heat": 0.0,
+                      "output": {
+                        "oredict": "ingotUranium235",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 4.07E-6
+                    }
+                  }
+                },
+                {
+                  "oredict": "dustProtactinium231",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_sfr:irradiator_stats": {
+                      "heat": 0.0,
+                      "output": {
+                        "oredict": "dustProtactinium233",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 3.05E-5
+                    }
+                  }
+                },
+                {
+                  "oredict": "ingotCobalt",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_sfr:irradiator_stats": {
+                      "heat": 0.0,
+                      "output": {
+                        "oredict": "ingotCobalt60",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 0.0
                     }
                   }
                 }
@@ -9959,6 +10370,36 @@
               "output_ratio": 1.0
             }
           }
+        },
+        {
+          "name": "mercury",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:coolant_recipe_stats": {
+              "heat": 512,
+              "output": {
+                "name": "high_pressure_mercury",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "output_ratio": 2.0
+            }
+          }
+        },
+        {
+          "name": "hot_mercury",
+          "type": "legacy_fluid",
+          "modules": {
+            "nuclearcraft:overhaul_sfr:coolant_recipe_stats": {
+              "heat": 256,
+              "output": {
+                "name": "high_pressure_mercury",
+                "type": "legacy_fluid",
+                "modules": {}
+              },
+              "output_ratio": 2.0
+            }
+          }
         }
       ],
       "modules": {
@@ -10219,6 +10660,11 @@
             },
             {
               "name": "cryotheum_nak_hot",
+              "type": "legacy_fluid",
+              "modules": {}
+            },
+            {
+              "name": "high_pressure_mercury",
               "type": "legacy_fluid",
               "modules": {}
             },
@@ -10638,6 +11084,21 @@
               "modules": {}
             },
             {
+              "oredict": "ingotDepletedMIX291Oxide",
+              "type": "oredict",
+              "modules": {}
+            },
+            {
+              "oredict": "ingotDepletedMIX291Nitride",
+              "type": "oredict",
+              "modules": {}
+            },
+            {
+              "oredict": "ingotDepletedMIX291ZA",
+              "type": "oredict",
+              "modules": {}
+            },
+            {
               "oredict": "dustTBP",
               "type": "oredict",
               "modules": {}
@@ -10649,6 +11110,21 @@
             },
             {
               "oredict": "dustPolonium",
+              "type": "oredict",
+              "modules": {}
+            },
+            {
+              "oredict": "siliconNDoped",
+              "type": "oredict",
+              "modules": {}
+            },
+            {
+              "oredict": "ingotUranium235",
+              "type": "oredict",
+              "modules": {}
+            },
+            {
+              "oredict": "ingotCobalt60",
               "type": "oredict",
               "modules": {}
             },
@@ -11679,6 +12155,42 @@
               }
             },
             {
+              "name": "qmd:depleted_fuel_copernicium",
+              "metadata": 1,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotDepletedMIX291Oxide"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:depleted_fuel_copernicium",
+              "metadata": 2,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotDepletedMIX291Nitride"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:depleted_fuel_copernicium",
+              "metadata": 3,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotDepletedMIX291ZA"
+                  ]
+                }
+              }
+            },
+            {
               "name": "nuclearcraft:fission_dust",
               "metadata": 3,
               "type": "legacy_item",
@@ -11711,6 +12223,42 @@
                 "plannerator:tags": {
                   "tags": [
                     "dustPolonium"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:semiconductor",
+              "metadata": 1,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "siliconNDoped"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "nuclearcraft:uranium",
+              "metadata": 5,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotUranium235"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:isotope",
+              "metadata": 6,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotCobalt60"
                   ]
                 }
               }
@@ -12688,6 +13236,42 @@
               }
             },
             {
+              "name": "qmd:fuel_copernicium",
+              "metadata": 1,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotMIX291Oxide"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:fuel_copernicium",
+              "metadata": 2,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotMIX291Nitride"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:fuel_copernicium",
+              "metadata": 3,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotMIX291ZA"
+                  ]
+                }
+              }
+            },
+            {
               "name": "nuclearcraft:fission_dust",
               "metadata": 0,
               "type": "legacy_item",
@@ -12707,6 +13291,78 @@
                 "plannerator:tags": {
                   "tags": [
                     "dustBismuth"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:semiconductor",
+              "metadata": 3,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "waferSilicon"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:isotope",
+              "metadata": 4,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotUranium234"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:isotope",
+              "metadata": 5,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "dustProtactinium231"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:ingot",
+              "metadata": 4,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotCobalt"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "tconstruct:ingots",
+              "metadata": 0,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotCobalt"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "rockhounding_chemistry:metal_items",
+              "metadata": 10,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotCobalt"
                   ]
                 }
               }
