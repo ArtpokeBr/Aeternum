@@ -107,3 +107,14 @@ mods.botania.mana_infusion.recipeBuilder()
 .register()
 
 //=================================================================================================
+
+//Fixing Copper Chest Conflicting Recipe ==========================================================
+crafting.shapedBuilder()
+    .name("deeperdepths:copper/copper_chest")
+    .replaceByName()
+    .output(item('deeperdepths:copper_chest'))
+    .shape('CCC',
+           'C C',
+           'CCC')
+    .key([C: ore('ingotCopper')])
+.register()
