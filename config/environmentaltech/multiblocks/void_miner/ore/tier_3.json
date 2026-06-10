@@ -131,6 +131,16 @@
       "id": "OD:oreNickel"
     },
     {
+      "target": "gray",
+      "weight": 416,
+      "id": "OD:oreFossil"
+    },
+    {
+      "target": "light_blue",
+      "weight": 392,
+      "id": "fossil:permafrost"
+    },
+    {
       "target": "light_blue",
       "weight": 150,
       "id": "OD:orePlatinum"

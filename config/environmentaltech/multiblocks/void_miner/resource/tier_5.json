@@ -1,6 +1,11 @@
 {
   "outputs": [
     {
+      "target": "light_blue",
+      "weight": 24,
+      "id": "fossil:iced_stone"
+    },
+    {
       "target": "gray",
       "weight": 32,
       "id": "minecraft:stone:0"

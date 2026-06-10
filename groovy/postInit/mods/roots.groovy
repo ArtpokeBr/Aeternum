@@ -1,0 +1,11 @@
+mods.roots.transmutation.recipeBuilder()
+    .name('amber_transmutation')
+    .start(blockstate('biomesoplenty:gem_ore', 'variant=amber'))
+    .output(item('fossil:amber_ore'))
+.register()
+
+mods.roots.transmutation.recipeBuilder()
+    .name('amber_transmutation_thaumcraft')
+    .start(blockstate('thaumcraft:ore_amber'))
+    .output(item('fossil:amber_ore'))
+.register()
