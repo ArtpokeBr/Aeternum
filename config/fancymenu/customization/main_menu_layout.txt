@@ -105,7 +105,7 @@ customization {
   actionid = 01dc4f91-65ab-4f96-a75d-2ece6b3fd7281781368524842
   action = addsplash
   y = 57
-  text = Yes, sir!
+  text = Herregud!
 }
 
 customization {
@@ -122,7 +122,7 @@ customization {
   width = 200
   action = custom_layout_element:fancymenu_customization_item_text
   actionid = 31f50a28-f35b-4f86-a09b-7b258d082dcd1781368622346
-  y = -26
+  y = -38
   alignment = left
   base_color = 3F9F85
   height = 12
@@ -139,7 +139,7 @@ customization {
   source_mode = direct
   line_spacing = 1
   x = -199
-  width = 200
+  width = 198
   action = custom_layout_element:fancymenu_customization_item_text
   actionid = f2e5b8dc-db8f-4bbf-a053-a14297fac2ef1781369401866
   y = -38
@@ -180,7 +180,7 @@ customization {
   width = 200
   action = custom_layout_element:fancymenu_customization_item_text
   actionid = a52c8878-2848-46bb-b33f-2ad393be0c721781369565908
-  y = -37
+  y = -27
   alignment = left
   base_color = c3d35a
   height = 12
