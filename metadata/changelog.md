@@ -14,6 +14,7 @@
 - Added a Thermal Expansion's Refinery Recipe to Convert Honey Types.
 - Enabled Menu Buttons for Changelog and Socials.
 - Enabled Pack Version Checking.
+- Enabled Quark's End Stone and Obsidian Speleothems.
 
 ### Fixed
 
