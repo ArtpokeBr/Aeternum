@@ -13,7 +13,8 @@
 - Tweaked Power Requirements of BC's Chipset Recipes.
 - Added a Thermal Expansion's Refinery Recipe to Convert Honey Types.
 - Enabled Menu Buttons for Changelog and Socials.
-- Enabled Pack Version Checking.
+- Enabled Pack Version Display in the Main Menu.
+- Added Fancy Menu and customized Main Menu.
 - Enabled Quark's End Stone and Obsidian Speleothems.
 
 ### Fixed
