@@ -14,3 +14,7 @@
 - Added a Thermal Expansion's Refinery Recipe to Convert Honey Types.
 - Enabled Menu Buttons for Changelog and Socials.
 - Enabled Pack Version Checking.
+
+### Fixed
+
+- IC2 Energy Limits with Flux Networks.
