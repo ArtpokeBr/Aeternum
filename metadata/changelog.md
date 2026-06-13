@@ -2,7 +2,7 @@
 
 ### Mod Changes
 
-- 
+- Added Fancy Menu.
 
 ### Changed
 
@@ -14,7 +14,7 @@
 - Added a Thermal Expansion's Refinery Recipe to Convert Honey Types.
 - Enabled Menu Buttons for Changelog and Socials.
 - Enabled Pack Version Display in the Main Menu.
-- Added Fancy Menu and customized Main Menu.
+- Added a Customized Main Menu.
 - Enabled Quark's End Stone and Obsidian Speleothems.
 
 ### Fixed
