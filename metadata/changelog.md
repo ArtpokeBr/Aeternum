@@ -12,3 +12,5 @@
 - Added a Recipe to the BC's Filler.
 - Tweaked Power Requirements of BC's Chipset Recipes.
 - Added a Thermal Expansion's Refinery Recipe to Convert Honey Types.
+- Enabled Menu Buttons for Changelog and Socials.
+- Enabled Pack Version Checking.
