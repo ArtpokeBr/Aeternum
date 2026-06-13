@@ -1,0 +1,8 @@
+type = customizablemenus
+
+fossilsarcheology.client.gui.FAMainMenuGUI {
+}
+
+net.minecraft.client.gui.GuiMainMenu {
+}
+

@@ -1,0 +1,188 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.GuiMainMenu
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 292
+  width = 270
+  action = deep_customization_element:title_screen_forge_top
+  actionid = 2828e8a3-b618-4d79-9f6c-7ea590e073571781368426413
+  y = 4
+  height = 19
+}
+
+customization {
+  orientation = top-left
+  hidden = false
+  x = 2
+  width = 170
+  action = deep_customization_element:title_screen_branding
+  actionid = 47a707c2-bd5c-4596-a12d-0fb0c0a3ddec1781368426421
+  y = 395
+  height = 60
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 624
+  width = 229
+  action = deep_customization_element:title_screen_forge_copyright
+  actionid = ec65f67d-e461-4283-8347-2fe108b071921781368426421
+  y = 437
+  height = 9
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 530
+  width = 13
+  action = deep_customization_element:title_screen_realms_notification
+  actionid = 32c89ac7-2d0c-430d-88d8-406b95fa66531781368426421
+  y = 214
+  height = 13
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 290
+  width = 274
+  action = deep_customization_element:title_screen_logo
+  actionid = 762ac871-de12-4efe-9c33-518c2a97634e1781368426421
+  y = 30
+  height = 52
+}
+
+customization {
+  orientation = original
+  splash_color = #ffff00
+  hidden = true
+  x = 0
+  width = 60
+  splash_rotation = -20
+  action = deep_customization_element:title_screen_splash
+  actionid = 2119c770-d502-45ef-900b-62a12ee9f5101781368426421
+  y = 0
+  height = 30
+}
+
+customization {
+  path = resources/modpack/textures/gui/aeternum_title.png
+  orientation = top-centered
+  x = -137
+  width = 274
+  actionid = 33ba5397-b7d4-4249-b4a5-c238750150f41781368461689
+  action = addtexture
+  y = 30
+  height = 52
+}
+
+customization {
+  orientation = top-centered
+  basecolor = #ffff00
+  shadow = true
+  rotation = -20.0
+  scale = 1.0
+  refresh = false
+  bouncing = true
+  vanilla-like = true
+  x = 102
+  actionid = 01dc4f91-65ab-4f96-a75d-2ece6b3fd7281781368524842
+  action = addsplash
+  y = 57
+  text = Yes, sir!
+}
+
+customization {
+  orientation = bottom-right
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = https://raw.githubusercontent.com/ArtpokeBr/Aeternum/refs/heads/main/metadata/pack_version.txt
+  text_border = 0
+  case_mode = normal
+  source_mode = web
+  line_spacing = 1
+  x = -79
+  width = 200
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 31f50a28-f35b-4f86-a09b-7b258d082dcd1781368622346
+  y = -26
+  alignment = left
+  base_color = 3F9F85
+  height = 12
+}
+
+customization {
+  orientation = bottom-right
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = Latest Pack Version:
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -199
+  width = 200
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = f2e5b8dc-db8f-4bbf-a053-a14297fac2ef1781369401866
+  y = -38
+  alignment = left
+  height = 12
+}
+
+customization {
+  orientation = bottom-right
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = Current Pack Version:
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -199
+  width = 198
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = b9a56ed9-9acf-4c50-8c77-612e0576c00b1781369531871
+  y = -27
+  alignment = left
+  height = 11
+}
+
+customization {
+  orientation = bottom-right
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = metadata/pack_version.txt
+  text_border = 0
+  case_mode = normal
+  source_mode = local
+  line_spacing = 1
+  x = -79
+  width = 200
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = a52c8878-2848-46bb-b33f-2ad393be0c721781369565908
+  y = -37
+  alignment = left
+  base_color = c3d35a
+  height = 12
+}
+
