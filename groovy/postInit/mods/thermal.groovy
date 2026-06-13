@@ -23,3 +23,15 @@ mods.thermalexpansion.factorizer.recipeBuilder()
 mods.thermalexpansion.pulverizer.removeByOutput(item('thermalfoundation:material', 800))
 
 //=================================================================================================
+
+//Converting BOP Honey into Forestry Honey =====================================================
+
+mods.thermalexpansion.refinery.recipeBuilder()
+    .fluidInput(fluid('honey') * 250)
+    .fluidOutput(fluid('for.honey') * 250)
+    .output(item('forestry:honey_drop'))
+    .chance(5)
+    .energy(5000)
+.register()
+
+// ================================================================================================
