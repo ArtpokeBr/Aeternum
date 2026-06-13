@@ -1,3 +1,19 @@
+# Aeternum 1.2.0
+
+### Mod Changes
+
+- 
+
+### Changed
+
+- 
+
+### Fixed
+
+- Industrial Foregoing's Machine Produce JEI Category having no Catalysts.
+
+---
+
 # Aeternum 1.1.0
 
 ### Mod Changes
