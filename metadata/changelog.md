@@ -1,4 +1,4 @@
-# Aeternum 1.2.0
+# Aeternum 1.1.1
 
 ### Mod Changes
 
@@ -11,6 +11,7 @@
 ### Fixed
 
 - Industrial Foregoing's Machine Produce JEI Category having no Catalysts.
+- Cleanroom Relauncher Configs being provided by Default.
 
 ---
 
