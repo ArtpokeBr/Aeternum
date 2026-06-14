@@ -2,11 +2,11 @@
 
 ### Mod Changes
 
-- 
+- Added ClocheCall.
 
 ### Changed
 
-- 
+- Thanks to ClocheCall, IE's Garden Cloches should have support for a ton of extra crops and even Trees.
 
 ### Fixed
 
