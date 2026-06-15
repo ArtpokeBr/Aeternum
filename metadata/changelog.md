@@ -1,3 +1,19 @@
+# Aeternum 1.2.0
+
+### Mod Changes
+
+- Added Modern Mob Spawn.
+
+### Changed
+
+- Mobs should spawn only on blocks with light level 0 and below now.
+
+### Fixed
+
+- 
+
+---
+
 # Aeternum 1.1.1
 
 ### Mod Changes
