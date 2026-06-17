@@ -29,3 +29,6 @@ def foregoing_produce_catalyst = [
 for (machine in foregoing_produce_catalyst) {
     mods.jei.catalyst.add("machine_produce_category", machine);
 }
+
+//Adding an Actual Catalyst to Blood Magic's Meteor Tab
+mods.jei.catalyst.add("bmj:meteors", item('thaumicwonders:meteorb'));

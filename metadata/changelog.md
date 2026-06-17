@@ -31,6 +31,7 @@
 - Immersive Engineering's villager core-sample trade generation and Engineer's Manual crafting-grid previews adding extra load time; both are now skipped (manual page text is unaffected).
 - Thermal Expansion's Factorizer letting Thaumcraft's Amber Block decompress into 9 Amber when it's only made from 4, a free duplication exploit.
 - Biomes O'Plenty biome ore-gen tweaks being silently discarded on every boot; they were placed under `biomes/defaults/`, which BOP deletes and regenerates from its own jar on startup. Moved to the actual config path BOP reads (`biomes/<namespace>/<biome>.json`, no `defaults` segment) so they persist.
+- Blood Magic Meteors Tab having no JEI Catalyst.
 
 ---
 
