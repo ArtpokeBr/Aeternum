@@ -12,6 +12,7 @@
 - Those same Ferdinand's Flowers can now also be processed into vanilla dye via Thermal's Pulverizer and Integrated Dynamics' Squeezer/Mechanical Squeezer (4x dye), Actually Additions' Crusher (3x dye), or Ender IO's Sag Mill (chance-based dye output, matching EnderIO's own vanilla flower recipes).
 - Amber unified across mods: Thaumcraft's Amber is now the canonical item, with Fossils & Archeology's and Biomes O'Plenty's Amber both converting into it (same precedent as the existing Ruby/Sapphire/Peridot unification).
 - Thermal Expansion's Pulverizer recipe for Amber Ore now uses Thaumcraft's Amber Ore instead of Biomes O'Plenty's, matching the new canonical Amber source.
+- Forestry's Natura-compat Fertilizer recipe now accepts any grain (ore('listAllgrain')) instead of only Natura's Barley.
 
 ### Fixed
 
