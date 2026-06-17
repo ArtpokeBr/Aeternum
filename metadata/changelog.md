@@ -8,6 +8,7 @@
 
 - Mobs should spawn only on blocks with light level 0 and below now.
 - Ferdinand's Flowers colours with a direct vanilla dye equivalent (red, orange, yellow, lime, green, cyan, light blue, blue, purple, magenta, pink) now produce that vanilla dye instead of the mod's own dye item.
+- Those same Ferdinand's Flowers can now also be processed into vanilla dye via Thermal's Pulverizer and Integrated Dynamics' Squeezer/Mechanical Squeezer (4x dye), Actually Additions' Crusher (3x dye), or Ender IO's Sag Mill (chance-based dye output, matching EnderIO's own vanilla flower recipes).
 
 ### Fixed
 

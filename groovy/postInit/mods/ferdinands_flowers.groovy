@@ -85,13 +85,60 @@ def ffDyeFixes = [
     ['block_cff_fungus', 13, 6, 1],
 ]
 
+// Blue and brown vanilla dye come from lapis lazuli and cocoa beans respectively - use
+// Biomes O'Plenty's dedicated dye items for those two colours instead of the vanilla ones.
+def dyeItemFor(dyeMeta) {
+    if (dyeMeta == 4) return item('biomesoplenty:blue_dye')
+    if (dyeMeta == 3) return item('biomesoplenty:brown_dye')
+    return item("minecraft:dye:${dyeMeta}")
+}
+
 for (fix in ffDyeFixes) {
     def (block, flowerMeta, dyeMeta, count) = fix
     crafting.addShapeless(
         "ff_dye_fix_${block}_${flowerMeta}",
-        item("minecraft:dye:${dyeMeta}") * count,
+        dyeItemFor(dyeMeta) * count,
         [item("ferdinandsflowers:${block}:${flowerMeta}")]
     )
+}
+
+// Same flowers, alternate processing options via machines - higher yield than hand-crafting
+// to make the machines worth using. Pulverizer and Squeezer give 4x dye, Crusher gives 3x.
+for (fix in ffDyeFixes) {
+    def (block, flowerMeta, dyeMeta, ignoredCount) = fix
+    def flower = item("ferdinandsflowers:${block}:${flowerMeta}")
+    def dye = dyeItemFor(dyeMeta)
+
+    mods.thermalexpansion.pulverizer.recipeBuilder()
+        .input(flower)
+        .output(dye * 4)
+        .energy(800)
+    .register()
+
+    mods.integrateddynamics.squeezer.recipeBuilder()
+        .input(flower)
+        .output(dye * 4)
+    .register()
+
+    mods.integrateddynamics.mechanical_squeezer.recipeBuilder()
+        .input(flower)
+        .output(dye * 4)
+        .output(dye * 2, 0.5F)
+    .register()
+
+    mods.actuallyadditions.crusher.recipeBuilder()
+        .input(flower)
+        .output(dye * 3)
+    .register()
+
+    mods.enderio.sag_mill.recipeBuilder()
+        .input(flower)
+        .output(dye, 0.8F)
+        .output(dye, 0.6F)
+        .output(dye, 0.3F)
+        .output(item('enderio:item_material', 46), 0.1F)
+        .energy(900)
+    .register()
 }
 
 // These specific colours no longer have any recipe producing them (replaced by vanilla
