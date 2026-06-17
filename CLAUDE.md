@@ -39,3 +39,4 @@ mods/configs/scripts can be versioned and pushed to CurseForge as pack updates.
 - Keep one logical change (one mod, one config, one recipe tweak) per commit — matches existing history.
 - This pack uses Ender Modpack Tweaks (`endermodpacktweaks`) for in-game pack version/changelog display and a FancyMenu-based custom main menu — version/changelog strings need to stay in sync when bumping pack version.
 - Notable overhaul/tech mods present: Thermal series, Mekanism, Applied Energistics 2, Industrial Foregoing, IndustrialCraft 2, Draconic Evolution, Astral Sorcery, Thaumcraft (+ addons), Botania, Tinkers' Construct (Antique fork), Forestry/Gendustry/Binnie, Pam's HarvestCraft, RFTools, Flux Networks.
+- `UniDict` is the mod used for item/ore-dict unification across mods. For any unification request, check and tweak its config first; if UniDict can't handle the case, fall back to a Groovy/CraftTweaker script instead.
