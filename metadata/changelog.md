@@ -14,6 +14,7 @@
 
 - Railcraft Metal Posts and Metal Post Platforms having no crafting recipes.
 - Immersive Engineering's Arc Furnace recycling recipe scan adding several seconds to load time; it's now skipped.
+- Immersive Engineering's villager core-sample trade generation and Engineer's Manual crafting-grid previews adding extra load time; both are now skipped (manual page text is unaffected).
 
 ---
 
