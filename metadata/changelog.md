@@ -3,6 +3,8 @@
 ### Mod Changes
 
 - Added Modern Mob Spawn.
+- Added Requious Frakto.
+- Added RoidTweaker.
 
 ### Changed
 
@@ -14,6 +16,13 @@
 - Thermal Expansion's Pulverizer recipe for Amber Ore now uses Thaumcraft's Amber Ore instead of Biomes O'Plenty's, matching the new canonical Amber source.
 - Forestry's Natura-compat Fertilizer recipe now accepts any grain (ore('listAllgrain')) instead of only Natura's Barley.
 - Forestry Farms now also accept Actually Additions' and Industrial Foregoing's Fertilizer as a fertilizer source.
+- Added 9 custom Requious Frakto JEI tabs ported from E2EE, recalculated against aeternum's own configs/mods where they differed from E2EE's:
+  - IC2's Liquid Heat Exchanger (lava/hot coolant cooling), Crop database (46 crops), and Semi-Fluid Generator
+  - Forestry's Farm Fertilizers (weighted by aeternum's own `config/forestry/farm.cfg` values)
+  - Actually Additions' Lens of the Miner End Stone bonus ores
+  - Astral Sorcery's Evershifting Fountain and Mineralis ritual rewards (weighted by aeternum's own `fluid_rarities.cfg`/`mineralis_ritual.cfg`)
+  - Immersive Engineering's Chemical Thrower (concrete spraying) and Garden Cloche liquid fertilizers (Water, Industrial Foregoing's Meat/Sewage, Forestry Honey, Short Mead, Botania's Life Essence, Ender IO's Nutrient Distillation/Vapor of Levity), the latter via RoidTweaker
+  - Thermal Expansion's Arboreal Extractor tree-tapping (resin/sap)
 
 ### Fixed
 

@@ -1,1 +1,13 @@
 item.aeternum.copper_chipset.name=Copper Chipset
+
+# Requious Frakto JEI tab titles (requious.jei.recipe.<resourceName>)
+requious.jei.recipe.liquid_interaction=Liquid Heat Exchanger
+requious.jei.recipe.neromantic_prime=Evershifting Fountain
+requious.jei.recipe.forestry_farm=Farm Fertilizers
+requious.jei.recipe.lens_of_the_miner=Lens of the Miner
+requious.jei.recipe.mineralis=Mineralis Ritual
+requious.jei.recipe.chemthrower=Chemical Thrower
+requious.jei.recipe.ic2_crops=IC2 Crop Database
+requious.jei.recipe.ic2_semifluid=Semi-Fluid Generator
+requious.jei.recipe.arboreal_extractor=Arboreal Extractor
+requious.jei.recipe.garden_cloche=Garden Cloche Fertilizers
