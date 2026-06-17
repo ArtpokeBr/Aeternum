@@ -16,7 +16,7 @@ mods/configs/scripts can be versioned and pushed to CurseForge as pack updates.
 - [mods/](mods/) — all mod jars (flat directory, no profiles)
 - [config/](config/) — per-mod `.cfg`/`.ini`/`.json` config files, one entry per mod
 - [scripts/](scripts/) and [groovy/](groovy/) — [CraftTweaker](https://docs.blamejared.com/1.12/en/) (legacy ZenScript) and [GroovyScript](https://cleanroommc.com/groovy-script/) recipe/loot scripts
-  - `scripts/mods/`, `scripts/loot/`, `scripts/nc_script_addons/` — the pack also has the `MoreTweaker` mod installed for extra CraftTweaker compat; see [its wiki](https://bitbucket.org/noeppi_noeppi/moretweaker/wiki/Home) for syntax not covered by the main CraftTweaker docs
+  - `scripts/mods/`, `scripts/loot/`, `scripts/nc_script_addons/` — the pack also has the `MoreTweaker` mod installed for extra CraftTweaker compat; see [its wiki](https://bitbucket.org/noeppi_noeppi/moretweaker/wiki/Home) for syntax not covered by the main CraftTweaker docs. `Roids Tweaker` is another mod providing extra CraftTweaker compat; see [its wiki](https://github.com/roidrole/Roids-Tweaker/wiki) for reference
   - `groovy/preInit/`, `groovy/postInit/`
 - [patchouli_books/](patchouli_books/) — custom in-game Patchouli guidebook content
 - [resourcepacks/](resourcepacks/), [shaderpacks/](shaderpacks/) — client assets
