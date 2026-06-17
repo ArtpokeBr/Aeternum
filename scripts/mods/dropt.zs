@@ -48,6 +48,14 @@ Dropt.list("bop_sapphire_unification")
       )
   );
 
+Dropt.list("bop_amber_unification")
+  .add(Dropt.rule()
+      .matchBlocks(["biomesoplenty:gem_ore:7"])
+      .addDrop(Dropt.drop()
+          .items([<thaumcraft:amber>], Dropt.range(1, 3, 2))
+      )
+  );
+
 //=================================================================================================
 
 //Unifying Mekanism's Salt Block ==================================================================
