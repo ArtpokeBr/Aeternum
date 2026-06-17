@@ -22,6 +22,8 @@ mods/configs/scripts can be versioned and pushed to CurseForge as pack updates.
 - [resourcepacks/](resourcepacks/), [shaderpacks/](shaderpacks/) — client assets
 - [saves/](saves/) — local worlds (not relevant to pack development)
 - `minecraftinstance.json` — CurseForge/Overwolf app instance metadata (Forge version, mod list)
+- [metadata/changelog.md](metadata/changelog.md) — pack changelog shown in-game via Ender Modpack Tweaks; update it as features/changes are approved and implemented
+- `metadata/pack_version.txt` — current pack version string
 - `README.md` — just a pointer to the CurseForge page
 
 ## Conventions
