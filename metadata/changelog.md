@@ -13,6 +13,7 @@
 ### Fixed
 
 - Railcraft Metal Posts and Metal Post Platforms having no crafting recipes.
+- Immersive Engineering's Arc Furnace recycling recipe scan adding several seconds to load time; it's now skipped.
 
 ---
 
