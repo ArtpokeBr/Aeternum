@@ -1,150 +1,109 @@
-def ferdinandFlowers = [
-    item("ferdinandsflowers:block_cff_flowers"),
-    item("ferdinandsflowers:block_cff_flowers", 1),
-    item("ferdinandsflowers:block_cff_flowers", 2),
-    item("ferdinandsflowers:block_cff_flowers", 3),
-    item("ferdinandsflowers:block_cff_flowers", 4),
-    item("ferdinandsflowers:block_cff_flowers", 5),
-    item("ferdinandsflowers:block_cff_flowers", 6),
-    item("ferdinandsflowers:block_cff_flowers", 7),
-    item("ferdinandsflowers:block_cff_flowers", 8),
-    item("ferdinandsflowers:block_cff_flowers", 9),
-    item("ferdinandsflowers:block_cff_flowers", 10),
-    item("ferdinandsflowers:block_cff_flowers", 11),
-    item("ferdinandsflowers:block_cff_flowers", 12),
-    item("ferdinandsflowers:block_cff_flowers", 13),
-    item("ferdinandsflowers:block_cff_flowers", 14),
-    item("ferdinandsflowers:block_cff_flowers", 15),
-    item("ferdinandsflowers:block_cff_flowersb"),
-    item("ferdinandsflowers:block_cff_flowersb", 1),
-    item("ferdinandsflowers:block_cff_flowersb", 2),
-    item("ferdinandsflowers:block_cff_flowersb", 3),
-    item("ferdinandsflowers:block_cff_flowersb", 4),
-    item("ferdinandsflowers:block_cff_flowersb", 5),
-    item("ferdinandsflowers:block_cff_flowersb", 6),
-    item("ferdinandsflowers:block_cff_flowersb", 7),
-    item("ferdinandsflowers:block_cff_flowersb", 8),
-    item("ferdinandsflowers:block_cff_flowersb", 9),
-    item("ferdinandsflowers:block_cff_flowersb", 10),
-    item("ferdinandsflowers:block_cff_flowersb", 11),
-    item("ferdinandsflowers:block_cff_flowersb", 12),
-    item("ferdinandsflowers:block_cff_flowersb", 13),
-    item("ferdinandsflowers:block_cff_flowersb", 14),
-    item("ferdinandsflowers:block_cff_flowersb", 15),
-    item("ferdinandsflowers:block_cff_flowersc"),
-    item("ferdinandsflowers:block_cff_flowersc", 1),
-    item("ferdinandsflowers:block_cff_flowersc", 2),
-    item("ferdinandsflowers:block_cff_flowersc", 3),
-    item("ferdinandsflowers:block_cff_flowersc", 4),
-    item("ferdinandsflowers:block_cff_flowersc", 5),
-    item("ferdinandsflowers:block_cff_flowersc", 6),
-    item("ferdinandsflowers:block_cff_flowersc", 7),
-    item("ferdinandsflowers:block_cff_flowersc", 8),
-    item("ferdinandsflowers:block_cff_flowersc", 9),
-    item("ferdinandsflowers:block_cff_flowersc", 10),
-    item("ferdinandsflowers:block_cff_flowersc", 11),
-    item("ferdinandsflowers:block_cff_flowersc", 12),
-    item("ferdinandsflowers:block_cff_flowersc", 13),
-    item("ferdinandsflowers:block_cff_flowersc", 14),
-    item("ferdinandsflowers:block_cff_flowersc", 15),
-    item("ferdinandsflowers:block_cff_flowersd"),
-    item("ferdinandsflowers:block_cff_flowersd", 1),
-    item("ferdinandsflowers:block_cff_flowersd", 2),
-    item("ferdinandsflowers:block_cff_flowersd", 3),
-    item("ferdinandsflowers:block_cff_flowersd", 4),
-    item("ferdinandsflowers:block_cff_flowersd", 5),
-    item("ferdinandsflowers:block_cff_flowersd", 6),
-    item("ferdinandsflowers:block_cff_flowersd", 7),
-    item("ferdinandsflowers:block_cff_flowersd", 8),
-    item("ferdinandsflowers:block_cff_flowersd", 9),
-    item("ferdinandsflowers:block_cff_flowersd", 10),
-    item("ferdinandsflowers:block_cff_flowersd", 11),
-    item("ferdinandsflowers:block_cff_flowersd", 12),
-    item("ferdinandsflowers:block_cff_flowersd", 13),
-    item("ferdinandsflowers:block_cff_flowersd", 14),
-    item("ferdinandsflowers:block_cff_flowersd", 15),
-    item("ferdinandsflowers:block_cff_flowerse"),
-    item("ferdinandsflowers:block_cff_flowerse", 1),
-    item("ferdinandsflowers:block_cff_flowerse", 2),
-    item("ferdinandsflowers:block_cff_flowerse", 3),
-    item("ferdinandsflowers:block_cff_flowerse", 4),
-    item("ferdinandsflowers:block_cff_flowerse", 5),
-    item("ferdinandsflowers:block_cff_flowerse", 6),
-    item("ferdinandsflowers:block_cff_flowerse", 7),
-    item("ferdinandsflowers:block_cff_flowerse", 8),
-    item("ferdinandsflowers:block_cff_flowerse", 9),
-    item("ferdinandsflowers:block_cff_flowerse", 10),
-    item("ferdinandsflowers:block_cff_flowerse", 11),
-    item("ferdinandsflowers:block_cff_flowerse", 12),
-    item("ferdinandsflowers:block_cff_flowerse", 13),
-    item("ferdinandsflowers:block_cff_flowerse", 14),
-    item("ferdinandsflowers:block_cff_flowerse", 15),
-    item("ferdinandsflowers:block_cff_doubles"),
-    item("ferdinandsflowers:block_cff_doubles", 1),
-    item("ferdinandsflowers:block_cff_doubles", 2),
-    item("ferdinandsflowers:block_cff_doubles", 3),
-    item("ferdinandsflowers:block_cff_doubles", 4),
-    item("ferdinandsflowers:block_cff_doubles", 5),
-    item("ferdinandsflowers:block_cff_doublesb"),
-    item("ferdinandsflowers:block_cff_doublesb", 1),
-    item("ferdinandsflowers:block_cff_doublesb", 2),
-    item("ferdinandsflowers:block_cff_doublesb", 3),
-    item("ferdinandsflowers:block_cff_doublesb", 4),
-    item("ferdinandsflowers:block_cff_doublesb", 5),
-    item("ferdinandsflowers:block_cff_doublesc"),
-    item("ferdinandsflowers:block_cff_doublesc", 1),
-    item("ferdinandsflowers:block_cff_doublesc", 2),
-    item("ferdinandsflowers:block_cff_doublesc", 3),
-    item("ferdinandsflowers:block_cff_doublesc", 4),
-    item("ferdinandsflowers:block_cff_doublesc", 5),
-    item("ferdinandsflowers:block_cff_doubless"),
-    item("ferdinandsflowers:block_cff_doubless", 1),
-    item("ferdinandsflowers:block_cff_doubless", 2),
-    item("ferdinandsflowers:block_cff_doubless", 3),
-    item("ferdinandsflowers:block_cff_doubless", 4),
-    item("ferdinandsflowers:block_cff_doubless", 5),
-    item("ferdinandsflowers:block_cff_doublesp"),
-    item("ferdinandsflowers:block_cff_doublesp", 1),
-    item("ferdinandsflowers:block_cff_doublesp", 2),
-    item("ferdinandsflowers:block_cff_doublesp", 3),
-    item("ferdinandsflowers:block_cff_doublesp", 4),
-    item("ferdinandsflowers:block_cff_doublesp", 5),
-    item("ferdinandsflowers:block_cff_desert"),
-    item("ferdinandsflowers:block_cff_desert", 1),
-    item("ferdinandsflowers:block_cff_desert", 2),
-    item("ferdinandsflowers:block_cff_desert", 3),
-    item("ferdinandsflowers:block_cff_desert", 4),
-    item("ferdinandsflowers:block_cff_desert", 5),
-    item("ferdinandsflowers:block_cff_desert", 6),
-    item("ferdinandsflowers:block_cff_desert", 7),
-    item("ferdinandsflowers:block_cff_desert", 8),
-    item("ferdinandsflowers:block_cff_desert", 9),
-    item("ferdinandsflowers:block_cff_desert", 10),
-    item("ferdinandsflowers:block_cff_desert", 11),
-    item("ferdinandsflowers:block_cff_desert", 12),
-    item("ferdinandsflowers:block_cff_desert", 13),
-    item("ferdinandsflowers:block_cff_desert", 14),
-    item("ferdinandsflowers:block_cff_desert", 15),
-    item("ferdinandsflowers:block_cff_ouch"),
-    item("ferdinandsflowers:block_cff_ouch", 1),
-    item("ferdinandsflowers:block_cff_ouch", 2),
-    item("ferdinandsflowers:block_cff_ouch", 3),
-    item("ferdinandsflowers:block_cff_ouch", 4),
-    item("ferdinandsflowers:block_cff_doublesd"),
-    item("ferdinandsflowers:block_cff_doublesd", 1),
-    item("ferdinandsflowers:block_cff_doublesd", 2),
-    item("ferdinandsflowers:block_cff_doublesd", 3),
-    item("ferdinandsflowers:block_cff_doublesd", 4),
-    item("ferdinandsflowers:block_cff_doublesd", 5),
-    item("ferdinandsflowers:block_cff_fungus"),
-    item("ferdinandsflowers:block_cff_fungus", 1),
-    item("ferdinandsflowers:block_cff_fungus", 2),
-    item("ferdinandsflowers:block_cff_fungus", 3),
-    item("ferdinandsflowers:block_cff_dark"),
-    item("ferdinandsflowers:block_cff_dark", 1)
+// [block name, number of metas (0..<count)]
+def ferdinandBlockCounts = [
+    ['block_cff_flowers', 16],
+    ['block_cff_flowersb', 16],
+    ['block_cff_flowersc', 16],
+    ['block_cff_flowersd', 16],
+    ['block_cff_flowerse', 16],
+    ['block_cff_doubles', 6],
+    ['block_cff_doublesb', 6],
+    ['block_cff_doublesc', 6],
+    ['block_cff_doubless', 6],
+    ['block_cff_doublesp', 6],
+    ['block_cff_desert', 16],
+    ['block_cff_ouch', 5],
+    ['block_cff_doublesd', 6],
+    ['block_cff_fungus', 4],
+    ['block_cff_dark', 2],
 ]
 
-for (flower in ferdinandFlowers) {
-    ore_dict.add('flower', flower)
-    ore_dict.add('allFlowers', flower)
+for (entry in ferdinandBlockCounts) {
+    def (block, metaCount) = entry
+    for (meta in 0..<metaCount) {
+        def flower = item("ferdinandsflowers:${block}", meta)
+        ore_dict.add('flower', flower)
+        ore_dict.add('allFlowers', flower)
+    }
+}
+
+//=====================================================================================
+// Ferdinand's Flowers adds its own extended 32-colour dye palette (flower_dye /
+// flower_dyeb, see EnumCFFDyes) instead of vanilla dyes. Only the FF colours that are
+// an exact match for an existing vanilla dye colour are redirected to that vanilla dye
+// below; flowers producing an in-between shade with no real vanilla counterpart (e.g.
+// red_orange, light_lavender, dark_magenta) keep producing FF's own dye untouched.
+//=====================================================================================
+
+def ffRemovedRecipeIds = [
+    'flower_dye_1', 'flower_dye_1b', 'flower_dye_1c',
+    'flower_dye_3', 'flower_dye_3b', 'flower_dye_3c',
+    'flower_dye_6', 'flower_dye_6b', 'flower_dye_6c',
+    'flower_dye_9', 'flower_dye_9b',
+    'flower_dye_10', 'flower_dye_10b', 'flower_dye_10c',
+    'flower_dye_14', 'flower_dye_14b',
+    'flower_dyeb_0', 'flower_dyeb_0b', 'flower_dyeb_0c',
+    'flower_dyeb_3', 'flower_dyeb_3b',
+    'flower_dyeb_6', 'flower_dyeb_6b', 'flower_dyeb_6c',
+    'flower_dyeb_10', 'flower_dyeb_10b',
+    'flower_dyeb_15', 'flower_dyeb_15b', 'flower_dyeb_15c',
+]
+
+for (id in ffRemovedRecipeIds) {
+    crafting.remove(resource("ferdinandsflowers:${id}"))
+}
+
+// [flower block, flower meta, vanilla dye meta, output count]
+def ffDyeFixes = [
+    ['block_cff_desert', 14, 2, 1],
+    ['block_cff_desert', 15, 5, 1],
+    ['block_cff_desert', 5, 14, 1],
+    ['block_cff_desert', 7, 9, 1],
+    ['block_cff_doubles', 2, 5, 2],
+    ['block_cff_doublesb', 3, 9, 2],
+    ['block_cff_doublesd', 0, 2, 2],
+    ['block_cff_doublesd', 5, 2, 2],
+    ['block_cff_flowers', 11, 11, 1],
+    ['block_cff_flowers', 12, 11, 1],
+    ['block_cff_flowers', 5, 9, 1],
+    ['block_cff_flowersb', 6, 11, 1],
+    ['block_cff_flowersb', 9, 14, 1],
+    ['block_cff_flowersc', 13, 1, 1],
+    ['block_cff_flowersc', 2, 10, 1],
+    ['block_cff_flowersc', 8, 1, 1],
+    ['block_cff_flowersd', 10, 6, 1],
+    ['block_cff_flowersd', 12, 12, 1],
+    ['block_cff_flowersd', 14, 4, 1],
+    ['block_cff_flowersd', 15, 13, 1],
+    ['block_cff_flowersd', 2, 1, 1],
+    ['block_cff_flowersd', 4, 14, 1],
+    ['block_cff_flowerse', 0, 10, 1],
+    ['block_cff_flowerse', 13, 13, 1],
+    ['block_cff_flowerse', 3, 5, 1],
+    ['block_cff_flowerse', 6, 12, 1],
+    ['block_cff_flowerse', 8, 4, 1],
+    ['block_cff_fungus', 12, 12, 1],
+    ['block_cff_fungus', 13, 6, 1],
+]
+
+for (fix in ffDyeFixes) {
+    def (block, flowerMeta, dyeMeta, count) = fix
+    crafting.addShapeless(
+        "ff_dye_fix_${block}_${flowerMeta}",
+        item("minecraft:dye:${dyeMeta}") * count,
+        [item("ferdinandsflowers:${block}:${flowerMeta}")]
+    )
+}
+
+// These specific colours no longer have any recipe producing them (replaced by vanilla
+// dye above), so hide just those metas from JEI. The other flower_dye/flower_dyeb
+// colours are still craftable and stay visible.
+def ffDyesToHide = [
+    ['flower_dye', 1], ['flower_dye', 3], ['flower_dye', 6],
+    ['flower_dye', 9], ['flower_dye', 10], ['flower_dye', 14],
+    ['flower_dyeb', 0], ['flower_dyeb', 3], ['flower_dyeb', 6],
+    ['flower_dyeb', 10], ['flower_dyeb', 15],
+]
+
+for (dye in ffDyesToHide) {
+    mods.jei.ingredient.hide(item("ferdinandsflowers:${dye[0]}", dye[1]))
 }

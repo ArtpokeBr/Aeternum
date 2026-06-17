@@ -7,6 +7,7 @@
 ### Changed
 
 - Mobs should spawn only on blocks with light level 0 and below now.
+- Ferdinand's Flowers colours with a direct vanilla dye equivalent (red, orange, yellow, lime, green, cyan, light blue, blue, purple, magenta, pink) now produce that vanilla dye instead of the mod's own dye item.
 
 ### Fixed
 
