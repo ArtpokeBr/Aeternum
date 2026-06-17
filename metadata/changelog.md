@@ -13,6 +13,7 @@
 - Amber unified across mods: Thaumcraft's Amber is now the canonical item, with Fossils & Archeology's and Biomes O'Plenty's Amber both converting into it (same precedent as the existing Ruby/Sapphire/Peridot unification).
 - Thermal Expansion's Pulverizer recipe for Amber Ore now uses Thaumcraft's Amber Ore instead of Biomes O'Plenty's, matching the new canonical Amber source.
 - Forestry's Natura-compat Fertilizer recipe now accepts any grain (ore('listAllgrain')) instead of only Natura's Barley.
+- Forestry Farms now also accept Actually Additions' and Industrial Foregoing's Fertilizer as a fertilizer source.
 
 ### Fixed
 
