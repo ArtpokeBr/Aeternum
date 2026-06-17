@@ -10,7 +10,7 @@
 
 ### Fixed
 
-- 
+- Railcraft Metal Posts and Metal Post Platforms having no crafting recipes.
 
 ---
 
