@@ -22,3 +22,6 @@ mods.thermalexpansion.pulverizer.recipeBuilder()
 .register()
 
 //=================================================================================================
+
+//Making Rubber Wood Great Again
+ore_dict.add('logWood', item('ic2:rubber_wood'))

@@ -23,6 +23,7 @@
   - Astral Sorcery's Evershifting Fountain and Mineralis ritual rewards (weighted by aeternum's own `fluid_rarities.cfg`/`mineralis_ritual.cfg`)
   - Immersive Engineering's Chemical Thrower (concrete spraying) and Garden Cloche liquid fertilizers (Water, Industrial Foregoing's Meat/Sewage, Forestry Honey, Short Mead, Botania's Life Essence, Ender IO's Nutrient Distillation/Vapor of Levity), the latter via RoidTweaker
   - Thermal Expansion's Arboreal Extractor tree-tapping (resin/sap)
+- IC2 Rubber is now considered a logWood.
 
 ### Fixed
 
