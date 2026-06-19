@@ -28,6 +28,7 @@
 - Ender Utilities Ender Alloys now can only be made in a EnderIO's Alloy Smelter.
 - Added Additional Recipes to make Ender Eye Dust.
 - Added Extractor Recipes to Cinder Pearls and Faint Amaranths.
+- Fossils & Archeology's Fossil block can now be processed in an Ender IO Enhanced Sag Mill into Bone (guaranteed), with chance-based bonus outputs of Biofossil, Relic Scrap, and Plant Fossil, scaling with grinding balls.
 
 ### Fixed
 
