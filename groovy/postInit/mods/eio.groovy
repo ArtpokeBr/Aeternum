@@ -47,3 +47,43 @@ mods.jei.ingredient.hide(item('enderio:item_material', 26))
 ore_dict.remove('dustCopper', item('enderio:item_material', 26))
 
 //=================================================================================================
+
+//Ender Utilities Ender Alloy Smelting ============================================================
+
+crafting.removeByOutput(item('enderutilities:enderpart', 0))
+mods.enderio.alloy_smelter.recipeBuilder()
+    .input(ore('ingotIron') * 4, item('minecraft:ender_pearl'))
+    .output(item('enderutilities:enderpart', 0) * 4)
+    .energy(3200)
+    .tierSimple()
+.register()
+
+crafting.removeByOutput(item('enderutilities:enderpart', 1))
+mods.enderio.alloy_smelter.recipeBuilder()
+    .input(ore('ingotGold') * 4, item('minecraft:ender_pearl'))
+    .output(item('enderutilities:enderpart', 1) * 4)
+    .energy(6400)
+    .tierNormal()
+.register()
+
+crafting.removeByOutput(item('enderutilities:enderpart', 2))
+mods.enderio.alloy_smelter.recipeBuilder()
+    .input(ore('ingotEnderium') * 4, ore('dustEnderEye'))
+    .output(item('enderutilities:enderpart', 2) * 4)
+    .energy(12800)
+    .tierEnhanced()
+.register()
+
+mods.thermalexpansion.pulverizer.recipeBuilder()
+    .input(ore('enderEye'))
+    .output(ore('dustEnderEye'))
+    .energy(2000)
+.register()
+
+mods.enderio.sag_mill.recipeBuilder()
+    .input(ore('enderEye'))
+    .output(ore('dustEnderEye'))
+    .tierAny()
+.register()
+
+//=================================================================================================

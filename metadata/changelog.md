@@ -25,6 +25,7 @@
   - Thermal Expansion's Arboreal Extractor tree-tapping (resin/sap)
 - IC2 Rubber is now considered a logWood.
 - Rustic's Apiary now shows its bees and honeycombs on TheOneProbe overlay.
+- Ender Utilities Ender Alloys now can only be made in a EnderIO's Alloy Smelter.
 
 ### Fixed
 
