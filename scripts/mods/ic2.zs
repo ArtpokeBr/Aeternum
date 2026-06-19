@@ -8,6 +8,6 @@ mods.nuclearcraft.Infuser.addRecipe(<environmentalmaterials:hardened_stone> * 16
 
 //Manufactory Recipe for Ender Eye Dust ===========================================================
 
-mods.nuclearcraft.Manufactory.addRecipe(<ore:pearlEnderEye>, <ic2:dust:32> * 1, 200.0, 100.0, 0.0);
+mods.nuclearcraft.Manufactory.addRecipe(<minecraft:ender_eye>, <ic2:dust:32> * 1, 1.2, 1.0, 0.0);
 
 //=================================================================================================
