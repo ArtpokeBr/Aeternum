@@ -27,6 +27,7 @@
 - Rustic's Apiary now shows its bees and honeycombs on TheOneProbe overlay.
 - Ender Utilities Ender Alloys now can only be made in a EnderIO's Alloy Smelter.
 - Added Additional Recipes to make Ender Eye Dust.
+- Added Extractor Recipes to Cinder Pearls and Faint Amaranths.
 
 ### Fixed
 
