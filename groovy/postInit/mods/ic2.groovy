@@ -25,3 +25,34 @@ mods.thermalexpansion.pulverizer.recipeBuilder()
 
 //Making Rubber Wood Great Again
 ore_dict.add('logWood', item('ic2:rubber_wood'))
+
+// More ways to make Ender Eye Dust ===============================================================
+
+mods.thermalexpansion.pulverizer.recipeBuilder()
+    .input(ore('pearlEnderEye'))
+    .output(item('ic2:dust', 32))
+    .energy(2000)
+.register()
+
+mods.enderio.sag_mill.recipeBuilder()
+    .input(ore('pearlEnderEye'))
+    .output(item('ic2:dust', 32))
+    .tierAny()
+.register()
+
+mods.integrateddynamics.squeezer.recipeBuilder()
+    .input(ore('pearlEnderEye'))
+    .output(item('ic2:dust', 32))
+.register()
+
+mods.integrateddynamics.mechanical_squeezer.recipeBuilder()
+    .input(ore('pearlEnderEye'))
+    .output(item('ic2:dust', 32))
+.register()
+
+mods.actuallyadditions.crusher.recipeBuilder()
+    .input(ore('pearlEnderEye'))
+    .output(item('ic2:dust', 32))
+.register()
+
+// ================================================================================================

@@ -74,16 +74,4 @@ mods.enderio.alloy_smelter.recipeBuilder()
     .tierEnhanced()
 .register()
 
-mods.thermalexpansion.pulverizer.recipeBuilder()
-    .input(ore('enderEye'))
-    .output(ore('dustEnderEye'))
-    .energy(2000)
-.register()
-
-mods.enderio.sag_mill.recipeBuilder()
-    .input(ore('enderEye'))
-    .output(ore('dustEnderEye'))
-    .tierAny()
-.register()
-
 //=================================================================================================
