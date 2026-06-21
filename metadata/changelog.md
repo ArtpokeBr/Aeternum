@@ -2,7 +2,8 @@
 
 ### Mod Changes
 
-- 
+- Added Backpack Display.
+
 ### Changed 
 
 - Aeternum now provides a Dark Mode ResourcePack.
@@ -12,6 +13,7 @@
 -
 
 --- 
+
 # Aeternum 1.2.0
 
 ### Mod Changes
