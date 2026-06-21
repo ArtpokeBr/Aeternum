@@ -5,7 +5,7 @@
 - 
 ### Changed 
 
--
+- Aeternum now provides a Dark Mode ResourcePack.
 
 ### Fixed
 
