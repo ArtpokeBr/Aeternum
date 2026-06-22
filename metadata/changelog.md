@@ -7,10 +7,11 @@
 ### Changed 
 
 - Aeternum now provides a Dark Mode ResourcePack.
+- Iron Tanks' and BuildCraft's tanks now show their fluid contents, fill level, and a bucket icon on TheOneProbe overlay.
 
 ### Fixed
 
--
+- Some Resources and Scripts not being shipped with the Pack.
 
 --- 
 
