@@ -1,3 +1,19 @@
+# Aeternum 1.4.0
+
+### Mod Changes
+
+- 
+
+### Changed 
+
+- Aqueous Soil now pauses auto-harvesting when receiving a redstone signal. Its tooltip has been updated to reflect this.
+
+### Fixed
+
+- 
+
+---
+
 # Aeternum 1.3.0
 
 ### Mod Changes

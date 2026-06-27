@@ -1,5 +1,8 @@
 item.aeternum.copper_chipset.name=Copper Chipset
 
+# Aqueous Soil redstone-disable tooltip (overrides roots' tile.aqueous_soil.effect)
+tile.aqueous_soil.effect=Automatically harvests plants when they reach maturity. Disable with a redstone signal.
+
 # Requious Frakto JEI tab titles (requious.jei.recipe.<resourceName>)
 requious.jei.recipe.liquid_interaction=Liquid Heat Exchanger
 requious.jei.recipe.neromantic_prime=Evershifting Fountain
