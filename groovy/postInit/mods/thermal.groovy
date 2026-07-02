@@ -35,3 +35,12 @@ mods.thermalexpansion.refinery.recipeBuilder()
 .register()
 
 // ================================================================================================
+
+//Rubber Wood Direcly in the Sawmill
+mods.thermalexpansion.tapper.addItem(item('ic2:rubber_wood'), fluid('resin') * 40)
+mods.thermalexpansion.sawmill.recipeBuilder()
+    .input(item('ic2:rubber_wood'))
+    .output(item('minecraft:planks', 3) * 6, item('thermalfoundation:material', 800))
+    .chance(100)
+    .energy(1000)
+.register()

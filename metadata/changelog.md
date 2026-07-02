@@ -10,7 +10,7 @@
 
 ### Fixed
 
-- 
+- Added Thermal Expansion Sawmill and Arboreal Extractor Compat to IC2 Rubber Wood. 
 
 ---
 
