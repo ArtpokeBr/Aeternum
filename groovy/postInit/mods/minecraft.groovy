@@ -8,3 +8,11 @@ crafting.shapelessBuilder()
 .register()
 
 //=================================================================================================
+
+//Clay Block by Hand
+crafting.shapedBuilder()
+    .output(item('minecraft:clay'))
+    .shape('CC',
+           'CC')
+    .key([C: item('minecraft:clay_ball')])
+.register()

@@ -7,6 +7,7 @@
 ### Changed 
 
 - Aqueous Soil now pauses auto-harvesting when receiving a redstone signal. Its tooltip has been updated to reflect this.
+- Added a Clay Ball to Clay Block Shaped Recipe.
 
 ### Fixed
 
