@@ -3,6 +3,7 @@
 ### Mod Changes
 
 - Added Thaumic Info.
+- Added Immersive Fixes.
 
 ### Changed 
 
