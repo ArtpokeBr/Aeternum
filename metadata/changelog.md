@@ -2,7 +2,7 @@
 
 ### Mod Changes
 
-- 
+- Added Thaumic Info.
 
 ### Changed 
 
