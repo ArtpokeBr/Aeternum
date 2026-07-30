@@ -44,3 +44,10 @@ mods.thermalexpansion.sawmill.recipeBuilder()
     .chance(100)
     .energy(1000)
 .register()
+
+//Sesame Seeds itself into Sesame Oil
+mods.thermalexpansion.centrifuge.recipeBuilder()
+    .input(item('harvestcraft:sesameseedsitem'))
+    .output(item('harvestcraft:sesameoilitem'), item('harvestcraft:grainbaititem'))
+    .energy(4000)
+.register()
