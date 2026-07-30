@@ -4,6 +4,7 @@
 
 - Added Thaumic Info.
 - Added Immersive Fixes.
+- Added Unlimited Chisel Works.
 
 ### Changed 
 
