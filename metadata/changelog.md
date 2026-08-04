@@ -2,9 +2,11 @@
 
 ### Mod Changes
 
-- Added Thaumic Info.
-- Added Immersive Fixes.
-- Added Unlimited Chisel Works.
+- Added: Thaumic Info.
+- Added: Immersive Fixes.
+- Added: Unlimited Chisel Works.
+
+- Replaced: Improved Cleanroom Relauncher -> Cleanroom Relauncher.
 
 ### Changed 
 
