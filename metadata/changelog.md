@@ -1,3 +1,11 @@
+# Aeternum 1.5.0
+
+### Mod Changes
+
+- Added: Rather Enough Immersive Engineering Multiblocks.
+
+---
+
 # Aeternum 1.4.0
 
 ### Mod Changes
