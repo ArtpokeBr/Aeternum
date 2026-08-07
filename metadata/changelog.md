@@ -4,6 +4,10 @@
 
 - Added: Rather Enough Immersive Engineering Multiblocks.
 
+### Changed
+
+- Spice of Life's Lunchbox can now hold up to 8 Items per slot.
+
 ---
 
 # Aeternum 1.4.0
