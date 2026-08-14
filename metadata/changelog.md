@@ -12,6 +12,7 @@
 - Spice of Life's Lunchbox can now hold up to 8 Items per slot.
 - Buffed Thermal Expansion's Augment Slots for Dynamos and Machines per Tier.
 - Buffed Thermal Expansion's Dynamo Generation.
+- Blacklisted Evilcraft's Display Stands and Biome Bottles from HEI.
 
 ---
 
