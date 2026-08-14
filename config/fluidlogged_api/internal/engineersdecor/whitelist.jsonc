@@ -1,0 +1,122 @@
+// DO NOT EDIT!
+[
+    {
+        "blockId": [
+            "engineersdecor:iron_floor_edge_light",
+            "engineersdecor:iron_inset_light",
+            "engineersdecor:factory_hopper",
+            "engineersdecor:sign_caution",
+            "engineersdecor:sign_danger",
+            "engineersdecor:sign_exit",
+            "engineersdecor:sign_factoryarea",
+            "engineersdecor:sign_firehazard",
+            "engineersdecor:sign_frost",
+            "engineersdecor:sign_hotsurface",
+            "engineersdecor:sign_hotwire",
+            "engineersdecor:sign_laser",
+            "engineersdecor:sign_magichazard",
+            "engineersdecor:sign_magneticfield",
+            "engineersdecor:sign_radioactive",
+            "engineersdecor:steel_double_t_support",
+            "engineersdecor:steel_floor_grating",
+            "engineersdecor:steel_framed_window",
+            "engineersdecor:steel_mech_fence_gate",
+            "engineersdecor:steel_table",
+            "engineersdecor:straight_pipe_valve",
+            "engineersdecor:straight_pipe_valve_redstone",
+            "engineersdecor:straight_pipe_valve_redstone_analog",
+            "engineersdecor:thick_steel_pole",
+            "engineersdecor:thick_steel_pole_head",
+            "engineersdecor:thin_steel_pole",
+            "engineersdecor:thin_steel_pole_head",
+            "engineersdecor:treated_wood_broad_windowsill",
+            "engineersdecor:treated_wood_pole",
+            "engineersdecor:treated_wood_pole_head",
+            "engineersdecor:treated_wood_pole_support",
+            "engineersdecor:treated_wood_side_table",
+            "engineersdecor:treated_wood_stool",
+            "engineersdecor:treated_wood_window",
+            "engineersdecor:treated_wood_windowsill"
+        ],
+        "canFluidFlow": true
+    },
+    {
+        "blockId": [
+            "engineersdecor:clinker_brick_slab",
+            "engineersdecor:clinker_brick_stained_slab",
+            "engineersdecor:gas_concrete_slab",
+            "engineersdecor:rebar_concrete_slab",
+            "engineersdecor:rebar_concrete_tile_slab",
+            "engineersdecor:slag_brick_slab"
+        ],
+        "canFluidFlow": ["up", "north", "south", "east", "west"],
+        "states": {"parts": 0 }
+    },
+    {
+        "blockId": [
+            "engineersdecor:clinker_brick_slab",
+            "engineersdecor:clinker_brick_stained_slab",
+            "engineersdecor:gas_concrete_slab",
+            "engineersdecor:rebar_concrete_slab",
+            "engineersdecor:rebar_concrete_tile_slab",
+            "engineersdecor:slag_brick_slab"
+        ],
+        "canFluidFlow": ["down", "north", "south", "east", "west"],
+        "states": {"parts": 1 }
+    },
+    {
+        "blockId": [
+            "engineersdecor:halfslab_concrete",
+            "engineersdecor:halfslab_gas_concrete",
+            "engineersdecor:halfslab_rebar_concrete",
+            "engineersdecor:halfslab_sheetmetal_aluminum",
+            "engineersdecor:halfslab_sheetmetal_copper",
+            "engineersdecor:halfslab_sheetmetal_gold",
+            "engineersdecor:halfslab_sheetmetal_iron",
+            "engineersdecor:halfslab_sheetmetal_steel",
+            "engineersdecor:halfslab_treated_wood"
+        ],
+        "canFluidFlow": ["up", "north", "south", "east", "west"],
+        "states": {"parts": [0, 1, 2, 3, 4, 5, 6 ]}
+    },
+    {
+        "blockId": "engineersdecor:treated_wood_crafting_table",
+        "boxes": {"min": 12, "max": 16},
+        "canFluidFlow": ["down", "north", "south", "east", "west"]
+    },
+    {
+        "blockId": "engineersdecor:treated_wood_table",
+        "boxes": {"min": 13, "max": 16},
+        "canFluidFlow": ["down", "north", "south", "east", "west"]
+    },
+    {
+        "blockId": "engineersdecor:small_block_breaker",
+        "boxes": {"min": 0, "max": 4},
+        "canFluidFlow": ["up", "north", "south", "east", "west"]
+    },
+    {
+        "blockId": "engineersdecor:small_tree_cutter",
+        "boxes": {"min": 0, "max": 3},
+        "canFluidFlow": ["up", "north", "south", "east", "west"]
+    },
+    {
+        "blockId": "engineersdecor:sign_defense",
+        "canFluidFlow": ["down", "up", "south", "east", "west"],
+        "states": {"facing": "north"}
+    },
+    {
+        "blockId": "engineersdecor:sign_defense",
+        "canFluidFlow": ["down", "up", "north", "east", "west"],
+        "states": {"facing": "south"}
+    },
+    {
+        "blockId": "engineersdecor:sign_defense",
+        "canFluidFlow": ["down", "up", "north", "south", "west"],
+        "states": {"facing": "east"}
+    },
+    {
+        "blockId": "engineersdecor:sign_defense",
+        "canFluidFlow": ["down", "up", "north", "south", "east"],
+        "states": {"facing": "west"}
+    }
+]

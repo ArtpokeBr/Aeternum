@@ -3,6 +3,9 @@
 ### Mod Changes
 
 - Added: Rather Enough Immersive Engineering Multiblocks.
+- Added: Demagnetize.
+- Added: Engineer's Decor.
+- Added: Engineer's Doors.
 
 ### Changed
 
