@@ -8,6 +8,8 @@
 - Added: Engineer's Doors.
 - Added: Ender Quarry Optimizer.
 
+- Removed: ThaumicJEI.
+
 ### Changed
 
 - Spice of Life's Lunchbox can now hold up to 8 Items per slot.
