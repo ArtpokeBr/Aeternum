@@ -11,24 +11,24 @@ import scripts.jei.requious.add as addRecipe;
 // -----------------------------------------------------------------------
 // Liquid Heat Exchanger - lava/hot coolant cooling
 // -----------------------------------------------------------------------
-var x = <assembly:liquid_interaction>;
-x.addJEICatalyst(<ic2:te:31>);
-x.setJEIFluidSlot(0, 0, 'liquid_input');
-x.setJEIItemSlot(1, 0, 'item_in');
-x.setJEIDurationSlot(2, 0, 'duration', scripts.jei.requious.getVisGauge(5, 1));
-x.setJEIFluidSlot(3, 0, 'liquid_output');
+// var x = <assembly:liquid_interaction>;
+// x.addJEICatalyst(<ic2:te:31>);
+// x.setJEIFluidSlot(0, 0, 'liquid_input');
+// x.setJEIItemSlot(1, 0, 'item_in');
+// x.setJEIDurationSlot(2, 0, 'duration', scripts.jei.requious.getVisGauge(5, 1));
+// x.setJEIFluidSlot(3, 0, 'liquid_output');
 
-for l_in, l_out in {
-  lava          : 'ic2pahoehoe_lava',
-  ic2hot_coolant: 'ic2coolant',
-} as string[string] {
-  x.addJEIRecipe(AssemblyRecipe.create(function (container) {
-    container.addFluidOutput('liquid_output', game.getLiquid(l_out));
-  })
-    .requireFluid('liquid_input', game.getLiquid(l_in))
-    .requireItem('item_in', <ic2:crafting:7> * 10)
-  );
-}
+// for l_in, l_out in {
+//   lava          : 'ic2pahoehoe_lava',
+//   ic2hot_coolant: 'ic2coolant',
+// } as string[string] {
+//   x.addJEIRecipe(AssemblyRecipe.create(function (container) {
+//     container.addFluidOutput('liquid_output', game.getLiquid(l_out));
+//   })
+//     .requireFluid('liquid_input', game.getLiquid(l_in))
+//     .requireItem('item_in', <ic2:crafting:7> * 10)
+//   );
+// }
 
 // -----------------------------------------------------------------------
 // Crop-Matron / Crystal Memory Chip - IC2 crop database reference
@@ -109,20 +109,20 @@ addCrop('diareed'       , [<ic2:dust:36>,<minecraft:diamond>]                   
 // -----------------------------------------------------------------------
 // Semi-Fluid Generator
 // -----------------------------------------------------------------------
-x = <assembly:ic2_semifluid>;
-x.addJEICatalyst(<ic2:te:7>);
-x.setJEIFluidSlot(0, 0, 'fluid_in');
-x.setJEIDurationSlot(1, 0, 'duration', SlotVisual.arrowRight());
-x.setJEIEnergySlot(2, 0, 'energy_out', 'rf');
+// x = <assembly:ic2_semifluid>;
+// x.addJEICatalyst(<ic2:te:7>);
+// x.setJEIFluidSlot(0, 0, 'fluid_in');
+// x.setJEIDurationSlot(1, 0, 'duration', SlotVisual.arrowRight());
+// x.setJEIEnergySlot(2, 0, 'energy_out', 'rf');
 
-function semifluid(input as ILiquidStack, eu_t as double) as void {
-  <assembly:ic2_semifluid>.addJEIRecipe(AssemblyRecipe.create(function (c) {
-    c.addEnergyOutput('energy_out', eu_t * 4, 0);
-  })
-    .requireFluid('fluid_in', input)
-  );
-}
+// function semifluid(input as ILiquidStack, eu_t as double) as void {
+//   <assembly:ic2_semifluid>.addJEIRecipe(AssemblyRecipe.create(function (c) {
+//     c.addEnergyOutput('energy_out', eu_t * 4, 0);
+//   })
+//     .requireFluid('fluid_in', input)
+//   );
+// }
 
-semifluid(<fluid:biomass>, 8);
-semifluid(<fluid:ic2biogas>, 16);
-semifluid(<fluid:bio.ethanol>, 32);
+// semifluid(<fluid:biomass>, 8);
+// semifluid(<fluid:ic2biogas>, 16);
+// semifluid(<fluid:bio.ethanol>, 32);
