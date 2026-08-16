@@ -13,6 +13,7 @@
 - Buffed Thermal Expansion's Augment Slots for Dynamos and Machines per Tier.
 - Buffed Thermal Expansion's Dynamo Generation.
 - Blacklisted Evilcraft's Display Stands and Biome Bottles from HEI.
+- Added a Mixin to Fix an Issue with Embers Freeze during Boot.
 
 ---
 
