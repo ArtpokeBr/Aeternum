@@ -6,6 +6,7 @@
 - Added: Demagnetize.
 - Added: Engineer's Decor.
 - Added: Engineer's Doors.
+- Added: Ender Quarry Optimizer.
 
 ### Changed
 
