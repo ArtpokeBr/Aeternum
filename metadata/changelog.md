@@ -20,6 +20,7 @@
 - Added a Mixin to Fix an Issue with Embers Freeze during Boot.
 - Reworked Immersive Engineering's Blueprint Recipes.
 - Added more JEI Tabs to IC2 Machines.
+- Immersive Engineering's Circuit Board is now considered a "circuitBasic".
 
 ---
 

@@ -1,4 +1,7 @@
 
+//Making the Circuit Board a bit more Useful
+ore_dict.add('circuitBasic', item('immersiveengineering:material', 27))
+
 //Remaking Blueprint Recipes ======================================================================
 
 //Molds
