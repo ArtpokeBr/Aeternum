@@ -22,6 +22,8 @@
 - Added more JEI Tabs to IC2 Machines.
 - Immersive Engineering's Circuit Board is now considered a "circuitBasic".
 - Disabled IC2's Mixins.
+- Improved JER Performance via a Mixin. (Original Credits goes to the E2EE Dev!)
+- Improved CyclopsCore Server Performance via a Mixin. (Original Credits goes to the E2EE Dev!)
 
 ---
 
