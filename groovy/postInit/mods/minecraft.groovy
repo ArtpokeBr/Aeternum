@@ -87,6 +87,51 @@ crafting.shapedBuilder()
     ])
 .register()
 
+
+// Readding Hopper Shortcut Recipe for JEI Ordering Reasons.
+crafting.remove('extrautils2:shortcut_hopper')
+crafting.shapedBuilder()
+    .output(item('minecraft:hopper'))
+    .shape(
+        'SLS',
+        'SLS',
+        ' S '
+    )
+    .key([
+        S: ore('ingotIron'),
+        L: ore('logWood')
+    ])
+.register()
+
+//Hopper with Steel ===============================================================================
+crafting.remove('quark:hopper')
+crafting.shapedBuilder()
+    .output(item('minecraft:hopper') * 2)
+    .shape(
+        'S S',
+        'SCS',
+        ' S '
+    )
+    .key([
+        S: ore('ingotSteel'),
+        C: ore('chestWood')
+    ])
+.register()
+
+crafting.shapedBuilder()
+    .output(item('minecraft:hopper') * 2)
+    .shape(
+        'SLS',
+        'SLS',
+        ' S '
+    )
+    .key([
+        S: ore('ingotSteel'),
+        L: ore('logWood')
+    ])
+.register()
+
+
 // ================================================================================================
 
 //OreDicting Vanilla Clay Recipe ==================================================================

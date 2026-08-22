@@ -24,7 +24,7 @@
 - Disabled IC2's Mixins.
 - Improved JER Performance via a Mixin. (Original Credits goes to the E2EE Dev!)
 - Improved CyclopsCore Server Performance via a Mixin. (Original Credits goes to the E2EE Dev!)
-- Added Alt Recipes for Buckets, Pistons, Cauldrons and Tripwires.
+- Added Alt Recipes for Buckets, Pistons, Cauldrons, Hoppers and Tripwires.
 
 ---
 
