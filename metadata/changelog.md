@@ -26,6 +26,8 @@
 - Improved CyclopsCore Server Performance via a Mixin. (Original Credits goes to the E2EE Dev!)
 - Added Alt Recipes for Buckets, Pistons, Cauldrons, Hoppers and Tripwires.
 - Added a Roots Transmutation Recipe for Copper Blocks to Aluminum Blocks.
+- Buffed Immersive Engineering's Metal Press.
+- Buffed Immersive Tech's Multiblocks.
 
 ---
 
