@@ -28,6 +28,7 @@
 - Added a Roots Transmutation Recipe for Copper Blocks to Aluminum Blocks.
 - Buffed Immersive Engineering's Metal Press.
 - Buffed Immersive Tech's Multiblocks.
+- Added Nutrional Values to Farmer's Delight's Foods.
 
 ---
 
