@@ -7,6 +7,7 @@
 ### Changed 
 
 - Disabled Salutation's Chat Override.
+- Added Immersive Engineering's Squeezer Recipes for Root's Elemental Seeds.
 
 ### Fixed
 

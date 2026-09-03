@@ -29,3 +29,22 @@ crafting.shapelessBuilder()
 .register()
 
 // ================================================================================================
+
+//Squeezer ========================================================================================
+
+//Root's Seeds to Plant Oil
+def roots_seeds = [
+    'roots:moonglow_seed',
+    'roots:pereskia_bulb',
+    'roots:spirit_herb_seed',
+    'roots:wildewheet_seed'
+]
+for (seed in roots_seeds) {
+    mods.immersiveengineering.squeezer.recipeBuilder()
+        .input(item(seed))
+        .fluidOutput(fluid('plantoil') * 120)
+        .energy(100)
+    .register()
+}
+
+// ================================================================================================
