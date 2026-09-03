@@ -1,3 +1,19 @@
+# Aeternum 1.6.0
+
+### Mod Changes
+
+- 
+
+### Changed 
+
+- Disabled Salutation's Chat Override.
+
+### Fixed
+
+- 
+
+---
+
 # Aeternum 1.5.0
 
 ### Mod Changes
