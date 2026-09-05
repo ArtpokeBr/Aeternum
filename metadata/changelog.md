@@ -8,6 +8,8 @@
 
 - Disabled Salutation's Chat Override.
 - Added Immersive Engineering's Squeezer Recipes for Root's Elemental Seeds.
+- Basic Ender Alloy now requires Copper instead of Iron ingots.
+- Enhanced Ender Alloy now requires Platinum instead of Enderium Ingots.
 
 ### Fixed
 
