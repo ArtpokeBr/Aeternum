@@ -48,3 +48,14 @@ for (seed in roots_seeds) {
 }
 
 // ================================================================================================
+
+//Refinery ========================================================================================
+
+//Biocrude variant of the vanilla Biodiesel recipe (Ethanol + Plant Oil -> Biodiesel)
+mods.immersiveengineering.refinery.recipeBuilder()
+    .fluidInput(fluid('ethanol') * 8, fluid('biocrude') * 8)
+    .fluidOutput(fluid('biodiesel') * 16)
+    .energy(80)
+.register()
+
+// ================================================================================================
