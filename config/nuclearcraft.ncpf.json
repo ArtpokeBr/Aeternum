@@ -700,7 +700,7 @@
                 "modules": {}
               },
               "coefficient": 3.0,
-              "power": 256.0
+              "power": 192.0
             }
           }
         }
@@ -1712,36 +1712,6 @@
                   }
                 },
                 {
-                  "oredict": "ingotUranium234",
-                  "type": "oredict",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:irradiator_stats": {
-                      "heat": 0.0,
-                      "output": {
-                        "oredict": "ingotUranium235",
-                        "type": "oredict",
-                        "modules": {}
-                      },
-                      "efficiency": 4.07E-6
-                    }
-                  }
-                },
-                {
-                  "oredict": "dustProtactinium231",
-                  "type": "oredict",
-                  "modules": {
-                    "nuclearcraft:overhaul_msr:irradiator_stats": {
-                      "heat": 0.0,
-                      "output": {
-                        "oredict": "dustProtactinium233",
-                        "type": "oredict",
-                        "modules": {}
-                      },
-                      "efficiency": 3.05E-5
-                    }
-                  }
-                },
-                {
                   "oredict": "ingotCobalt",
                   "type": "oredict",
                   "modules": {
@@ -1749,6 +1719,21 @@
                       "heat": 0.0,
                       "output": {
                         "oredict": "ingotCobalt60",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 0.0
+                    }
+                  }
+                },
+                {
+                  "oredict": "ingotIridium192",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_msr:irradiator_stats": {
+                      "heat": 0.0,
+                      "output": {
+                        "oredict": "ingotIridium",
                         "type": "oredict",
                         "modules": {}
                       },
@@ -5894,12 +5879,12 @@
               "modules": {}
             },
             {
-              "oredict": "ingotUranium235",
+              "oredict": "ingotCobalt60",
               "type": "oredict",
               "modules": {}
             },
             {
-              "oredict": "ingotCobalt60",
+              "oredict": "ingotIridium",
               "type": "oredict",
               "modules": {}
             },
@@ -5983,18 +5968,6 @@
               }
             },
             {
-              "name": "nuclearcraft:uranium",
-              "metadata": 5,
-              "type": "legacy_item",
-              "modules": {
-                "plannerator:tags": {
-                  "tags": [
-                    "ingotUranium235"
-                  ]
-                }
-              }
-            },
-            {
               "name": "qmd:isotope",
               "metadata": 6,
               "type": "legacy_item",
@@ -6002,6 +5975,18 @@
                 "plannerator:tags": {
                   "tags": [
                     "ingotCobalt60"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "thermalfoundation:material",
+              "metadata": 135,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotIridium"
                   ]
                 }
               }
@@ -6043,30 +6028,6 @@
               }
             },
             {
-              "name": "qmd:isotope",
-              "metadata": 4,
-              "type": "legacy_item",
-              "modules": {
-                "plannerator:tags": {
-                  "tags": [
-                    "ingotUranium234"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "qmd:isotope",
-              "metadata": 5,
-              "type": "legacy_item",
-              "modules": {
-                "plannerator:tags": {
-                  "tags": [
-                    "dustProtactinium231"
-                  ]
-                }
-              }
-            },
-            {
               "name": "qmd:ingot",
               "metadata": 4,
               "type": "legacy_item",
@@ -6098,6 +6059,18 @@
                 "plannerator:tags": {
                   "tags": [
                     "ingotCobalt"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:isotope",
+              "metadata": 7,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotIridium192"
                   ]
                 }
               }
@@ -8095,36 +8068,6 @@
                   }
                 },
                 {
-                  "oredict": "ingotUranium234",
-                  "type": "oredict",
-                  "modules": {
-                    "nuclearcraft:overhaul_sfr:irradiator_stats": {
-                      "heat": 0.0,
-                      "output": {
-                        "oredict": "ingotUranium235",
-                        "type": "oredict",
-                        "modules": {}
-                      },
-                      "efficiency": 4.07E-6
-                    }
-                  }
-                },
-                {
-                  "oredict": "dustProtactinium231",
-                  "type": "oredict",
-                  "modules": {
-                    "nuclearcraft:overhaul_sfr:irradiator_stats": {
-                      "heat": 0.0,
-                      "output": {
-                        "oredict": "dustProtactinium233",
-                        "type": "oredict",
-                        "modules": {}
-                      },
-                      "efficiency": 3.05E-5
-                    }
-                  }
-                },
-                {
                   "oredict": "ingotCobalt",
                   "type": "oredict",
                   "modules": {
@@ -8132,6 +8075,21 @@
                       "heat": 0.0,
                       "output": {
                         "oredict": "ingotCobalt60",
+                        "type": "oredict",
+                        "modules": {}
+                      },
+                      "efficiency": 0.0
+                    }
+                  }
+                },
+                {
+                  "oredict": "ingotIridium192",
+                  "type": "oredict",
+                  "modules": {
+                    "nuclearcraft:overhaul_sfr:irradiator_stats": {
+                      "heat": 0.0,
+                      "output": {
+                        "oredict": "ingotIridium",
                         "type": "oredict",
                         "modules": {}
                       },
@@ -11119,12 +11077,12 @@
               "modules": {}
             },
             {
-              "oredict": "ingotUranium235",
+              "oredict": "ingotCobalt60",
               "type": "oredict",
               "modules": {}
             },
             {
-              "oredict": "ingotCobalt60",
+              "oredict": "ingotIridium",
               "type": "oredict",
               "modules": {}
             },
@@ -12240,18 +12198,6 @@
               }
             },
             {
-              "name": "nuclearcraft:uranium",
-              "metadata": 5,
-              "type": "legacy_item",
-              "modules": {
-                "plannerator:tags": {
-                  "tags": [
-                    "ingotUranium235"
-                  ]
-                }
-              }
-            },
-            {
               "name": "qmd:isotope",
               "metadata": 6,
               "type": "legacy_item",
@@ -12259,6 +12205,18 @@
                 "plannerator:tags": {
                   "tags": [
                     "ingotCobalt60"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "thermalfoundation:material",
+              "metadata": 135,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotIridium"
                   ]
                 }
               }
@@ -13308,30 +13266,6 @@
               }
             },
             {
-              "name": "qmd:isotope",
-              "metadata": 4,
-              "type": "legacy_item",
-              "modules": {
-                "plannerator:tags": {
-                  "tags": [
-                    "ingotUranium234"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "qmd:isotope",
-              "metadata": 5,
-              "type": "legacy_item",
-              "modules": {
-                "plannerator:tags": {
-                  "tags": [
-                    "dustProtactinium231"
-                  ]
-                }
-              }
-            },
-            {
               "name": "qmd:ingot",
               "metadata": 4,
               "type": "legacy_item",
@@ -13363,6 +13297,18 @@
                 "plannerator:tags": {
                   "tags": [
                     "ingotCobalt"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "qmd:isotope",
+              "metadata": 7,
+              "type": "legacy_item",
+              "modules": {
+                "plannerator:tags": {
+                  "tags": [
+                    "ingotIridium192"
                   ]
                 }
               }
