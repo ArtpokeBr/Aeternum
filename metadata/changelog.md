@@ -14,7 +14,7 @@
 
 ### Fixed
 
-- 
+- Diamond and Emerald Gears should require Bushes now.
 
 ---
 
