@@ -11,6 +11,7 @@
 - Basic Ender Alloy now requires Copper instead of Iron ingots.
 - Enhanced Ender Alloy now requires Platinum instead of Enderium Ingots.
 - Biocrude can be used to make Bio Diesel with Immersive Engineering now.
+- Removed Not Needed Ember's Crash Fix Mixin.
 
 ### Fixed
 
