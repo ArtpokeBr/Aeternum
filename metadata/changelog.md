@@ -12,6 +12,7 @@
 - Enhanced Ender Alloy now requires Platinum instead of Enderium Ingots.
 - Biocrude can be used to make Bio Diesel with Immersive Engineering now.
 - Removed Not Needed Ember's Crash Fix Mixin.
+- Filtered harmless Advancement, BuildCraft Facade and AE2 config errors out of the logs.
 
 ### Fixed
 

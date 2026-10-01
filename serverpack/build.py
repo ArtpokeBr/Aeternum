@@ -16,6 +16,7 @@ import argparse
 import io
 import json
 import re
+import subprocess
 import sys
 import zipfile
 from pathlib import Path
@@ -77,18 +78,21 @@ def ignored_projects():
     return {int(m) for m in re.findall(r"^\s*-\s*(\d+)", block, re.M)}
 
 
-def check_scripts(src):
-    """Warn when the export's scripts differ from the instance (a stale export desyncs recipes)."""
+def check_overrides(src):
+    """Warn when the export's scripts/configs differ from the repo (a stale export desyncs the server)."""
     exported = {i.filename[len("overrides/"):] for i in src.infolist() if i.filename.startswith("overrides/")}
-    for folder in ("scripts", "groovy"):
-        for path in (INSTANCE / folder).rglob("*"):
-            if not path.is_file():
-                continue
-            rel = path.relative_to(INSTANCE).as_posix()
-            if rel not in exported:
-                print(f"warning: {rel} is missing from the export", file=sys.stderr)
-            elif src.read("overrides/" + rel) != path.read_bytes():
-                print(f"warning: {rel} differs from the export (re-export?)", file=sys.stderr)
+    tracked = subprocess.run(
+        ["git", "ls-files", "-z", "--", "scripts", "groovy", "config"],
+        cwd=INSTANCE, capture_output=True, check=True,
+    ).stdout.decode("utf-8").split("\0")
+    for rel in filter(None, tracked):
+        path = INSTANCE / rel
+        if not path.is_file():
+            continue
+        if rel not in exported:
+            print(f"warning: {rel} is missing from the export", file=sys.stderr)
+        elif src.read("overrides/" + rel) != path.read_bytes():
+            print(f"warning: {rel} differs from the export (re-export?)", file=sys.stderr)
 
 
 def main():
@@ -109,7 +113,7 @@ def main():
             print("Export does not match the instance:", *errors, sep="\n  ", file=sys.stderr)
             sys.exit(1)
 
-        check_scripts(src)
+        check_overrides(src)
 
         stale = ignored_projects() - {e["projectID"] for e in manifest["files"]}
         for pid in sorted(stale):
