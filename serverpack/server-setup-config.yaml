@@ -1,0 +1,145 @@
+# ServerStarter config (https://github.com/EnigmaticaModpacks/ServerStarter)
+# Layout adapted from Enigmatica 2 Expert Extended's server pack.
+_specver: 2
+
+modpack:
+  name: 'Artpoke Presents: Aeternum'
+  description: A chill 1.12.2 kitchen-sink pack
+
+install:
+  mcVersion: 1.12.2
+
+  # ~ = use the loader version from the modpack manifest.
+  loaderVersion: ~
+
+  # The server runs Cleanroom directly (the client reaches it through Cleanroom Relauncher instead).
+  # Keep this in sync with "selectedVersion" in config/relauncher.json.
+  installerUrl: 'https://github.com/CleanroomMC/Cleanroom/releases/download/0.6.13-alpha/cleanroom-0.6.13-alpha-installer.jar'
+  installerArguments:
+    - --installServer
+
+  # The modpack zip ships inside this server pack (built by serverpack/build.py).
+  # Its manifest carries a direct CDN downloadUrl per mod, because ServerStarter's
+  # CurseForge lookup service (cursemeta.dries007.net) has been shut down.
+  modpackUrl: file://Aeternum-modpack.zip
+  modpackFormat: curse
+
+  formatSpecific:
+    # Client-only CurseForge projects that are not downloaded on the server.
+    ignoreProject:
+      - 1214490 # Cleanroom Relauncher (the server installs Cleanroom directly)
+      # Explicit @Mod(clientSideOnly = true)
+      - 1331377 # Armored Arms
+      - 1132293 # Backpack Display
+      - 1537740 # Capn's Chisel Search
+      - 1313831 # Celeritas/Nothirium Dynamic Lights
+      - 1451214 # Celeritas Extra
+      - 236484 # Chunk Animator
+      - 267602 # ConnectedTexturesMod
+      - 250398 # Controlling
+      - 250419 # Enchantment Descriptions
+      - 227441 # Fullscreen Windowed (Borderless)
+      - 1220460 # Gnetum
+      - 521590 # Item Highlighter
+      - 1085598 # JEI Area Fixer
+      - 267939 # Just Enough HarvestCraft (JEHC)
+      - 940521 # Just Enough Magiculture
+      - 240630 # Just Enough Resources (JER)
+      - 928895 # Key Binding Patch
+      - 532127 # Legendary Tooltips
+      - 1081085 # MiniEffects-Legacy Extended Life
+      - 229067 # Mob Dismemberment
+      - 238747 # Mod Name Tooltip
+      - 629058 # Modern Splash
+      - 243478 # More Overlays
+      - 461660 # Mouse Tweaks Unofficial
+      - 408853 # Particle Culling
+      - 299080 # Proportional Destruction Particles
+      - 226447 # Resource Loader
+      - 319656 # ScalingGUIs
+      - 1254583 # VisualClaiming
+      # Client-only by function (client mixins / rendering / sound / GUI only)
+      - 1308068 # Betterer Biomer Blender
+      - 409087 # Entity Culling
+      - 1052470 # Extreme Sound Muffler: Legacy
+      - 367706 # FancyMenu
+      - 410295 # Konkrete (FancyMenu library)
+      - 618947 # FreeCam by Zergatul
+      - 454215 # Just Enough Drags
+      - 1234162 # Lumenized
+      - 1073925 # Rather Enough Immersive Multiblocks
+      - 624967 # RenderLib
+      - 254144 # Sound Reloader
+      - 262137 # Stuff A Sock In It
+      - 1513373 # Travelers Titles
+      - 1465528 # UIFadeFX
+      - 1255064 # VintageDisplay
+
+  baseInstallPath: ~
+
+  # Client-only folders are already stripped from the modpack zip by build.py.
+  ignoreFiles:
+    - resourcepacks
+    - resources
+
+  additionalFiles:
+
+  localFiles:
+
+  checkFolder: true
+  installLoader: true
+  spongeBootstrapper: https://github.com/simon816/SpongeBootstrap/releases/download/v0.7.1/SpongeBootstrap-0.7.1.jar
+  connectTimeout: 30
+  readTimeout: 30
+
+launch:
+  spongefix: false
+
+  # Use a RAMDisk for the world folder (Linux start script only).
+  # NOTE: The server must have run once fully before switching to `true`!
+  ramDisk: false
+
+  checkOffline: false
+  maxRam: 6G
+  minRam: 6G
+  autoRestart: false
+  crashLimit: 10
+  crashTimer: 5min
+  preJavaArgs: ~
+
+  # Name of the jar the Cleanroom installer produces.
+  startFile: cleanroom-0.6.13-alpha.jar
+  startCommand:
+    - -jar
+    - '{{@startFile@}}'
+    - nogui
+
+  # Cleanroom needs Java 21 or newer. Set an absolute path here if `java` on PATH is older.
+  # Example: "\"C:/Program Files/Zulu/zulu-25/bin/java.exe\""
+  forcedJavaPath: ~
+
+  javaArgs:
+    - '-XX:+UseG1GC'
+    - '-XX:+ParallelRefProcEnabled'
+    - '-XX:MaxGCPauseMillis=200'
+    - '-XX:+UnlockExperimentalVMOptions'
+    - '-XX:+DisableExplicitGC'
+    - '-XX:+AlwaysPreTouch'
+    - '-XX:G1NewSizePercent=30'
+    - '-XX:G1MaxNewSizePercent=40'
+    - '-XX:G1HeapRegionSize=8M'
+    - '-XX:G1ReservePercent=20'
+    - '-XX:G1HeapWastePercent=5'
+    - '-XX:G1MixedGCCountTarget=4'
+    - '-XX:InitiatingHeapOccupancyPercent=15'
+    - '-XX:G1MixedGCLiveThresholdPercent=90'
+    - '-XX:G1RSetUpdatingPauseTimePercent=5'
+    - '-XX:SurvivorRatio=32'
+    - '-XX:+PerfDisableSharedMem'
+    - '-XX:MaxTenuringThreshold=1'
+    - '-XX:MetaspaceSize=384M'
+    - '-Dusing.aikars.flags=https://mcflags.emc.gs'
+    - -Daikars.new.flags=true
+    - -Dfml.readTimeout=180 # servertimeout
+    - -Dfml.queryResult=confirm # auto /fmlconfirm
+    - '-XX:+IgnoreUnrecognizedVMOptions'

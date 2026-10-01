@@ -16,6 +16,11 @@
 ### Fixed
 
 - Diamond and Emerald Gears should require Bushes now.
+- Fixed Dedicated Servers crashing on startup because of the Bedrock Ores crash fix Mixin.
+
+### Other
+
+- Added a Server Pack.
 
 ---
 
