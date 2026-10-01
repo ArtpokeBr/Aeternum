@@ -17,6 +17,7 @@
 
 - Diamond and Emerald Gears should require Bushes now.
 - Fixed Dedicated Servers crashing on startup because of the Bedrock Ores crash fix Mixin.
+- Fixed Dedicated Servers crashing when Unseen's Nether Backport generates its structures.
 
 ### Other
 
