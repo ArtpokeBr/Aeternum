@@ -1,4 +1,4 @@
-# Aeternum 1.7.0
+# Aeternum 1.6.1
 
 ### Mod Changes
 
