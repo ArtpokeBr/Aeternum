@@ -1,3 +1,11 @@
+# Aeternum 1.6.1
+
+### Mod Changes
+
+- Downgraded HEI to 4.34.3 to fix a Crash with AE2 Terminals.
+
+---
+
 # Aeternum 1.6.0
 
 ### Mod Changes
