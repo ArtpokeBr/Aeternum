@@ -1,3 +1,19 @@
+# Aeternum 1.7.0
+
+### Mod Changes
+
+- 
+
+### Changed 
+
+- 
+
+### Fixed
+
+- 
+
+---
+
 # Aeternum 1.6.0
 
 ### Mod Changes
