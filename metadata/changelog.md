@@ -1,3 +1,15 @@
+# Aeternum 1.6.2
+
+### Mod Changes
+
+- 
+
+### Fixed
+
+- Fixed AE2 Auto-Crafting failing with an "Index (0) is greater than or equal to list size (0)" error for Patterns that use some of IC2's hidden Recipes (Pistons, Rails, Torches, Buckets...).
+
+---
+
 # Aeternum 1.6.1
 
 ### Mod Changes
