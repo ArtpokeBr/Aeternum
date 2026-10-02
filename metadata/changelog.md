@@ -4,14 +4,6 @@
 
 - Downgraded HEI to 4.34.3 to fix a Crash with AE2 Terminals.
 
-### Changed 
-
-- 
-
-### Fixed
-
-- 
-
 ---
 
 # Aeternum 1.6.0
