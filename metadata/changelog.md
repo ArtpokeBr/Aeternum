@@ -2,7 +2,7 @@
 
 ### Mod Changes
 
-- 
+- Removed: AE2 Cell Render.
 
 ### Fixed
 
