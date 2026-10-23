@@ -8,6 +8,9 @@
 
 - Red Alloy can now be made in every alloying machine (Ender IO Alloy Smelter, Thermal Induction Smelter, Mekanism Metallurgic Infuser and NuclearCraft Alloy Furnace), and Electrotine Alloy (1 Silver + 4 Electrotine) was added to all of them, including the IE Alloy Kiln and Arc Furnace. Electrotine Dust is now a Metallurgic Infuser source.
 - Electrotine now works like Redstone in the Metallurgic Infuser: it has its own infuse texture, Blocks of Electrotine give 90, and a new Compressed Electrotine (made from Electrotine Dust in the Enrichment Chamber) gives 80.
+- ProjectRed's Infused, Energized and Electrotine Silicon can now be made in one step from Silicon + 8 Redstone, Glowstone or Electrotine Dust in the IE Alloy Kiln and Arc Furnace, Ender IO Alloy Smelter, Thermal Induction Smelter and NuclearCraft Alloy Furnace, and from Silicon with Redstone or Electrotine infuse in the Mekanism Metallurgic Infuser.
+- Glowstone is now a Metallurgic Infuser infuse type (Glowstone Dust 10, Glowstone block 40, new Compressed Glowstone 80, made from Glowstone Dust in the Enrichment Chamber), so Energized Silicon can be made there too.
+- Electrotine Ore now processes in every machine Redstone Ore does, at the same yields (SAG Mill, Induction Smelter, Enrichment Chamber, XU2 Crusher and more), with Electrum as a byproduct.
 
 ### Fixed
 
@@ -215,9 +218,6 @@
 - Enabled Pack Version Display in the Main Menu.
 - Added a Customized Main Menu.
 - Enabled Quark's End Stone and Obsidian Speleothems.
-- ProjectRed's Infused, Energized and Electrotine Silicon can now be made in one step from Silicon + 8 Redstone, Glowstone or Electrotine Dust in the IE Alloy Kiln and Arc Furnace, Ender IO Alloy Smelter, Thermal Induction Smelter and NuclearCraft Alloy Furnace, and from Silicon with Redstone or Electrotine infuse in the Mekanism Metallurgic Infuser
-- Glowstone is now a Metallurgic Infuser infuse type (Glowstone Dust 10, Glowstone block 40, new Compressed Glowstone 80, made from Glowstone Dust in the Enrichment Chamber), so Energized Silicon can be made there too
-- Electrotine Ore now processes in every machine Redstone Ore does, at the same yields (SAG Mill, Induction Smelter, Enrichment Chamber, XU2 Crusher and more), with Electrum as a byproduct
 
 ### Fixed
 

@@ -9,7 +9,7 @@ Personal 1.12.2 kitchen-sink modpack ("Artpoke Presents: Aeternum") on [CurseFor
 
 - `config/`: one config per mod. `scripts/`: [CraftTweaker](https://docs.blamejared.com/1.12/en/) (ZenScript), with `mods/`, `loot/`, `jei/`, `nc_script_addons/`. `groovy/`: [GroovyScript](https://cleanroommc.com/groovy-script/), with `preInit/`, `postInit/`, `assets/`.
 - `patchouli_books/`: the in-game guidebook. `resourcepacks/`, `shaderpacks/`: client assets. `saves/`: local worlds, irrelevant.
-- `metadata/changelog.md`: changelog shown in game by Ender Modpack Tweaks; add lines with `changelog_add.py`. `metadata/pack_version.txt`: version string.
+- `metadata/changelog.md`: changelog shown in game by Ender Modpack Tweaks, all versions newest first; add lines with `changelog_add.py`, only ever to the top block. `metadata/pack_version.txt`: version string.
 - `serverpack/`: dedicated server pack sources and `build.py`.
 - `minecraftinstance.json`: CurseForge app metadata, one 1.5 MB line. **Never read or grep it**; use `python serverpack/modinfo.py <query>`.
 
@@ -27,6 +27,7 @@ Detail lives next to the code. A folder's `CLAUDE.md` loads once a file in that 
 | Biomes O'Plenty biome configs | `config/biomesoplenty/CLAUDE.md` |
 | Server pack, client-only mods, server testing and profiling | `serverpack/CLAUDE.md` |
 | Log noise, `config/sasit.cfg` | `docs/claude/log-filtering.md` |
+| Changelog entries (layout, which version block, style) | `metadata/CLAUDE.md` |
 
 At the end of a change that alters how the pack works, run the `docs-keeper` agent with the base commit (or "uncommitted") and the feature names.
 
