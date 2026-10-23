@@ -42,6 +42,11 @@ CLIENT_ONLY_OVERRIDES = [
 MODPACK_ZIP_NAME = "Aeternum-modpack.zip"
 
 
+def is_claude_doc(path):
+    """Folder docs for Claude sessions: tracked in git, never needed in the export or on the server."""
+    return path.rsplit("/", 1)[-1] == "CLAUDE.md"
+
+
 def cdn_url(file_id, file_name):
     s = str(file_id)
     return f"https://edge.forgecdn.net/files/{s[:4]}/{int(s[4:])}/{file_name}"
@@ -87,7 +92,7 @@ def check_overrides(src):
     ).stdout.decode("utf-8").split("\0")
     for rel in filter(None, tracked):
         path = INSTANCE / rel
-        if not path.is_file():
+        if not path.is_file() or is_claude_doc(rel):
             continue
         if rel not in exported:
             print(f"warning: {rel} is missing from the export", file=sys.stderr)
@@ -126,7 +131,7 @@ def main():
                 name = info.filename
                 if not name.startswith("overrides/") or info.is_dir():
                     continue
-                if any(name.startswith(p) for p in CLIENT_ONLY_OVERRIDES):
+                if any(name.startswith(p) for p in CLIENT_ONLY_OVERRIDES) or is_claude_doc(name):
                     continue
                 dst.writestr(info, src.read(info))
 
