@@ -215,6 +215,8 @@
 - Enabled Pack Version Display in the Main Menu.
 - Added a Customized Main Menu.
 - Enabled Quark's End Stone and Obsidian Speleothems.
+- ProjectRed's Infused, Energized and Electrotine Silicon can now be made in one step from Silicon + 8 Redstone, Glowstone or Electrotine Dust in the IE Alloy Kiln and Arc Furnace, Ender IO Alloy Smelter, Thermal Induction Smelter and NuclearCraft Alloy Furnace, and from Silicon with Redstone or Electrotine infuse in the Mekanism Metallurgic Infuser
+- Glowstone is now a Metallurgic Infuser infuse type (Glowstone Dust 10, Glowstone block 40, new Compressed Glowstone 80, made from Glowstone Dust in the Enrichment Chamber), so Energized Silicon can be made there too
 
 ### Fixed
 

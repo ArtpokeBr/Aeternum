@@ -19,6 +19,16 @@ mods.mekanism.enrichment_chamber.recipeBuilder()
     .output(item('aeternum:compressed_electrotine'))
 .register()
 
+//Glowstone infuse sources, for Energized Silicon below. A Glowstone block is only 4 dust, so 40.
+mods.mekanism.infusion.add('GLOWSTONE', 10, ore('dustGlowstone'))
+mods.mekanism.infusion.add('GLOWSTONE', 80, item('aeternum:compressed_glowstone'))
+mods.mekanism.infusion.add('GLOWSTONE', 40, item('minecraft:glowstone'))
+
+mods.mekanism.enrichment_chamber.recipeBuilder()
+    .input(ore('dustGlowstone'))
+    .output(item('aeternum:compressed_glowstone'))
+.register()
+
 for (alloy in alloys) {
     //Immersive Engineering: Red Alloy is already added by IE itself
     if (alloy.base != 'Copper') {
@@ -59,6 +69,58 @@ for (alloy in alloys) {
         .infuse(alloy.infuse)
         .amount(40)
         .output(alloy.output)
+    .register()
+}
+
+//=================================================================================================
+
+//Doped Silicon ===================================================================================
+
+//ProjectRed dopes Silicon by crafting it with 8 dust into a compound and smelting that; let every
+//alloyer do it in one step.
+//NuclearCraft's Alloy Furnace has no GroovyScript compat: see scripts/mods/projectred.zs.
+def silicon = item('projectred-core:resource_item', 301)
+def dopedSilicon = [
+    [additive: 'dustRedstone', infuse: 'REDSTONE', output: item('projectred-core:resource_item', 320)],
+    [additive: 'dustGlowstone', infuse: 'GLOWSTONE', output: item('projectred-core:resource_item', 341)],
+    [additive: 'dustElectrotine', infuse: 'ELECTROTINE', output: item('projectred-core:resource_item', 342)]
+]
+
+for (doped in dopedSilicon) {
+    mods.immersiveengineering.alloy_kiln.recipeBuilder()
+        .input(silicon, ore(doped.additive) * 8)
+        .output(doped.output)
+        .time(200)
+    .register()
+
+    mods.immersiveengineering.arc_furnace.recipeBuilder()
+        .mainInput(silicon)
+        .input(ore(doped.additive) * 8)
+        .output(doped.output)
+        .time(100)
+        .energyPerTick(512)
+        .alloying()
+    .register()
+
+    mods.enderio.alloy_smelter.recipeBuilder()
+        .input(silicon, ore(doped.additive) * 8)
+        .output(doped.output)
+        .energy(2000)
+        .tierAny()
+    .register()
+
+    mods.thermalexpansion.smelter.recipeBuilder()
+        .input(silicon, ore(doped.additive) * 8)
+        .output(doped.output)
+        .energy(4000)
+    .register()
+
+    //80 infuse = 8 dusts (10 each)
+    mods.mekanism.metallurgic_infuser.recipeBuilder()
+        .input(silicon)
+        .infuse(doped.infuse)
+        .amount(80)
+        .output(doped.output)
     .register()
 }
 
