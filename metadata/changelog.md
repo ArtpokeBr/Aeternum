@@ -4,6 +4,10 @@
 
 - 
 
+### Changed
+
+- Red Alloy can now be made in every alloying machine (Ender IO Alloy Smelter, Thermal Induction Smelter, Mekanism Metallurgic Infuser and NuclearCraft Alloy Furnace), and Electrotine Alloy (1 Silver + 4 Electrotine) was added to all of them, including the IE Alloy Kiln and Arc Furnace. Electrotine Dust is now a Metallurgic Infuser source.
+
 ### Fixed
 
 - 

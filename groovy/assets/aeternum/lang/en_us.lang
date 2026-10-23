@@ -1,5 +1,8 @@
 item.aeternum.copper_chipset.name=Copper Chipset
 
+# Mekanism infuse type registered in groovy/preInit/mekanism.groovy
+infuse.electrotine=Electrotine
+
 # Aqueous Soil redstone-disable tooltip (overrides roots' tile.aqueous_soil.effect)
 tile.aqueous_soil.effect=Automatically harvests plants when they reach maturity. Disable with a redstone signal.
 
