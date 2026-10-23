@@ -8,7 +8,7 @@ import native.net.minecraft.util.EnumFacing;
 import native.net.minecraft.item.ItemStack;
 import native.net.minecraftforge.items.IItemHandler;
 import native.net.minecraftforge.items.CapabilityItemHandler;
-import native.net.minecraft.tileentity.TileEntity;
+import native.net.minecraftforge.common.capabilities.ICapabilityProvider;
 import native.mcjty.theoneprobe.api.IProbeInfoAccessor;
 import native.mcjty.theoneprobe.api.IProbeInfo;
 import native.mcjty.theoneprobe.api.IProbeHitData;
@@ -20,12 +20,14 @@ ITEM_HANDLER_CAPABILITY (EnumFacing.DOWN = honeycombs, any other side = bees) - 
 to shadow its private fields. Implement TheOneProbe's IProbeInfoAccessor directly on
 BlockApiary so TheOneSmeagle's built-in BlockProbeInfoProvider picks it up automatically
 (no IMC registration needed) and shows the Apiary's contents on the probe overlay.
+The tile is typed as ICapabilityProvider, not TileEntity: since Cleanroom 0.7 ZenUtils
+compiles this script against the unpatched TileEntity, which has no Forge getCapability.
 */
 #mixin {targets: "rustic.common.blocks.BlockApiary"}
 zenClass MixinBlockApiary extends IProbeInfoAccessor {
 
     function addProbeInfo(mode as ProbeMode, info as IProbeInfo, player as EntityPlayer, world as World, state as IBlockState, data as IProbeHitData) as void {
-        val tile = world.getTileEntity(data.getPos()) as TileEntity;
+        val tile = world.getTileEntity(data.getPos()) as ICapabilityProvider;
         if (tile == null) {
             return;
         }
