@@ -1,3 +1,3 @@
 # GroovyScript asset overlay
 
-`groovy/assets/<modid>/{lang,models,textures}/...` ships custom lang, model and texture resources without a separate resourcepack: `aeternum:copper_chipset`'s lang and model, the Requious JEI tab titles, and the Mekanism `infuse.<name>` keys. Lang keys merge globally, whichever folder or modid declares them.
+`groovy/assets/<modid>/{lang,models,textures}/...` ships custom lang, model and texture resources without a separate resourcepack: the lang, model and texture of the `aeternum:` items registered in `groovy/preInit/items.groovy` (`copper_chipset`, `compressed_electrotine`), the Requious JEI tab titles, and the Mekanism infuse types (`infuse.<name>` lang keys, icons under `textures/blocks/infuse/`). Textures here are also stitched into the block atlas, so a `ResourceLocation` like `aeternum:blocks/infuse/electrotine` works for anything that registers its own sprite. Lang keys merge globally, whichever folder or modid declares them.

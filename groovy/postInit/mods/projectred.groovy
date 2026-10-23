@@ -8,8 +8,16 @@ def alloys = [
     [base: 'Copper', additive: 'dustRedstone', infuse: 'REDSTONE', output: item('projectred-core:resource_item', 103)]
 ]
 
-//Electrotine Dust as a Metallurgic Infuser source (type registered in preInit/mekanism.groovy)
+//Electrotine infuse sources, same values as Mekanism's Redstone (type registered in preInit/mekanism.groovy)
 mods.mekanism.infusion.add('ELECTROTINE', 10, ore('dustElectrotine'))
+mods.mekanism.infusion.add('ELECTROTINE', 80, item('aeternum:compressed_electrotine'))
+mods.mekanism.infusion.add('ELECTROTINE', 90, ore('blockElectrotine'))
+
+//Compressed Electrotine, like Compressed Redstone (1 dust -> 1 compressed)
+mods.mekanism.enrichment_chamber.recipeBuilder()
+    .input(ore('dustElectrotine'))
+    .output(item('aeternum:compressed_electrotine'))
+.register()
 
 for (alloy in alloys) {
     //Immersive Engineering: Red Alloy is already added by IE itself
