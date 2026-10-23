@@ -2,7 +2,8 @@
 
 ### Mod Changes
 
-- 
+- Removed: Just Enough Drags.
+- Removed: Modern Mob Spawn.
 
 ### Added
 
