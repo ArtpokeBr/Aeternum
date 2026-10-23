@@ -19,3 +19,8 @@ Read the one the task needs:
 
 - `references/alloying.md`: every machine that makes alloys, with its API. Read before adding an alloy; an alloy added "everywhere" covers every row.
 - `references/nuclearcraft.md`: NuclearCraft's CraftTweaker API and the Manufactory ore-dict bug. Read before any NuclearCraft recipe.
+
+## Looking up vanilla-ore yields (ore parity)
+
+- `groovy/postInit/mods/projectred.groovy` ("Electrotine Ore Processing") gives Electrotine Ore Redstone Ore's yields in every machine that crushes Redstone Ore; use it as the template for matching a modded ore to a vanilla one. Each machine block's comment records the Redstone yield it copies, and `removeByInput` precedes the new recipe wherever a generic ore->dust loop already made one.
+- Ender IO's SAG Mill recipes sit in XMLs inside the EnderIO jar that moddig's `search` does not index. Ender IO writes PDF copies to `config/enderio/recipes/*.pdf`; read them with `pdftotext -layout <file>.pdf -`.

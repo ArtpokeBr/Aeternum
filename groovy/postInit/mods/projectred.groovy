@@ -125,3 +125,121 @@ for (doped in dopedSilicon) {
 }
 
 //=================================================================================================
+
+//Electrotine Ore Processing ======================================================================
+
+//Electrotine Ore is only reached by generic ore->dust loops (flat 2x, no byproduct), and not at all
+//by the machines whose loop needs an ingot. Give it Redstone Ore's yields in every machine that
+//crushes Redstone Ore. Electrum (its GregTech byproduct) stands in where Redstone gets Cinnabar.
+def electrotineOre = item('projectred-exploration:ore', 6)
+def electrotine = item('projectred-core:resource_item', 105)
+def electrumDust = item('thermalfoundation:material', 97)
+
+//Thermal Pulverizer: Redstone Ore is 6 dust + 25% Cinnabar
+mods.thermalexpansion.pulverizer.removeByInput(electrotineOre)
+mods.thermalexpansion.pulverizer.recipeBuilder()
+    .input(ore('oreElectrotine'))
+    .output(electrotine * 6, electrumDust)
+    .chance(10)
+    .energy(4000)
+.register()
+
+//Induction Smelter: Redstone Ore + Sand is 8 dust + 50% Rich Slag
+mods.thermalexpansion.smelter.recipeBuilder()
+    .input(ore('oreElectrotine'), ore('sand'))
+    .output(electrotine * 8, item('thermalfoundation:material', 865))
+    .chance(50)
+    .energy(4000)
+.register()
+
+//Mekanism: Enrichment 1 ore -> 12 dust, Combiner 16 dust + Cobblestone -> 1 ore, as for Redstone
+mods.mekanism.enrichment_chamber.recipeBuilder()
+    .input(ore('oreElectrotine'))
+    .output(electrotine * 12)
+.register()
+
+mods.mekanism.combiner.recipeBuilder()
+    .input(ore('dustElectrotine') * 16)
+    .extra(item('minecraft:cobblestone'))
+    .output(electrotineOre)
+.register()
+
+//IE Crusher: Redstone Ore is 6 dust + 25% Cinnabar
+mods.immersiveengineering.crusher.removeByInput(electrotineOre)
+mods.immersiveengineering.crusher.recipeBuilder()
+    .input(ore('oreElectrotine'))
+    .output(electrotine * 6)
+    .secondaryOutput(electrumDust, 0.1F)
+    .energy(6000)
+.register()
+
+//Actually Additions Crusher: Redstone Ore is 10 dust
+//removeByInput casts to ItemStack, so no ore() here
+mods.actuallyadditions.crusher.removeByInput(electrotineOre)
+mods.actuallyadditions.crusher.recipeBuilder()
+    .input(ore('oreElectrotine'))
+    .output(electrotine * 10)
+.register()
+
+//Extra Utilities 2 Crusher: Redstone Ore is 8 dust
+mods.extrautils2.crusher.recipeBuilder()
+    .input(ore('oreElectrotine'))
+    .output(electrotine * 8)
+    .energy(4000)
+    .time(200)
+.register()
+
+//SAG Mill (Ender IO's sagmill_ores.xml): Redstone Ore is 8 dust + 20% dust + 80% Silicon + 15%
+//Cobblestone, Nether Redstone Ore 21 dust + 2 at 20% + 2 Silicon at 80% + 15% Netherrack.
+//Project Red's own Silicon (defined in Doped Silicon above), which Electrotine is already paired with.
+mods.enderio.sag_mill.recipeBuilder()
+    .input(ore('oreElectrotine'))
+    .output(electrotine * 8)
+    .output(electrotine, 0.2F)
+    .output(silicon, 0.8F)
+    .output(item('minecraft:cobblestone'), 0.15F)
+    .energy(3600)
+    .bonusTypeMultiply()
+    .tierAny()
+.register()
+
+mods.enderio.sag_mill.recipeBuilder()
+    .input(ore('oreNetherElectrotine'))
+    .output(electrotine * 21)
+    .output(electrotine * 2, 0.2F)
+    .output(silicon * 2, 0.8F)
+    .output(item('minecraft:netherrack'), 0.15F)
+    .energy(3200)
+    .bonusTypeMultiply()
+    .tierAny()
+.register()
+
+//Blood Magic Alchemy Table: Redstone Ore + Basic Cutting Fluid is 8 dust, 400 LP, 200 ticks, tier 1
+def cuttingFluid = item('bloodmagic:cutting_fluid', 0)
+//Ore only: with several inputs, removeByInput keeps only the last one's match, so passing the
+//Cutting Fluid too would remove every ore-doubling recipe
+mods.bloodmagic.alchemy_table.removeByInput(electrotineOre)
+mods.bloodmagic.alchemy_table.recipeBuilder()
+    .input(ore('oreElectrotine'), cuttingFluid)
+    .output(electrotine * 8)
+    .syphon(400)
+    .time(200)
+    .tier(1)
+.register()
+
+//Astral Sorcery Grindstone: Redstone Ore is 4 dust (its generic loop gives other ores only 1)
+mods.astralsorcery.grindstone.removeByInput(electrotineOre)
+mods.astralsorcery.grindstone.recipeBuilder()
+    .input(ore('oreElectrotine'))
+    .output(electrotine * 4)
+    .weight(12)
+    .secondaryChance(0.85F)
+.register()
+
+//Thaumcraft: Redstone Ore has a 1% bonus nugget when smelted (Electrotine Ore smelts to 1 dust)
+mods.thaumcraft.smelting_bonus.add(ore('oreElectrotine'), item('thermalfoundation:material', 225), 0.01F)
+
+//Botania Orechid: Redstone is 6885; Electrotine is rarer, as a modded ore
+mods.botania.orechid.add('oreElectrotine', 2000)
+
+//=================================================================================================
