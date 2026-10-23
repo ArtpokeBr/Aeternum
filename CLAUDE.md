@@ -1,114 +1,48 @@
 # Aeternum (1.12.2 Cleanroom Modpack)
 
-A personal Minecraft 1.12.2 modpack ("Artpoke Presents: Aeternum"), published on
-[CurseForge](https://www.curseforge.com/minecraft/modpacks/artpoke-presents-aeternum).
-This repo is the pack's working directory (instance folder), tracked in git so changes to
-mods/configs/scripts can be versioned and pushed to CurseForge as pack updates.
+Personal 1.12.2 kitchen-sink modpack ("Artpoke Presents: Aeternum") on [CurseForge](https://www.curseforge.com/minecraft/modpacks/artpoke-presents-aeternum). This repo is the instance folder, versioned in git and pushed to CurseForge as pack updates.
 
-- Minecraft: 1.12.2
-- Forge: 14.23.5.2860
-- Loader/launch helpers: Red-Core, MixinBooter, ConfigAnytime, Cleanroom Relauncher (the `!`-prefixed jars in `mods/`, loaded first)
-- ~300 mods in [mods/](mods/)
-- The Modpack is relaunched with Cleanroom: Cleanroom Relauncher (`!cleanroom-relauncher-*.jar`, CurseForge project 1214490) relaunches the client using the [Cleanroom](https://cleanroommc.com/wiki/) mod loader instead of stock Forge; the Cleanroom version and Java target live in `config/relauncher.json` (`selectedVersion`, currently `0.6.13-alpha`, Java 25). The dedicated server skips the relauncher and installs Cleanroom directly (see *Server pack* below)
+- Minecraft 1.12.2, Forge 14.23.5.2860, ~300 mods in `mods/` (flat). The `!`-prefixed jars load first: Red-Core, MixinBooter, ConfigAnytime, Cleanroom Relauncher.
+- Cleanroom Relauncher (CurseForge project 1214490) relaunches the client on the [Cleanroom](https://cleanroommc.com/wiki/) loader; version and Java target in `config/relauncher.json` (`selectedVersion`, currently `0.6.13-alpha`, Java 25). The dedicated server installs Cleanroom directly.
 
 ## Layout
 
-- [mods/](mods/) — all mod jars (flat directory, no profiles)
-- [config/](config/) — per-mod `.cfg`/`.ini`/`.json` config files, one entry per mod
-- [scripts/](scripts/) and [groovy/](groovy/) — [CraftTweaker](https://docs.blamejared.com/1.12/en/) (legacy ZenScript) and [GroovyScript](https://cleanroommc.com/groovy-script/) recipe/loot scripts
-  - `scripts/mods/`, `scripts/loot/`, `scripts/nc_script_addons/` — the pack also has the `MoreTweaker` mod installed for extra CraftTweaker compat; see [its wiki](https://bitbucket.org/noeppi_noeppi/moretweaker/wiki/Home) for syntax not covered by the main CraftTweaker docs. `Roids Tweaker` is another mod providing extra CraftTweaker compat; see [its wiki](https://github.com/roidrole/Roids-Tweaker/wiki) for reference
-  - `groovy/preInit/`, `groovy/postInit/`
-- [patchouli_books/](patchouli_books/) — custom in-game Patchouli guidebook content
-- [resourcepacks/](resourcepacks/), [shaderpacks/](shaderpacks/) — client assets
-- [saves/](saves/) — local worlds (not relevant to pack development)
-- `minecraftinstance.json` — CurseForge/Overwolf app instance metadata (Forge version, mod list)
-- [metadata/changelog.md](metadata/changelog.md) — pack changelog shown in-game via Ender Modpack Tweaks; update it as features/changes are approved and implemented
-- `metadata/pack_version.txt` — current pack version string
-- [serverpack/](serverpack/) — dedicated server pack sources + `build.py` (see *Server pack* below); `serverpack/build/` is gitignored output
-- `README.md` — just a pointer to the CurseForge page
+- `config/`: one config per mod. `scripts/`: [CraftTweaker](https://docs.blamejared.com/1.12/en/) (ZenScript), with `mods/`, `loot/`, `jei/`, `nc_script_addons/`. `groovy/`: [GroovyScript](https://cleanroommc.com/groovy-script/), with `preInit/`, `postInit/`, `assets/`.
+- `patchouli_books/`: the in-game guidebook. `resourcepacks/`, `shaderpacks/`: client assets. `saves/`: local worlds, irrelevant.
+- `metadata/changelog.md`: changelog shown in game by Ender Modpack Tweaks; add lines with `changelog_add.py`. `metadata/pack_version.txt`: version string.
+- `serverpack/`: dedicated server pack sources and `build.py`.
+- `minecraftinstance.json`: CurseForge app metadata, one 1.5 MB line. **Never read or grep it**; use `python serverpack/modinfo.py <query>`.
+
+## Doc map
+
+Detail lives next to the code. A folder's `CLAUDE.md` loads once a file in that folder is read; **when starting new work in a folder, read its doc first.**
+
+| Task | Read |
+|---|---|
+| Any recipe, alloy or machine recipe (which language, which API) | `aeternum-recipes` skill |
+| CraftTweaker mixins, server-only crashes | `scripts/mods/mixins/CLAUDE.md` |
+| Unification, plate/gear templates | `config/unidict/CLAUDE.md` |
+| Custom JEI tabs (Requious) | `scripts/jei/CLAUDE.md` |
+| Lang, models, textures for custom items | `groovy/assets/CLAUDE.md` |
+| Biomes O'Plenty biome configs | `config/biomesoplenty/CLAUDE.md` |
+| Server pack, client-only mods, server testing and profiling | `serverpack/CLAUDE.md` |
+| Log noise, `config/sasit.cfg` | `docs/claude/log-filtering.md` |
+
+At the end of a change that alters how the pack works, run the `docs-keeper` agent with the base commit (or "uncommitted") and the feature names.
+
+## Hazards
+
+- **Never name a client-only class in a `#loader mixin` script**, even a `#sideonly server` one: Cleanroom blacklists the class and an unrelated mod crashes later. Recipe and mixin code must also avoid client-only calls (`Minecraft.getMinecraft()` etc.) or the dedicated server crashes.
+- Changing `config/relauncher.json` `selectedVersion` means updating `installerUrl` and `startFile` in `serverpack/server-setup-config.yaml`.
+- A new client-only mod needs its CurseForge project ID in `ignoreProject` in `serverpack/server-setup-config.yaml`.
+- New files under `config/`, `scripts/`, `groovy/` must be ticked in the CurseForge export; `build.py` warns when one is missing.
+- Bumping the pack version: version and changelog strings (Ender Modpack Tweaks, FancyMenu main menu) must stay in sync.
 
 ## Conventions
 
-- Commit messages use an emoji + category prefix, e.g.:
-  - `📈 Mod Addition: <name>` — new mod added
-  - `✏️ Config Tweak: <what changed>` — config file edit
-  - `📄 Recipe Tweak: <what changed>` — CraftTweaker/Groovy script change
-  - `🛠️ Refactor: <what changed>` — fixing something previously added
-  - `✨ New Feature: <name>` — new pack feature (e.g. custom main menu)
-  - `🔧 Internal: <what changed>` — packaging/pack-updater/versioning plumbing
-  - `⚙️ Bump: <what>` — version/changelog bumps
-- Keep one logical change (one mod, one config, one recipe tweak) per commit — matches existing history.
-- Branches: `main` is the currently released version (what players and the server pack run); day-to-day work happens on `dev`, which carries the next version (bumped in `metadata/pack_version.txt` + a new changelog section right after a release) and is merged into `main` when that version ships.
-- This pack uses Ender Modpack Tweaks (`endermodpacktweaks`) for in-game pack version/changelog display and a FancyMenu-based custom main menu — version/changelog strings need to stay in sync when bumping pack version.
-- Notable overhaul/tech mods present: Thermal series, Mekanism, Applied Energistics 2, Industrial Foregoing, IndustrialCraft 2, Draconic Evolution, Astral Sorcery, Thaumcraft (+ addons), Botania, Tinkers' Construct (Antique fork), Forestry/Gendustry/Binnie, Pam's HarvestCraft, RFTools, Flux Networks.
-- `UniDict` is the mod used for item/ore-dict unification across mods. For any unification request, check and tweak its config first; if UniDict can't handle the case, fall back to a Groovy/CraftTweaker script instead.
-- `Dropt` is the mod used to tweak block drops; see its [docs](https://dropt.readthedocs.io/en/latest/) for syntax reference.
-- Aeternum is a **kitchen-sink** pack, not an expert pack — chill experience, mods talking to each other. Don't port aggressive balancing/progression-gating/recipe-replacement-for-difficulty content from expert packs; only port genuine cross-mod integrations or bug/exploit fixes.
-- [Enigmatica2Expert-Extended](https://github.com/Krutoy242/Enigmatica2Expert-Extended) (E2EE) is a useful reference for cross-mod recipes/mixins/JEI tabs, but most of its content is expert-pack balance gating (skip) or tied to E2EE-exclusive addon mods/data (FluidIntegrationTweaker, PotionCore, custom `scripts.mods.*` structures) that don't exist here — always verify the referenced mod/item/oreDict tag actually exists in this pack's installed jars before porting; don't trust E2EE's config values blindly (e.g. some mod "default" cfgs, like Astral Sorcery's `mineralis_ritual.cfg`, are static templates never validated against what's actually installed — `javap`/`unzip` the real jar to confirm a tag/item exists before using it in a script).
-
-### UniDict resources & CraftTweaker recipe templates
-
-`scripts/mods/unidict.zs` uses UniDict's CraftTweaker compat (`mods.unidict.removalByKind.get("Crafting").remove("<kind>")` + `mods.unidict.api.newShapedRecipeTemplate("<kind>", count, [[...]])`) to rebuild all plate/gear recipes per resource. Template cells are kind names (`"ingot"`, `"gem"`, ...) that UniDict expands to each resource's ore entry (`ingotIron`, `gemDiamond`, ...), or a real `<ore:...>` for fixed ingredients.
-
-**A template only applies to resources that have *every* kind it references (output kind + all input kinds), and removal-by-kind only touches resources that have that kind.** UniDict discovers resources from ore-dict names starting with `ingot` (minus a name blacklist), plus whatever is listed in `config/unidict/UniDict.cfg` → `customUnifiedResources` (`Name:kind1|kind2`, a child kind is only created if the ore-dict name `kind+Name` actually exists). So anything with no `ingotX` entry — gems like Diamond/Emerald — is invisible to UniDict by default: the `"ingot"` gear template never matched them and their default gear recipes were never removed.
-
-**`customUnifiedResources` does NOT make CraftTweaker templates work for gems (tried, failed).** `UniResourceHandler` keeps two maps: `apiResourceMap` (metals found via `ingot*`) backs `UniDictAPI`, which is what `newShapedRecipeTemplate` iterates; `resourceMap` (metals + custom resources) backs `ResourceHandler`, which unification/removal-by-kind use. Custom resources only land in `resourceMap`, so a `"gem"` template never matches them, and registering e.g. `Diamond:gem|gear` can even get a CraftTweaker recipe for that gear deleted by UniDict's postInit `remove("gear")` pass (it runs after CT scripts). **For non-ingot gears (Diamond/Emerald), skip UniDict entirely**: write plain CraftTweaker recipes (`recipes.remove(<thermalfoundation:material:26>)` + `recipes.addShaped(...)`, see `scripts/mods/thermalfoundation.zs`; TF gear metas: diamond 26, emerald 27) using `<ore:gearBushing>` (registered by Railcraft). Decompiled classes: `wanion.unidict.resource.UniResourceHandler.gatherResources` (resource discovery), `wanion.unidict.plugin.crafttweaker.UniDictCraftTweakerPlugin` (template application).
-
-### Biomes O'Plenty config gotcha
-
-`config/biomesoplenty/biomes/defaults/**` is **regenerated and deleted by BOP itself on every boot** — edits there are silently discarded. The real, persistent per-biome override path is `config/biomesoplenty/biomes/<namespace>/<biome>.json` (same relative structure, just without the `defaults` segment), as a partial JSON (only the keys you want to change — BOPConfig falls back to built-in defaults for anything omitted).
-
-### Requious Frakto (custom JEI tabs)
-
-Each block type's variants are defined in `config/requious/<machine>.json` (e.g. `assembly.json`) by `resourceName`; CraftTweaker scripts reference them via `<assembly:resourceName>` and the `mods.requious.Assembly`/`AssemblyRecipe`/`SlotVisual` API (`addJEICatalyst`, `addJEIRecipe`, `setJEIItemSlot`/`setJEIFluidSlot`/`setJEIDurationSlot`). A shared helper library lives at `scripts/jei/requious.zs` — cross-script calls like `scripts.jei.requious.add(...)` require mirroring that exact folder path (CraftTweaker resolves `scripts.X.Y.Z` calls by file path, dots-for-slashes). JEI tab titles come from lang key `requious.jei.recipe.<resourceName>` (lang keys are global across all loaded lang files regardless of asset folder/modid, so these can live anywhere, e.g. `groovy/assets/aeternum/lang/en_us.lang`). Ported tabs live under `scripts/jei/mod/<sourceMod>.zs`.
-- `Roids Tweaker` (RoidTweaker) is required for the Garden Cloche liquid-fertilizer tab (`mods.roidtweaker.immersiveengineering.GardenCloche`).
-
-### CraftTweaker-coded mixins
-
-Java-level bug/performance fixes (not just recipes) can be written as CraftTweaker scripts via the ZenUtils mixin loader — `scripts/mods/mixins/<modid>.zs` files starting with `#modloaded <modid>` + `#loader mixin`, then `#mixin {targets: "fully.qualified.ClassName"} zenClass MixinName { ... }` blocks using `#mixin Overwrite`/`Redirect`/`Inject`/`ModifyConstant` annotations (SRG method names in the `target:`/`method:` bytecode descriptors, MCP/friendly names in the actual function body). Used so far for EnderIO/Forestry/ThermalDynamics/VillageNames perf fixes, Immersive Engineering's slow Arc Furnace recipe scan + villager trade gen + Engineer's Manual recipe-grid previews, and a TheOneProbe (TheOneSmeagle fork) integration for Rustic's Apiary (`scripts/mods/mixins/rustic.zs`). Side-specific files use `#sideonly client`/`#sideonly server` (`*_client.zs`/`*_server.zs`, e.g. the dedicated-server crash fixes `bedrockores_server.zs` and `nb_server.zs`) — and must not reference client-only classes even then, see *Server-safe code* below. **Always decompile the actual installed jar with `javap`** to confirm field/method names before writing one — a close copy of an E2EE mixin broke once (`scripts/mods/mixins/chisel.zs`, since reverted) because the assumed field didn't exist in this build.
-
-**Adding a new interface to a target class:** ZenScript class syntax uses `extends`, not `implements`, for both superclasses *and* interfaces — `zenClass MixinFoo extends SomeInterface { ... }` (the compiler classifies each `extends`-listed native type as superclass vs. interface via `isInterface()`). `#mixin {targets: "..."}` only supports **one** target class per `zenClass` block — you cannot shadow a field on class A and merge an interface into class B in the same block; that needs two separate mixins (or, better, see below).
-
-**Avoid Shadow-field-+-getter for cross-class TE/Block access — prefer the public Forge Capability API.** The natural approach for a Block-level provider (e.g. TheOneProbe's `IProbeInfoAccessor`, detected only on the `Block` instance, not the TileEntity) that needs a TileEntity's private inventory field is: mixin `#mixin Shadow` the private field on the TE class, add a small getter method, then call that getter from the Block's mixin. **This reliably crashes with `VerifyError: Bad type on operand stack`** — ZenUtils' reflection-based native type resolution can't see a method that another, separately-compiled mixin class injects (chicken-and-egg: the ZenScript script compiles before Sponge Mixin transforms the real class), so the call site falls back to dynamic typing and emits broken bytecode for the later `as Type` cast / overload resolution. **Instead, decompile the TE with `javap` to check if it exposes the same data through `hasCapability`/`getCapability`** (very common for `IItemHandler` inventories, keyed by `EnumFacing` side) — that's a real, fully-reflectable native API call ZenUtils binds correctly, and skips the Shadow/getter dance entirely. This is how the Rustic Apiary TOP integration was eventually written: `tile.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.DOWN) as IItemHandler` instead of shadowing `honeyCombItemStackHandler`.
-
-**`val x as Type = expr;` does NOT pin the static type** for later member resolution in this ZenUtils build — cast the right-hand expression instead: `val x = expr as Type;`. Even then, native-typed locals derived from a generic/erased call (e.g. `IItemHandler.getStackInSlot(int)`) can still misresolve **overloaded** method calls afterward (seen: `ItemStack.isEmpty()` failing with "matched method isEmpty, but the argument types do not match" — the dynamic dispatch picks the wrong overload across unrelated types). When that happens, swap the ambiguous call for an unambiguous one (e.g. `stack.getCount() > 0` instead of `!stack.isEmpty()`).
-
-### GroovyScript asset overlay
-
-`groovy/assets/<modid>/{lang,models,textures}/...` ships custom lang/model/texture resources without a separate resourcepack (used for `aeternum:copper_chipset`'s lang/model and the Requious JEI tab titles). Lang keys merge globally regardless of which folder/modid they're declared under.
-
-### NuclearCraft has no GroovyScript support — use CraftTweaker, and avoid oreDict on Manufactory recipes
-
-GroovyScript 1.4.3 (`mods/groovyscript-1.4.3.jar`) has **no** NuclearCraft compat package at all (confirmed via `unzip -l`/`javap` on `com/cleanroommc/groovyscript/compat/mods/` — no `nuclearcraft` dir). NuclearCraft recipes must go through its own bundled CraftTweaker (ZenScript) integration instead, e.g. `mods.nuclearcraft.Manufactory.addRecipe(input, output, time, power, radiation)`, `mods.nuclearcraft.Extractor.addRecipe(input, output1, output2OrNull, time, power, radiation)`, `mods.nuclearcraft.Infuser.addRecipe(...)` — class list at `nc/integration/crafttweaker/CTRecipes$<Machine>Methods` in `mods/nuclearcraft-*.jar` (zenClass names match `mods.nuclearcraft.<Machine>`, decompile with `javap` to get exact signatures per machine).
-
-**`<ore:tagName>` (OreDict) inputs reliably fail on the Manufactory specifically** with a bare, contextless log line: `Failed to add manufactory recipe 1 x ore:X -> 1 x Y` (no further detail, even at TRACE). Root cause (confirmed via `javap` decompilation of `nc.integration.crafttweaker.CTAddRecipe`/`nc.recipe.BasicRecipeHandler`): the recipe addition goes through `BasicRecipeHandler.buildRecipe(List<?>...)`, which re-runs each *already-built* ingredient through `RecipeHelper.buildItemIngredient(Object)` a second time; for Manufactory specifically this second pass silently returns `null` for an `OreIngredient`, aborting the whole recipe (sets the `nullRecipe` flag, which produces that bare message with no diagnostic suffix). This is NOT a duplicate-recipe conflict (`removeRecipeWithInput`/`removeRecipeWithOutput` confirmed no existing match) and NOT a config issue (`nuclearcraft.cfg`'s `smart_processor_input` vs `stellar_core.cfg`'s `BasicRecipeSearchImprovements` mismatch was a red herring — fixing it did not help, though it's still worth keeping `smart_processor_input=false` since StellarCore's own doc comment requires it). The same oreDict tag works fine as an input to every *other* NC machine (Extractor, Infuser, etc.) — it's specific to Manufactory's CT path.
-
-**Fix:** use a direct item id (`<modid:item:meta>`) instead of an oreDict tag for Manufactory recipe inputs/outputs. Example (Ender Eye → Ender Eye Dust, in `scripts/mods/ic2.zs`): `<minecraft:ender_eye>` works, `<ore:pearlEnderEye>` does not.
-
-### Server pack (`serverpack/`)
-
-Modelled on Enigmatica 2 Expert Extended's server pack: a small zip driven by [ServerStarter 2.4.0](https://github.com/EnigmaticaModpacks/ServerStarter) (`start-server.bat`/`.sh` download `serverstarter-2.4.0.jar`, which reads `server-setup-config.yaml`). On first launch it installs Cleanroom via `installerUrl` (`cleanroom-<ver>-installer.jar --installServer`, launched as `startFile: cleanroom-<ver>.jar`), unpacks the bundled `Aeternum-modpack.zip` (`modpackUrl: file://Aeternum-modpack.zip`, relative to the server folder) and downloads every mod in its manifest except the CurseForge project IDs under `ignoreProject`.
-
-- **Release flow:** export the client from the CurseForge app → `python serverpack/build.py <export.zip>` → upload `serverpack/build/Aeternum-<ver>-server.zip` as the CurseForge server file. The version comes from `metadata/pack_version.txt` (or `--version`).
-- **Why `build.py` exists:** ServerStarter's CurseForge lookup service (`cursemeta.dries007.net`) is shut down ("Goodbye" page), so a stock CurseForge export manifest can't be resolved. ServerStarter still honours a per-file `downloadUrl` in `manifest.json` (`ModEntryRaw`); `build.py` fills it from `minecraftinstance.json` → `installedFile.downloadUrl` (direct `edge.forgecdn.net` links, same trick E2EE uses), strips `overrides/resources` + `overrides/resourcepacks`, and packs everything. It aborts if an export file ID doesn't match the installed one, warns about `ignoreProject` IDs no longer in the manifest, and warns about any git-tracked file under `config/`, `scripts/`, `groovy/` that is missing from or differs from the export (the CurseForge app's export checklist does not auto-tick newly added files — this caught a missing `scripts/mods/thermalfoundation.zs`). `config/brandon3055/ProjectIntelligence/manifest.json` is intentionally left out of the export and always warns.
-- **Keep in sync:** when `config/relauncher.json` → `selectedVersion` changes, update `installerUrl` and `startFile` in `server-setup-config.yaml`. When adding a client-only mod, add its CurseForge project ID to `ignoreProject` (grouped there into explicit `@Mod(clientSideOnly = true)` vs client-only-by-function). Cleanroom Relauncher itself is always ignored.
-- **Classifying client-only mods:** parse the `@Mod` annotation for `clientSideOnly = true` (a plain string search for `clientSideOnly` gives false hits, e.g. CraftTweaker's `ctgui` submod or Sound Physics' paired server mod), then check jars without it: mods whose mixin configs only have `client` entries and register no items/blocks/packets are client-only (Entity Culling, RenderLib, FancyMenu + Konkrete, Lumenized, …). Read `mcmod.info` before trusting a name — Stuff A Sock In It sounds like a sound mod but is the pack's **log filter** and must stay on the server. When unsure, keep the mod on the server: an extra mod that boots is harmless, a missing one isn't.
-- **Not shipped as CurseForge files:** `mods/celeritas-forge-*-dev.jar` is a manual dev build from [Celeritas-auto-build](https://github.com/kappa-maintainer/Celeritas-auto-build/releases) and is deliberately not in the export (client-only; Celeritas Extra / Dynamic Lights no-op without it).
-- **`server.properties`:** `level-type=rtgc` — RTG registers its world type as `rtgc`, and `config/RTGC/rtgc.cfg` `defaultWorldType=true` only applies to the singleplayer world screen.
-- **Testing a server build:** unzip the built zip into an empty scratch folder, drop in `serverstarter-2.4.0.jar`, run `java -jar serverstarter-2.4.0.jar` (it stops at the EULA on first boot — the EULA is the user's to accept). Afterwards, iterate faster with `java -Xmx6G -jar cleanroom-<ver>.jar nogui` directly. Piping a file into stdin (`tail -f console.in | java …`) gives a console for `stop`, `op`, `/flare …`. A random seed only exercises some worldgen: a crash in structure generation can hide behind a lucky seed, so a real join + exploring new chunks + visiting the Nether/End is the final check. `flare sampler stop --save-to-file` keeps profiles local (the default uploads to the public spark.lucko.me); the `.sparkprofile` is protobuf (`SamplerData`: thread node children = field 3, times = 4, child refs = 5; stack node class/method/times/refs = 3/4/8/9; class→mod map = top-level field 3).
-- **Known baseline (1.6.0):** ~10 ms median tick with one player; steady costs are Thaumic Augmentation `WardEventHandler.onWorldTick` (ward capability lookup on every loaded chunk each tick) and Extra Utilities 2 `PlayerPowerManager.tick` (scans player inventories + baubles every tick, scales with players). 300–550 ms spikes are vanilla autosave (every 45 s) and new-chunk generation (Recurrent Complex decoration is the largest mod share).
-
-### Server-safe code: client-only classes and methods
-
-Vanilla strips `@SideOnly(Side.CLIENT)` methods from the dedicated server, and Cleanroom's class loader (Foundation, `top.outlands.foundation.boot.ActualClassLoader`) **permanently blacklists** any class whose first load attempt fails ("Found X in invalid classes"), hiding the original error. Two dedicated-server crashes found while building the server pack, both invisible in singleplayer:
-
-- **Never name a client-only class in a `#loader mixin` script**, even in a `#sideonly server` file. Mixin scripts compile very early; ZenUtils resolving `import native.net.minecraft.util.BlockRenderLayer` failed there, Foundation blacklisted `BlockRenderLayer`, and Ender IO later crashed during construction (`NoClassDefFoundError` from `BlockDarkSteelAnvil` via `Class.getMethods`). Fixed in `scripts/mods/mixins/bedrockores_server.zs` by switching from a typed `WrapOperation` to an `@Inject` at HEAD of `getActualState` whose signature uses only server-safe types.
-- **Mods calling client-only vanilla methods in common code** crash with `NoSuchMethodError` only on servers. Unseen's Nether Backport's `WorldGenNetherStructures.getGroundFromAbove` calls `Block.func_149751_l` (`isTranslucent`); `scripts/mods/mixins/nb_server.zs` redirects it to `!state.func_185904_a().func_76228_b()` (what vanilla's `translucent` field is initialised to), as a `#sideonly server` static `@Redirect`.
-- **Debugging these:** add `-Dfoundation.verbose=true` (optionally `-Dfoundation.target=<class>`) to the server JVM args; `logs/debug.log` then shows `Failed to load class X, caused by …` with the real stack (that's how the ZenUtils early lookup was found). CleanMix's audit log (`logs/cleanmix.log`, `APPLY … -> target`) confirms whether a ZenScript mixin applied.
-
-### Log filtering (Stuff A Sock In It)
-
-`config/sasit.cfg` → `BasicFilter` drops any log event whose `"[logger]: message"` text contains one of its lines (stack traces attached to the event go with it). Filters are scoped per mod/namespace (e.g. `Parsing error loading built-in advancement farmersdelight:`) so new mods' errors stay visible.
-
-- It installs its filter at its own `FMLConstructionEvent`, so anything logged earlier can't be filtered: coremod/CleanMix messages and FML's "expecting signature … no signature matching" warnings always show.
-- Universal Tweaks' `Mute Advancement Errors` does **nothing** under Cleanroom: UT's `UTForgeHooksMixin` wraps `Logger.error(String, Throwable)`, but Cleanroom's `ForgeHooks.lambda$loadAdvancements$0` logs with `error(String, Object, Object)`, so it matches no call site. Use sasit filters instead. (The client log looks clean for an unrelated reason — the relauncher's log setup — so check the server log when hunting noise.)
+- Commit prefixes: `📈 Mod Addition: <name>`, `✏️ Config Tweak: <what>`, `📄 Recipe Tweak: <what>`, `🛠️ Refactor: <what>` (fixing something added earlier), `✨ New Feature: <name>`, `🔧 Internal: <what>` (packaging, versioning, tooling), `⚙️ Bump: <what>`. One logical change per commit.
+- Branches: `main` is the released version (what players and the server run). Work happens on `dev`, which carries the next version (bumped in `pack_version.txt` with a new changelog section right after a release) and merges into `main` when it ships.
+- **Kitchen-sink, not expert:** a chill experience with mods talking to each other. Don't port balancing, progression gating or difficulty recipe replacements from expert packs; port only genuine cross-mod integrations and bug/exploit fixes.
+- [Enigmatica2Expert-Extended](https://github.com/Krutoy242/Enigmatica2Expert-Extended) is a good reference for cross-mod recipes, mixins and JEI tabs, but much of it is expert gating or relies on E2EE-only mods and data. Verify every mod, item and ore-dict tag exists in this pack's jars (moddig) before porting, and don't trust its config values: some "default" cfgs (Astral Sorcery's `mineralis_ritual.cfg`) are templates never checked against installed mods.
+- Unification goes through UniDict config first; block drops through Dropt.
+- Major mods: Thermal series, Mekanism, AE2, Industrial Foregoing, IC2, Draconic Evolution, Astral Sorcery, Thaumcraft (+ addons), Botania, Tinkers' Construct (Antique fork), Forestry/Gendustry/Binnie, Pam's HarvestCraft, RFTools, Flux Networks.
