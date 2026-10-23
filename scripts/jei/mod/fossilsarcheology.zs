@@ -42,3 +42,26 @@ for _y in 0 .. fossilDropsList.length / 9 + 1 {
 }
 
 addRecipe(x, { []: fossilDropsList });
+
+// -----------------------------------------------------------------------
+// Permafrost drops - breaking <fossil:permafrost> rolls random.nextInt(20000)
+// and splits it evenly into 5 items, 20% each (decompiled from
+// PermafrostBlock.func_180660_a; its Dirt fallback is unreachable). All
+// weights are equal, so every entry is shown as a single item.
+// -----------------------------------------------------------------------
+var p = <assembly:permafrost_drops>;
+p.addJEICatalyst(<fossil:permafrost>);
+
+val permafrostDropsList = [
+  <fossil:fossil_seed_fern> * 1, // 20.00% (4000/20000)
+  <fossil:skull_block>      * 1, // 20.00% (4000/20000)
+  <fossil:iced_meat>        * 1, // 20.00% (4000/20000)
+  <minecraft:bone>          * 1, // 20.00% (4000/20000)
+  <minecraft:book>          * 1, // 20.00% (4000/20000)
+] as IItemStack[];
+
+for _x in 0 .. permafrostDropsList.length {
+  p.setJEIItemSlot(_x, 0, 'output' ~ _x);
+}
+
+addRecipe(p, { []: permafrostDropsList });

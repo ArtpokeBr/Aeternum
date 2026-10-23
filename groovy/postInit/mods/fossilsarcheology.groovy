@@ -15,3 +15,21 @@ mods.enderio.sag_mill.recipeBuilder()
 .register()
 
 //=================================================================================================
+
+// Permafrost processing - its 5 drops are an even 20% each (Fern Seed, Skull, Iced Meat, Bone, Book).
+// Bone guaranteed like the Fossil block, the rest at an equal chance. Book left out: the SAG Mill caps at 4 outputs.
+// Enhanced SAG Mill only, bonus outputs scale with grinding balls.
+// =================================================================================================
+
+mods.enderio.sag_mill.recipeBuilder()
+    .input(item('fossil:permafrost'))
+    .output(item('minecraft:bone'))
+    .output(item('fossil:fossil_seed_fern'), 0.35F)
+    .output(item('fossil:iced_meat'), 0.35F)
+    .output(item('fossil:skull_block'), 0.35F)
+    .energy(6400)
+    .tierEnhanced()
+    .bonusTypeChance()
+.register()
+
+//=================================================================================================

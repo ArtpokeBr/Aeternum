@@ -4,6 +4,11 @@
 
 - 
 
+### Added
+
+- Fossils & Archeology's Permafrost can now be processed in an Ender IO Enhanced Sag Mill into Bone (guaranteed), with chance-based bonus outputs of Fern Seeds, Iced Meat and Skulls, scaling with grinding balls.
+- Added a JEI Tab for Fossils & Archeology Permafrost Drops.
+
 ### Changed
 
 - Red Alloy can now be made in every alloying machine (Ender IO Alloy Smelter, Thermal Induction Smelter, Mekanism Metallurgic Infuser and NuclearCraft Alloy Furnace), and Electrotine Alloy (1 Silver + 4 Electrotine) was added to all of them, including the IE Alloy Kiln and Arc Furnace. Electrotine Dust is now a Metallurgic Infuser source.
