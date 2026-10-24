@@ -22,6 +22,7 @@
 ### Fixed
 
 - Environmental Tech's Void Ore Miner never producing Aer and Ignis Crystal Clusters.
+- Extra Utilities 2's JEI Blocks tab (Water, Lava, Fire and Dragon Egg Mill build patterns) having no icon or catalysts.
 
 ---
 
