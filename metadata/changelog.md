@@ -17,6 +17,7 @@
 - Glowstone is now a Metallurgic Infuser infuse type (Glowstone Dust 10, Glowstone block 40, new Compressed Glowstone 80, made from Glowstone Dust in the Enrichment Chamber), so Energized Silicon can be made there too.
 - Electrotine Ore now processes in every machine Redstone Ore does, at the same yields (SAG Mill, Induction Smelter, Enrichment Chamber, XU2 Crusher and more), with Electrum as a byproduct.
 - Added Crushing Recipes for Thaumcraft's Crystal Clusters in every Crusher, Pulverizer and Grinder.
+- The Angel Ring now accepts a Cursed Lasso holding any kind of Ghast, including Special Mobs' Ghast variants and Twilight Forest's Ghasts, and a Thaumcraft Firebat (in a Cursed Lasso) in place of the Bat. Angel Rings now have a tooltip saying so.
 
 ### Fixed
 
