@@ -27,6 +27,7 @@ Export the client from the CurseForge app → `python serverpack/build.py <expor
 
 - Parse the `@Mod` annotation for `clientSideOnly = true`. A plain string search for `clientSideOnly` gives false hits (CraftTweaker's `ctgui` submod, Sound Physics' paired server mod).
 - For jars without it: mods whose mixin configs have only `client` entries and that register no items, blocks or packets are client-only (Entity Culling, RenderLib, FancyMenu + Konkrete, Lumenized, …).
+- JEI addons are not automatically client-only. Just Enough Drags sends a server-bound packet to set the dropped slot, and without it on the server, drags looked set but never saved.
 - Read `mcmod.info` before trusting a name: Stuff A Sock In It is the pack's **log filter** and must stay on the server.
 - When unsure, keep the mod on the server: an extra mod that boots is harmless, a missing one isn't.
 
