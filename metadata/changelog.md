@@ -21,7 +21,7 @@
 - Traveler's Titles dimension names now use the same purple as The One Probe overlay.
 - Thaumcraft's Cinnabar Ore can now be doubled: every Crusher, Pulverizer and Grinder turns it into the new Quicksilver Dust (with Redstone and Sulfur byproducts), which smelts into Quicksilver. The Induction Smelter gives up to 3 Quicksilver, the Mekanism Combiner turns 8 Quicksilver Dust back into Cinnabar Ore, and Quicksilver can be crushed back into dust.
 - The Thermal Transposer recipe that turns Cinnabar Ore and Cryotheum into 4 Cinnabar now also works in the NuclearCraft Fluid Infuser.
-- Cinnabar Ore no longer gives Rare Earth as an Infernal Furnace bonus, only Quicksilver Drops.
+- Infernal Furnace bonuses no longer overlap: ores now only give their nugget (Rare Earth stays only on Redstone and Lapis Ore, which have no nugget), and Native and Eldritch Clusters only give Rare Earth (Eldritch Clusters keep their Flux crystal).
 
 ### Fixed
 

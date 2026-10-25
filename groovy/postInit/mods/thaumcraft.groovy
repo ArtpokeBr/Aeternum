@@ -250,13 +250,8 @@ mods.bloodmagic.alchemy_table.recipeBuilder()
     .tier(1)
 .register()
 
-//Infernal Furnace: Thaumcraft gives oreCinnabar both Quicksilver Drops (33%) and Rare Earth (2.5%).
-//Keep only the Quicksilver Drops. removeByOutput would strip Rare Earth from every ore, so filter on
-//the input, which Thaumcraft stores as the ore-dict name string.
-def rareEarth = item('thaumcraft:nugget', 10)
-mods.thaumcraft.smelting_bonus.streamRecipes()
-    .filter { it.in == 'oreCinnabar' && rareEarth.isItemEqual(it.out) }
-    .removeAll()
+//The Infernal Furnace bonus for Cinnabar Ore (Quicksilver Drops only) is set in Infernal Furnace
+//Bonuses below.
 
 //Astral Sorcery Grindstone: its generic ore loop gives 1 dust with a second-dust chance
 mods.astralsorcery.grindstone.recipeBuilder()
@@ -265,5 +260,47 @@ mods.astralsorcery.grindstone.recipeBuilder()
     .weight(12)
     .secondaryChance(0.85F)
 .register()
+
+//=================================================================================================
+
+//Infernal Furnace Bonuses ========================================================================
+
+//Thaumcraft, Thaumic Wonders and Congrega Mystica give every ore and cluster two Infernal Furnace
+//bonuses: a nugget (33%) and Rare Earth (1-2.5%). Split them: ores keep only their nugget, clusters
+//only Rare Earth (Eldritch Clusters also keep their Flux crystal). Ores with no nugget
+//(Redstone, Lapis) keep Rare Earth, their only bonus.
+//A bonus input is an ore-dict name string (oreX, clusterX, clusterEldritchX) or an ItemStack
+//(Thaumcraft and Thaumic Wonders clusters). Groovy postInit runs after every mod's postInit, so all
+//bonuses are registered by now.
+def rareEarth = item('thaumcraft:nugget', 10)
+def visCrystalItem = item('thaumcraft:crystal_essence')
+def clusterItems = ['thaumcraft:cluster', 'thaumicwonders:eldritch_cluster']
+
+def isRareEarth = { bonus -> rareEarth.isItemEqual(bonus.out) }
+def isOre = { bonus -> bonus.in instanceof String && bonus.in.startsWith('ore') }
+def isCluster = { bonus ->
+    bonus.in instanceof String ? bonus.in.startsWith('cluster') : bonus.in.item.registryName.toString() in clusterItems
+}
+
+//Diamond and Emerald get their Thermal Foundation nugget from Congrega Mystica, which adds an ore
+//nugget bonus for every cluster type in its config ("Register Smelting Bonus"). Drop exact
+//duplicates (same input, same output), so two mods adding one bonus can't show it twice.
+def stackKey = { stack -> "${stack.item.registryName}:${stack.metadata}" }
+def seenBonuses = [] as Set
+mods.thaumcraft.smelting_bonus.streamRecipes()
+    .filter { !seenBonuses.add("${it.in instanceof String ? it.in : stackKey(it.in)}>${stackKey(it.out)}") }
+    .removeAll()
+
+def oresWithNugget = mods.thaumcraft.smelting_bonus.streamRecipes()
+    .findAll { isOre(it) && !isRareEarth(it) }
+    .collect { it.in } as Set
+
+mods.thaumcraft.smelting_bonus.streamRecipes()
+    .filter { isOre(it) && isRareEarth(it) && it.in in oresWithNugget }
+    .removeAll()
+
+mods.thaumcraft.smelting_bonus.streamRecipes()
+    .filter { isCluster(it) && !isRareEarth(it) && it.out.item != visCrystalItem.item }
+    .removeAll()
 
 //=================================================================================================

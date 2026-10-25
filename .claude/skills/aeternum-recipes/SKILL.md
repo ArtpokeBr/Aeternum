@@ -26,6 +26,7 @@ Read the one the task needs:
 ## Thaumcraft Quicksilver and Cinnabar
 
 - Ore dict: Quicksilver is plain `quicksilver` (no `item` prefix), its nugget `nuggetQuicksilver` (`thaumcraft:nugget:5`; meta 10 is Rare Earth), the cluster `clusterCinnabar` (`thaumcraft:cluster:6`). Thermal's Cinnabar (`thermalfoundation:material:866`) is `crystalCinnabar`/`itemCinnabar`.
+- Infernal Furnace bonuses (`mods.thaumcraft.smelting_bonus`): the input is an ore-dict name string or an ItemStack. `removeByOutput` strips that output from every input, so filter `streamRecipes()` on `it.in` instead. Pack rule ("Infernal Furnace Bonuses" in `groovy/postInit/mods/thaumcraft.groovy`): ores give only their nugget, clusters only Rare Earth (`thaumcraft:nugget:10`). It's applied generically, so a new ore or cluster bonus from any mod follows it automatically.
 - The pack's dust stage is `aeternum:quicksilver_dust` (`dustQuicksilver`, registered in `groovy/postInit/mods/thaumcraft.groovy`).
 
 ## Looking up vanilla-ore yields (ore parity)
