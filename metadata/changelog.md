@@ -29,6 +29,7 @@
 - Blocks now break at normal speed while flying (jetpacks, Angel Ring, flight armour).
 - The /time set day and /time set night commands skip ahead to the next day or night again instead of resetting world time.
 - AE2's in-world Fluix Crystal recipe (Charged Certus Quartz, Redstone and Nether Quartz dropped into water) now shows in JEI, and a new variant using Electrotine Dust instead of Redstone gives 4 Fluix Crystals instead of 2.
+- Deep Mob Learning's Glitch-Infused Ingot recipe (Glitch Fragment, Gold Ingot and Lapis Lazuli dropped into water) now shows in JEI.
 
 ### Fixed
 
