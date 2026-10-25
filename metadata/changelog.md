@@ -9,6 +9,7 @@
 
 - Fossils & Archeology's Permafrost can now be processed in an Ender IO Enhanced Sag Mill into Bone (guaranteed), with chance-based bonus outputs of Fern Seeds, Iced Meat and Skulls, scaling with grinding balls.
 - Added a JEI Tab for Fossils & Archeology Permafrost Drops.
+- Added a JEI Tab for Deep Mob Learning's left-click recipes: Soot-covered Redstone (Redstone on a Block of Coal) and Glitch Fragments (Glitch Heart on Obsidian).
 
 ### Changed
 
