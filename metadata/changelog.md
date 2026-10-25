@@ -18,6 +18,7 @@
 - Electrotine Ore now processes in every machine Redstone Ore does, at the same yields (SAG Mill, Induction Smelter, Enrichment Chamber, XU2 Crusher and more), with Electrum as a byproduct.
 - Added Crushing Recipes for Thaumcraft's Crystal Clusters in every Crusher, Pulverizer and Grinder.
 - The Angel Ring now accepts a Cursed Lasso holding any kind of Ghast, including Special Mobs' Ghast variants and Twilight Forest's Ghasts, and a Thaumcraft Firebat (in a Cursed Lasso) in place of the Bat. Angel Rings now have a tooltip saying so.
+- Traveler's Titles dimension names now use the same purple as The One Probe overlay.
 
 ### Fixed
 
