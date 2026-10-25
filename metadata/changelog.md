@@ -35,6 +35,7 @@
 - Dragging items and fluids from JEI into AE2 buses, interfaces, level emitters, the Cell Workbench and the Pattern Terminal now uses AE2's own handler again, instead of Just Enough Drags' older one overriding it.
 - Dedicated servers crashing on boot because of the new Electrotine and Glowstone infuse types.
 - Just Enough Drags crashing dedicated servers on boot (its XNet support now only loads on the client).
+- Infernal Furnace bonuses still showing duplicates on dedicated servers (the de-duplication script failed there).
 
 ---
 

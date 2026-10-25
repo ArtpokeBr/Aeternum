@@ -1,5 +1,7 @@
 // mods_loaded: thaumcraft
 
+import net.minecraft.item.Item
+
 //IC2 Extractor Recipe for Cinder Pearl ===========================================================
 
 mods.ic2.extractor.add(item('thaumcraft:cinderpearl'), item('minecraft:blaze_powder') * 3)
@@ -276,16 +278,22 @@ def rareEarth = item('thaumcraft:nugget', 10)
 def visCrystalItem = item('thaumcraft:crystal_essence')
 def clusterItems = ['thaumcraft:cluster', 'thaumicwonders:eldritch_cluster']
 
+//Never read a property or call a method on an Item itself (stack.item.registryName, item != item):
+//Groovy then builds a MetaClass for the mod's item class, and on a dedicated server that fails for
+//Thaumcraft's ItemTCBase (IThaumcraftItems methods return the client-only ItemMeshDefinition and
+//ModelResourceLocation). Look the name up through the vanilla registry instead.
+def itemName = { stack -> Item.REGISTRY.getNameForObject(stack.getItem()) }
+
 def isRareEarth = { bonus -> rareEarth.isItemEqual(bonus.out) }
 def isOre = { bonus -> bonus.in instanceof String && bonus.in.startsWith('ore') }
 def isCluster = { bonus ->
-    bonus.in instanceof String ? bonus.in.startsWith('cluster') : bonus.in.item.registryName.toString() in clusterItems
+    bonus.in instanceof String ? bonus.in.startsWith('cluster') : itemName(bonus.in).toString() in clusterItems
 }
 
 //Diamond and Emerald get their Thermal Foundation nugget from Congrega Mystica, which adds an ore
 //nugget bonus for every cluster type in its config ("Register Smelting Bonus"). Drop exact
 //duplicates (same input, same output), so two mods adding one bonus can't show it twice.
-def stackKey = { stack -> "${stack.item.registryName}:${stack.metadata}" }
+def stackKey = { stack -> "${itemName(stack)}:${stack.getMetadata()}" }
 def seenBonuses = [] as Set
 mods.thaumcraft.smelting_bonus.streamRecipes()
     .filter { !seenBonuses.add("${it.in instanceof String ? it.in : stackKey(it.in)}>${stackKey(it.out)}") }
@@ -300,7 +308,7 @@ mods.thaumcraft.smelting_bonus.streamRecipes()
     .removeAll()
 
 mods.thaumcraft.smelting_bonus.streamRecipes()
-    .filter { isCluster(it) && !isRareEarth(it) && it.out.item != visCrystalItem.item }
+    .filter { isCluster(it) && !isRareEarth(it) && itemName(it.out) != itemName(visCrystalItem) }
     .removeAll()
 
 //=================================================================================================
