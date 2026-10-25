@@ -36,6 +36,7 @@
 - Dedicated servers crashing on boot because of the new Electrotine and Glowstone infuse types.
 - Just Enough Drags crashing dedicated servers on boot (its XNet support now only loads on the client).
 - Infernal Furnace bonuses still showing duplicates on dedicated servers (the de-duplication script failed there).
+- Joining a Dedicated Server no longer shows a Mixin error in chat about Nether Backport.
 
 ---
 
