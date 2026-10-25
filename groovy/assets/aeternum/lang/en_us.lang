@@ -1,6 +1,7 @@
 item.aeternum.copper_chipset.name=Copper Chipset
 item.aeternum.compressed_electrotine.name=Compressed Electrotine
 item.aeternum.compressed_glowstone.name=Compressed Glowstone
+item.aeternum.quicksilver_dust.name=Quicksilver Dust
 
 # Mekanism infuse types registered in groovy/preInit/mekanism.groovy
 infuse.electrotine=Electrotine

@@ -1,6 +1,6 @@
 ---
 name: aeternum-recipes
-description: How to write recipes in the Aeternum 1.12.2 pack - which language each machine needs (GroovyScript first, CraftTweaker fallback), the full list of alloying machines and crushing machines and their APIs, and NuclearCraft's CraftTweaker-only API and Manufactory ore-dict bug. Use when adding, changing or removing a recipe or alloy, adding a crusher/pulverizer/grinder recipe, adding a machine recipe for NuclearCraft, Immersive Engineering, Ender IO, Thermal, Mekanism or Tinkers', or adding a Mekanism infuse type.
+description: How to write recipes in the Aeternum 1.12.2 pack - which language each machine needs (GroovyScript first, CraftTweaker fallback), the full list of alloying machines, crushing machines and item+fluid machines (Transposer, NC Infuser) and their APIs, and NuclearCraft's CraftTweaker-only API and Manufactory ore-dict bug. Use when adding, changing or removing a recipe or alloy, adding a crusher/pulverizer/grinder recipe, adding a machine recipe for NuclearCraft, Immersive Engineering, Ender IO, Thermal, Mekanism or Tinkers', or adding a Mekanism infuse type.
 ---
 
 # Recipes in Aeternum
@@ -19,7 +19,14 @@ Read the one the task needs:
 
 - `references/alloying.md`: every machine that makes alloys, with its API. Read before adding an alloy; an alloy added "everywhere" covers every row.
 - `references/crushing.md`: every crusher, grinder and mill with its API and quirks (IC2 Macerator takes the output first, SAG Mill grinding-ball bonus). Read before adding a crushing recipe; one added "to every crusher" covers every automatable row.
+- `references/crushing.md` also has the Iron Ore yield table (metal-ore parity) and why ore loops skip ores with no matching dust.
 - `references/nuclearcraft.md`: NuclearCraft's CraftTweaker API and the Manufactory ore-dict bug. Read before any NuclearCraft recipe.
+- `references/fluid-infusion.md`: item + fluid -> item machines (Transposer, NC Infuser, Bottling Machine, ...) and fluid-name notes (Cryotheum, mercury/quicksilver). Read before porting a Transposer-style recipe.
+
+## Thaumcraft Quicksilver and Cinnabar
+
+- Ore dict: Quicksilver is plain `quicksilver` (no `item` prefix), its nugget `nuggetQuicksilver` (`thaumcraft:nugget:5`; meta 10 is Rare Earth), the cluster `clusterCinnabar` (`thaumcraft:cluster:6`). Thermal's Cinnabar (`thermalfoundation:material:866`) is `crystalCinnabar`/`itemCinnabar`.
+- The pack's dust stage is `aeternum:quicksilver_dust` (`dustQuicksilver`, registered in `groovy/postInit/mods/thaumcraft.groovy`).
 
 ## Looking up vanilla-ore yields (ore parity)
 

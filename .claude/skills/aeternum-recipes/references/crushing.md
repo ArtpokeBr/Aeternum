@@ -4,6 +4,23 @@ Every machine in the pack that crushes, grinds or mills an item into another, wi
 
 - `groovy/postInit/mods/thaumcraft.groovy` and `scripts/mods/thaumcraft.zs` ("Crystal Cluster Crushing"): one plain item -> item recipe in every automatable crusher, NBT output included.
 - `groovy/postInit/mods/projectred.groovy` ("Electrotine Ore Processing"): ore recipes with byproducts and chances, plus the `removeByInput` quirks.
+- `groovy/postInit/mods/thaumcraft.groovy` and `scripts/mods/thaumcraft.zs` ("Cinnabar Ore Processing"): an ore with no dust gets a custom one (`aeternum:quicksilver_dust`) at Iron Ore's yields in every machine, plus dust smelting, the Mekanism Combiner back to ore, and ingot-style item -> dust recipes.
+
+## Iron Ore yields (metal-ore parity)
+
+Checked in the jars and the SAG Mill PDFs. Copy these when giving a modded ore "normal" doubling:
+
+| Machine | Ore | Ingot -> dust |
+|---|---|---|
+| Thermal Pulverizer | 2 dust + 10% related, 4000 RF | 1 dust, 2000 RF |
+| Induction Smelter | + Sand: 2 ingots + 5% Rich Slag; + Rich Slag: 3 + 75% Slag; + Cinnabar: 3 + 100% related (75% Rich Slag if none; the Cinnabar Ore recipe uses 75% Rich Slag); 4000 RF | dust + Sand: 1 ingot + 25% Slag, 1000 RF |
+| IE Crusher | 2 dust + secondary, 6000 RF | 3600 RF |
+| SAG Mill | 2 dust + 5% and 10% byproducts + 15% Cobblestone, 3600 RF | 2400 RF, `bonus="none"` |
+| Mekanism | Enrichment 2 dust; Combiner 8 dust + Cobblestone -> ore | Crusher |
+
+## Ore loops miss ores with no matching dust
+
+Every generic ore loop (Thermal, IE, Mekanism, Actually Additions, XU2, SAG Mill, Blood Magic Cutting Fluid, Astral Sorcery Grindstone, NC Manufactory, IC2) pairs `ore<X>` with `dust<X>`/`ingot<X>`/`gem<X>`. An ore without those, like Thaumcraft's `oreCinnabar`, gets no recipe anywhere, so write each machine's recipe explicitly. When the pack adds a dust for such an ore, name its ore-dict entry after the product (`dustQuicksilver`), not `dust<OreName>`, or the loops add flat recipes of their own next to the explicit ones.
 
 ## GroovyScript (automatable)
 

@@ -30,3 +30,19 @@ for aspect, cluster in crystalClusters {
 }
 
 //=================================================================================================
+
+//Cinnabar Ore Processing =========================================================================
+
+//The GroovyScript machines and the Quicksilver Dust ore dict are in groovy/postInit/mods/thaumcraft.groovy.
+
+//Fluid Infuser: Thermal's Transposer recipe, Cinnabar Ore + 200 mB Cryotheum -> 4 Cinnabar
+mods.nuclearcraft.Infuser.addRecipe(<ore:oreCinnabar>, <liquid:cryotheum> * 200, <thermalfoundation:material:866> * 4);
+
+//Direct item ids only: the Manufactory rejects ore-dict inputs. Ores are 2 dust, ingots 1.
+mods.nuclearcraft.Manufactory.addRecipe(<thaumcraft:ore_cinnabar>, <aeternum:quicksilver_dust> * 2, 1.0, 1.0, 0.0);
+mods.nuclearcraft.Manufactory.addRecipe(<thaumcraft:quicksilver>, <aeternum:quicksilver_dust>, 1.0, 1.0, 0.0);
+
+//Rock Crusher: 2 dust with GregTech's Cinnabar byproducts, Redstone then Sulfur
+moretweaker.railcraft.RockCrusher.add(<thaumcraft:ore_cinnabar>, [<aeternum:quicksilver_dust> * 2, <minecraft:redstone>, <thermalfoundation:material:771>], [1.0, 0.1, 0.05], 100);
+
+//=================================================================================================

@@ -19,6 +19,9 @@
 - Added Crushing Recipes for Thaumcraft's Crystal Clusters in every Crusher, Pulverizer and Grinder.
 - The Angel Ring now accepts a Cursed Lasso holding any kind of Ghast, including Special Mobs' Ghast variants and Twilight Forest's Ghasts, and a Thaumcraft Firebat (in a Cursed Lasso) in place of the Bat. Angel Rings now have a tooltip saying so.
 - Traveler's Titles dimension names now use the same purple as The One Probe overlay.
+- Thaumcraft's Cinnabar Ore can now be doubled: every Crusher, Pulverizer and Grinder turns it into the new Quicksilver Dust (with Redstone and Sulfur byproducts), which smelts into Quicksilver. The Induction Smelter gives up to 3 Quicksilver, the Mekanism Combiner turns 8 Quicksilver Dust back into Cinnabar Ore, and Quicksilver can be crushed back into dust.
+- The Thermal Transposer recipe that turns Cinnabar Ore and Cryotheum into 4 Cinnabar now also works in the NuclearCraft Fluid Infuser.
+- Cinnabar Ore no longer gives Rare Earth as an Infernal Furnace bonus, only Quicksilver Drops.
 
 ### Fixed
 
