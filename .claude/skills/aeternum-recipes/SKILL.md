@@ -22,6 +22,7 @@ Read the one the task needs:
 - `references/crushing.md` also has the Iron Ore yield table (metal-ore parity) and why ore loops skip ores with no matching dust.
 - `references/nuclearcraft.md`: NuclearCraft's CraftTweaker API and the Manufactory ore-dict bug. Read before any NuclearCraft recipe.
 - `references/fluid-infusion.md`: item + fluid -> item machines (Transposer, NC Infuser, Bottling Machine, ...) and fluid-name notes (Cryotheum, mercury/quicksilver). Read before porting a Transposer-style recipe.
+- `references/rockhounding.md`: Rockhounding Chemistry (CraftTweaker-only machines, item metas). Read before using its items.
 
 ## Thaumcraft Quicksilver and Cinnabar
 

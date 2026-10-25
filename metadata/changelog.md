@@ -23,6 +23,7 @@
 - The Thermal Transposer recipe that turns Cinnabar Ore and Cryotheum into 4 Cinnabar now also works in the NuclearCraft Fluid Infuser.
 - Infernal Furnace bonuses no longer overlap: ores now only give their nugget (Rare Earth stays only on Redstone and Lapis Ore, which have no nugget), and Native and Eldritch Clusters only give Rare Earth (Eldritch Clusters keep their Flux crystal).
 - Immersive Engineering's Metal Blocks (Copper, Aluminum, Lead, Silver, Nickel, Uranium, Electrum and Steel), hidden by unification, can now be made again in a Chisel from any Block of the same metal. Constantan gets its own Chisel group with Thermal's and Immersive Engineering's Blocks of Constantan.
+- Deep Mob Learning's Polymer Clay is now made like the real thing: Rockhounding Chemistry's Chloride Compound (the PVC) and Coal Tar Compound (the plasticizer), with Clay and Lapis Lazuli. It no longer needs Gold or Iron.
 
 ### Fixed
 
