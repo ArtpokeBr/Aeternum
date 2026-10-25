@@ -27,7 +27,7 @@ Detail lives next to the code. A folder's `CLAUDE.md` loads once a file in that 
 | Biomes O'Plenty biome configs | `config/biomesoplenty/CLAUDE.md` |
 | Server pack, client-only mods, server testing and profiling | `serverpack/CLAUDE.md` |
 | Log noise, `config/sasit.cfg` | `docs/claude/log-filtering.md` |
-| StellarCore options vs LoliASM, VintageFix, Universal Tweaks | `docs/claude/stellarcore-conflicts.md` |
+| Performance mods (Celeritas, LoliASM, VintageFix, UT), StellarCore options | `docs/claude/performance-mods.md`, `docs/claude/stellarcore-conflicts.md` |
 | Changelog entries (layout, which version block, style) | `metadata/CLAUDE.md` |
 
 At the end of a change that alters how the pack works, run the `docs-keeper` agent with the base commit (or "uncommitted") and the feature names.

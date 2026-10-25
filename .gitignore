@@ -38,6 +38,7 @@ journeymap/server
 servers.dat
 loading-log.log
 config/cleanroom_load_timings.dat
+config/stellarcore_vanilla_model_cache_*.dat
 tinkersplannerantique/planner_bookmarks_tools.dat
 visualores/
 config/rc_cache/

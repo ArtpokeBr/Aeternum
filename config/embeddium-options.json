@@ -4,8 +4,8 @@
     "leaves_quality": "DEFAULT",
     "enable_vignette": true,
     "use_quad_normals_for_shading_v2": true,
-    "chunk_fade_in_duration": 0,
-    "legacy_biome_blend_radius": 0
+    "chunk_fade_in_duration": 1000,
+    "legacy_biome_blend_radius": 3
   },
   "advanced": {
     "enable_memory_tracing": false,

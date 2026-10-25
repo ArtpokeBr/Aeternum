@@ -11,6 +11,7 @@ LoliASM is `mods/chibi-5.34.jar` (modid `loliasm`), easy to miss in a grep for "
 - `ResourceLocationCanonicalization`: LoliASM `resourceLocationCanonicalization` ASM-rewrites the same `toLowerCase` call in `ResourceLocation.<init>` before mixins apply, so StellarCore's `@Redirect` matched nothing.
 - `NBTTagImprovements`: conflicts with LoliASM `optimizeNBTTagCompoundBackingMap` / `nbtBackingMapStringCanonicalization`. StellarCore auto-disabled it with a warning banner in `latest.log`; it is off explicitly now.
 - `StateMapperBaseImprovements`: LoliASM `optimizeRegistries` swaps the map in `StateMapperBase.<init>`; StellarCore replaced it again afterwards.
+- `ASMModParserImprovements`: `ASMModParser` is already loaded (MixinBooter patches it) before StellarCore's mixin can apply, so it logged "Critical problem … loaded too early" every launch and never ran.
 - `PropertyEnumHashCodeCache`: VintageFix `mixin.blockstates` and StellarCore both `@Overwrite` `PropertyEnum.hashCode()`.
 - `ResourceExistStateCache`: VintageFix `mixin.resourcepacks` caches the same lookups (`AbstractResourcePack`, `DefaultResourcePack`, `FileResourcePack.hasResourceName`, `ResourceLoader`). Options that do nothing without it are off too: `ArchiveResourcePackIndex`, `DirectoryResourcePackIndex`, libnine `L9ModelsIsOfTypeCache`, tconstruct `ParallelMaterialTextureGen`.
 - `ChunkTileEntityMapImprovements`: UT's "Tile Entity Map" (`LINKED_HASHMAP`) owns that field. Must stay off.
