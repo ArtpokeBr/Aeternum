@@ -8,7 +8,7 @@ Java-level bug and performance fixes written as CraftTweaker scripts through the
 - SRG names in the `target:`/`method:` bytecode descriptors; MCP/friendly names in the function body.
 - Side-specific files: `#sideonly client` / `#sideonly server`, named `*_client.zs` / `*_server.zs`. They still must not name client-only classes (see *Server-safe code*).
 - **Always decompile the installed jar with `javap`** to confirm field and method names first. A close copy of an E2EE mixin (`chisel.zs`, since reverted) broke because the field it assumed doesn't exist in this build.
-- Existing fixes: EnderIO, Forestry, ThermalDynamics, VillageNames perf; Immersive Engineering's Arc Furnace recipe scan, villager trade gen and Engineer's Manual recipe-grid previews; Just Enough Drags' AE2 integration disabled so AE2UEL's own JEI ghost handler is used (`justenoughdrags.zs`); a TheOneProbe (TheOneSmeagle fork) provider for Rustic's Apiary (`rustic.zs`); the server crash fixes `bedrockores_server.zs` and `nb_server.zs`.
+- Existing fixes: EnderIO, Forestry, ThermalDynamics, VillageNames perf; Immersive Engineering's Arc Furnace recipe scan, villager trade gen and Engineer's Manual recipe-grid previews; Just Enough Drags' AE2 integration disabled so AE2UEL's own JEI ghost handler is used, and its XNet integration disabled on the dedicated server only (`justenoughdrags.zs`); a TheOneProbe (TheOneSmeagle fork) provider for Rustic's Apiary (`rustic.zs`); the server crash fixes `bedrockores_server.zs` and `nb_server.zs`.
 - `logs/cleanmix.log` (`APPLY … -> target`) confirms whether a mixin applied. Grep it, it's ~1 MB.
 
 ## ZenScript class pitfalls

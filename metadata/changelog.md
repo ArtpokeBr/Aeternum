@@ -33,6 +33,7 @@
 - Extra Utilities 2's JEI Blocks tab (Water, Lava, Fire and Dragon Egg Mill build patterns) having no icon or catalysts.
 - Dragging items from JEI into filters with Just Enough Drags not saving on servers (the mod was missing from the server pack).
 - Dragging items and fluids from JEI into AE2 buses, interfaces, level emitters, the Cell Workbench and the Pattern Terminal now uses AE2's own handler again, instead of Just Enough Drags' older one overriding it.
+- Just Enough Drags crashing dedicated servers on boot (its XNet support now only loads on the client).
 
 ---
 
