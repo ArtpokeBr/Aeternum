@@ -26,7 +26,8 @@
     "use_render_pass_consolidation": true,
     "use_faster_clouds": true,
     "use_no_error_g_l_context": true,
-    "async_occlusion_mode": "ONLY_SHADOW"
+    "async_occlusion_mode": "ONLY_SHADOW",
+    "use_raster_occlusion_culling": false
   },
   "notifications": {
     "force_disable_donation_prompts": false,

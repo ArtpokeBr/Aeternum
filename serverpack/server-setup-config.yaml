@@ -64,6 +64,7 @@ install:
       - 1052470 # Extreme Sound Muffler: Legacy
       - 367706 # FancyMenu
       - 410295 # Konkrete (FancyMenu library)
+      - 650242 # File Director (only downloads the client-only Celeritas jar)
       - 618947 # FreeCam by Zergatul
       - 1234162 # Lumenized
       - 1073925 # Rather Enough Immersive Multiblocks

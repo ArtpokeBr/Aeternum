@@ -1,0 +1,27 @@
+{
+	"url":
+	[
+		{
+			"url": "https://github.com/kappa-maintainer/Celeritas-auto-build/releases/download/commit-625b6f40faa5ae65f0c5d47b383e2fc6bbfc3451-20261023T020729/01-celeritas-forge-mc12.2-2.5.0-dev.jar",
+			"fileName": "celeritas-forge-mc12.2-2.5.0-dev.jar",
+			"inject": false,
+			"metadata":
+			{
+				"side": "CLIENT",
+				"hash":
+				{
+					"MD5": "4b6d1f5d8a11248c1f3527564e5e06f3"
+				}
+			},
+			"installationPolicy":
+			{
+				"optionalKey": "celeritas",
+				"selectedByDefault": true,
+				"name": "Celeritas",
+				"description": "Optional renderer rewrite for much higher FPS. Celeritas Extra and Dynamic Lights hook into it. Untick to keep the vanilla renderer. Takes effect after you restart the game once.",
+				"supersede": "celeritas-forge-mc12.2-2.4.0-dev.jar",
+				"continueOnFailedDownload": true
+			}
+		}
+	]
+}

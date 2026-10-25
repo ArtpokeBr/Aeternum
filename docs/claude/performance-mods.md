@@ -4,7 +4,7 @@ How the optimisation mods fit together and why their options are set as they are
 
 ## Celeritas is optional
 
-- Players install the Celeritas core jar (`celeritas-forge-*-dev.jar`) by hand. Celeritas Extra and Celeritas Dynamic Lights ship through CurseForge and must keep working without it.
+- The Celeritas core jar (`celeritas-forge-*-dev.jar`) isn't on CurseForge. File Director offers it on first launch (ticked, players can untick) from `config/mod-director/celeritas.bundle.json`. It takes effect from the second launch on; see `serverpack/CLAUDE.md` for bumping it. Celeritas Extra and Celeritas Dynamic Lights ship through CurseForge and must keep working without it.
 - Celeritas Extra only references Celeritas in its options GUI; its other mixins target vanilla classes. So mods that matter only on the vanilla renderer stay in the pack.
 - Celeritas reads `config/embeddium-options.json`.
 - **ChunkAnimator** ASM-patches vanilla `RenderChunk`/`ChunkRenderContainer`, which Celeritas bypasses, so it does nothing for Celeritas players. Celeritas' `chunk_fade_in_duration` is 1000 ms to match ChunkAnimator's `AnimationDuration=1000`.
