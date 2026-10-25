@@ -3,7 +3,7 @@
 Personal 1.12.2 kitchen-sink modpack ("Artpoke Presents: Aeternum") on [CurseForge](https://www.curseforge.com/minecraft/modpacks/artpoke-presents-aeternum). This repo is the instance folder, versioned in git and pushed to CurseForge as pack updates.
 
 - Minecraft 1.12.2, Forge 14.23.5.2860, ~300 mods in `mods/` (flat). The `!`-prefixed jars load first: Red-Core, MixinBooter, ConfigAnytime, Cleanroom Relauncher.
-- Cleanroom Relauncher (CurseForge project 1214490) relaunches the client on the [Cleanroom](https://cleanroommc.com/wiki/) loader; version and Java target in `config/relauncher.json` (`selectedVersion`, currently `0.6.13-alpha`, Java 25). The dedicated server installs Cleanroom directly.
+- Cleanroom Relauncher (CurseForge project 1214490) relaunches the client on the [Cleanroom](https://cleanroommc.com/wiki/) loader; version and Java target in `config/relauncher.json` (`selectedVersion`, currently `0.7.12-alpha`, Java 25). The dedicated server installs Cleanroom directly.
 
 ## Layout
 

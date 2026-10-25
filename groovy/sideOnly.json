@@ -1,0 +1,9 @@
+{
+  "_comment": "Hand-written GroovyScript side-only config. Members under 'client' only exist on the client and are stripped from the class on the dedicated server. InfuseType's sprite/setIcon use the client-only TextureAtlasSprite: without stripping them, Groovy can't reflect the class on a server (preInit/mekanism.groovy) and GroovyScript's auto-detection writes every member, name included, into sideOnlyGenerated.json, which breaks the class on the next boot.",
+  "client": {
+    "mekanism.api.infuse.InfuseType": [
+      "sprite",
+      "setIcon()"
+    ]
+  }
+}
