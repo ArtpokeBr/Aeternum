@@ -26,6 +26,8 @@
 - Immersive Engineering's Metal Blocks (Copper, Aluminum, Lead, Silver, Nickel, Uranium, Electrum and Steel), hidden by unification, can now be made again in a Chisel from any Block of the same metal. Constantan gets its own Chisel group with Thermal's and Immersive Engineering's Blocks of Constantan.
 - Deep Mob Learning's Polymer Clay is now made like the real thing: Rockhounding Chemistry's Chloride Compound (the PVC) and Coal Tar Compound (the plasticizer), with Clay and Lapis Lazuli. It no longer needs Gold or Iron.
 - Celeritas is now offered on first launch (ticked by default, untick it to keep the vanilla renderer) and updated to 2.5.0. No more installing it by hand.
+- Blocks now break at normal speed while flying (jetpacks, Angel Ring, flight armour).
+- The /time set day and /time set night commands skip ahead to the next day or night again instead of resetting world time.
 
 ### Fixed
 
@@ -37,6 +39,7 @@
 - Just Enough Drags crashing dedicated servers on boot (its XNet support now only loads on the client).
 - Infernal Furnace bonuses still showing duplicates on dedicated servers (the de-duplication script failed there).
 - Joining a Dedicated Server no longer shows a Mixin error in chat about Nether Backport.
+- AE2 Storage Buses no longer crash the game when attached to a misbehaving modded inventory.
 
 ---
 
