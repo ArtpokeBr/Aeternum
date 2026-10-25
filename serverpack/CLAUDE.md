@@ -4,13 +4,21 @@ Modelled on Enigmatica 2 Expert Extended's server pack: a small zip driven by [S
 
 ## Release flow
 
-Export the client from the CurseForge app → `python serverpack/build.py <export.zip>` → upload `serverpack/build/Aeternum-<ver>-server.zip` (gitignored) as the CurseForge server file. The version comes from `metadata/pack_version.txt` (or `--version`).
+`python serverpack/export.py` builds `serverpack/build/Aeternum-<ver>.zip` (client export) and then the server zip `Aeternum-<ver>-server.zip` (both gitignored); upload them to CurseForge. `--no-server` skips the server zip. The version comes from `metadata/pack_version.txt` (or `--version`). Exporting from the CurseForge app is no longer needed.
+
+## `export.py`
+
+- Same layout as the app's export: `manifest.json`, `modlist.html`, `profileImage/`, `overrides/`. The manifest is built from `minecraftinstance.json` (`installedAddons` of `categoryClassID` in `manifestCategoryClasses`, i.e. mods; `isEnabled` becomes `required`). It aborts if a jar in `mods/` has no CurseForge record and doesn't match `unmanagedJars` (e.g. the Celeritas dev jar), or if a recorded jar is missing on disk.
+- Overrides are the **git-tracked** files under `include` in `serverpack/export.json`, minus `exclude` (fnmatch globs; `*/CLAUDE.md` and `config/brandon3055/ProjectIntelligence/manifest.json` are excluded). So a file ships only once it is `git add`ed. It warns about untracked files under `include` (left out), tracked files with uncommitted changes (the working tree is exported), and tracked files missing on disk.
+- `export.json` also holds pack `name`, `author`, `recommendedRam`, and `image` (`serverpack/icon_256.png`). A new shipped top-level folder must be added to `include`.
+- It imports `build.py` and calls `build_server(export, version)`.
 
 ## `build.py`
 
+- Can still be run by hand on an app export: `python serverpack/build.py <export.zip> [--version X]`.
 - ServerStarter's CurseForge lookup service (`cursemeta.dries007.net`) is shut down, so a stock export manifest can't be resolved. ServerStarter still honours a per-file `downloadUrl` in `manifest.json` (`ModEntryRaw`); `build.py` fills it from `minecraftinstance.json` → `installedFile.downloadUrl` (direct `edge.forgecdn.net` links, as E2EE does).
 - Strips `overrides/resources` and `overrides/resourcepacks`, and every `CLAUDE.md`.
-- Aborts if an export file ID doesn't match the installed one. Warns about `ignoreProject` IDs no longer in the manifest, and about any git-tracked file under `config/`, `scripts/`, `groovy/` missing from or differing from the export (the CurseForge export checklist doesn't auto-tick new files). `CLAUDE.md` files are exempt. `config/brandon3055/ProjectIntelligence/manifest.json` is deliberately left out of the export and always warns.
+- Aborts if an export file ID doesn't match the installed one. Warns about `ignoreProject` IDs no longer in the manifest, and about any git-tracked file under `config/`, `scripts/`, `groovy/` missing from or differing from the export (a safety net for app exports). `CLAUDE.md` files are exempt. `config/brandon3055/ProjectIntelligence/manifest.json` is deliberately left out of the export and always warns.
 
 ## Finding a mod's CurseForge IDs
 

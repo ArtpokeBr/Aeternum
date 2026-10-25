@@ -1,0 +1,25 @@
+{
+  "name": "Aeternum",
+  "author": "",
+  "recommendedRam": 6080,
+  "image": "serverpack/icon_256.png",
+  "manifestCategoryClasses": [6],
+  "include": [
+    "config/",
+    "scripts/",
+    "groovy/",
+    "resources/",
+    "metadata/",
+    "mods/1.12.2/",
+    "mods/hats/",
+    "mods/memory_repo/",
+    "resourcepacks/Aeternum.zip"
+  ],
+  "exclude": [
+    "*/CLAUDE.md",
+    "config/brandon3055/ProjectIntelligence/manifest.json"
+  ],
+  "unmanagedJars": [
+    "celeritas-forge-*-dev.jar"
+  ]
+}

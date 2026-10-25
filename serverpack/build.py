@@ -3,6 +3,9 @@
 Usage:
     python serverpack/build.py <path/to/Aeternum-export.zip> [--version 1.6.0]
 
+serverpack/export.py builds the client export itself and calls this; pass an export
+from the CurseForge app here only when building by hand.
+
 Output: serverpack/build/Aeternum-<version>-server.zip, containing the ServerStarter
 files from this folder plus Aeternum-modpack.zip (the export's manifest + overrides).
 
@@ -52,10 +55,13 @@ def cdn_url(file_id, file_name):
     return f"https://edge.forgecdn.net/files/{s[:4]}/{int(s[4:])}/{file_name}"
 
 
-def load_installed_files():
+def load_instance():
     with open(INSTANCE / "minecraftinstance.json", encoding="utf-8") as f:
-        instance = json.load(f)
-    return {a["addonID"]: a for a in instance["installedAddons"]}
+        return json.load(f)
+
+
+def load_installed_files():
+    return {a["addonID"]: a for a in load_instance()["installedAddons"]}
 
 
 def enrich_manifest(manifest, installed):
@@ -100,16 +106,14 @@ def check_overrides(src):
             print(f"warning: {rel} differs from the export (re-export?)", file=sys.stderr)
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("export", type=Path, help="CurseForge client export zip")
-    parser.add_argument("--version", help="pack version (default: metadata/pack_version.txt)")
-    args = parser.parse_args()
+def pack_version():
+    return (INSTANCE / "metadata" / "pack_version.txt").read_text(encoding="utf-8").strip()
 
-    version = args.version or (INSTANCE / "metadata" / "pack_version.txt").read_text(encoding="utf-8").strip()
+
+def build_server(export, version):
     installed = load_installed_files()
 
-    with zipfile.ZipFile(args.export) as src:
+    with zipfile.ZipFile(export) as src:
         manifest = json.loads(src.read("manifest.json"))
         manifest["version"] = version
 
@@ -151,6 +155,14 @@ def main():
     skipped = len(ignored_projects() & {e["projectID"] for e in manifest["files"]})
     print(f"Built {out.relative_to(INSTANCE)} ({out.stat().st_size / 1e6:.1f} MB): "
           f"{mods} mods in manifest, {skipped} client-only skipped on the server")
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("export", type=Path, help="CurseForge client export zip")
+    parser.add_argument("--version", help="pack version (default: metadata/pack_version.txt)")
+    args = parser.parse_args()
+    build_server(args.export, args.version or pack_version())
 
 
 if __name__ == "__main__":
