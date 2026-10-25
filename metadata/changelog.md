@@ -40,6 +40,7 @@
 - Infernal Furnace bonuses still showing duplicates on dedicated servers (the de-duplication script failed there).
 - Joining a Dedicated Server no longer shows a Mixin error in chat about Nether Backport.
 - AE2 Storage Buses no longer crash the game when attached to a misbehaving modded inventory.
+- Glass Panes and Iron Bars no longer connect to Cooking for Blockheads counters, cabinets, cutting boards and other kitchen blocks.
 
 ---
 
