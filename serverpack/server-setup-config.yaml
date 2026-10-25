@@ -14,7 +14,7 @@ install:
 
   # The server runs Cleanroom directly (the client reaches it through Cleanroom Relauncher instead).
   # Keep this in sync with "selectedVersion" in config/relauncher.json.
-  installerUrl: 'https://github.com/CleanroomMC/Cleanroom/releases/download/0.6.13-alpha/cleanroom-0.6.13-alpha-installer.jar'
+  installerUrl: 'https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.12-alpha/cleanroom-0.7.12-alpha-installer.jar'
   installerArguments:
     - --installServer
 
@@ -107,7 +107,7 @@ launch:
   preJavaArgs: ~
 
   # Name of the jar the Cleanroom installer produces.
-  startFile: cleanroom-0.6.13-alpha.jar
+  startFile: cleanroom-0.7.12-alpha.jar
   startCommand:
     - -jar
     - '{{@startFile@}}'
