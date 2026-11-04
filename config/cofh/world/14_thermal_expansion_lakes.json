@@ -60,58 +60,6 @@
 					-1	
 				]
 			}
-		},
-		
-		"pyrotheum_lake_space": {
-			"distribution": "uniform",
-			"generator": {
-				"type": "lake",
-				"block": "thermalfoundation:fluid_pyrotheum",
-				"material": ["biomesoplenty:ash_block", "nuclearcraft:ingot_block", "quark:basalt"],
-				"use-material": true,
-				"outline-block": [
-					"contenttweaker:compressed_basalt_double",
-					"magma"
-				]
-			},
-				"cluster-count": 3,
-				"min-height": 20,
-				"max-height": 200,
-				"follow-terrain": true,
-				"dimension": {
-				"restriction": "whitelist",
-				"value": [
-					102,
-					122
-				]
-			}
-		},
-		
-		"cryotheum_lake_space": {
-			"distribution": "uniform",
-			"generator": {
-				"type": "lake",
-				"block": "thermalfoundation:fluid_cryotheum",
-				"material": "minecraft:snow",
-				"use-material": true,
-				"outline-block": [
-					"minecraft:packed_ice",
-					"nuclearcraft:supercold_ice"
-				]
-			},
-				"cluster-count": 1,
-				"min-height": 20,
-				"max-height": 200,
-				"follow-terrain": true,
-				"dimension": {
-				"restriction": "whitelist",
-				"value": [
-					109,
-					110,
-					114,
-					120
-				]
-			}
 		}
 	}
 }
