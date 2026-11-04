@@ -46,6 +46,7 @@
 - Glass Panes and Iron Bars no longer connect to Cooking for Blockheads counters, cabinets, cutting boards and other kitchen blocks.
 - Rather Enough Immersive Multiblocks showing no multiblock structures in JEI; Immersive Engineering and Immersive Petroleum structures are back (Immersive Technology's stay covered by Immersive Convergence).
 - Oceanic Expanse's JEI info pages (Barnacle Shells, Conduit, Guardian Spike, Sea Oats, Sea Pickle and Shell Sand) missing, and its double slabs showing in JEI.
+- EvilCraft Brooms no longer render parts with the missing (purple and black) texture.
 
 ---
 

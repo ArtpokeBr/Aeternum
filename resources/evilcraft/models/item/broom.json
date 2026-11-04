@@ -1,0 +1,22 @@
+{
+  "__comment": "Aeternum override. EvilCraft bakes the broom part models (models/broom_part) at bake time, so VintageFix's texture pass never sees their textures and brooms render with missing textures. VintageFix follows every quoted id in an item model JSON, so listing the part textures here gets them stitched. The broom itself still uses EvilCraft's custom model loader.",
+  "parent": "block/cube_all",
+  "aeternum_stitched_textures": [
+    "evilcraft:broom_parts/bare",
+    "evilcraft:broom_parts/brush_feather",
+    "evilcraft:broom_parts/brush_leaves",
+    "evilcraft:broom_parts/brush_wheat",
+    "evilcraft:broom_parts/cap_gem",
+    "evilcraft:broom_parts/cap_head_creeper",
+    "evilcraft:broom_parts/cap_head_skeleton",
+    "evilcraft:broom_parts/cap_head_wither",
+    "evilcraft:broom_parts/cap_head_witherskeleton",
+    "evilcraft:broom_parts/cap_head_zombie",
+    "evilcraft:broom_parts/cap_metal",
+    "evilcraft:broom_parts/ring",
+    "evilcraft:broom_parts/rod_blaze",
+    "evilcraft:broom_parts/rod_bone",
+    "evilcraft:broom_parts/rod_reed",
+    "minecraft:entity/steve"
+  ]
+}

@@ -16,6 +16,7 @@ How the optimisation mods fit together and why their options are set as they are
 ## LoliASM and VintageFix
 
 - VintageFix `mixin.searchtree=false`. LoliASM `replaceSearchTreeWithJEISearching=true` (its `mixins.searchtree_vanilla` patches `Minecraft.populateSearchTreeManager`) already swaps the creative search for HEI's, so VintageFix's lazy SearchTree did nothing useful. VintageFix doesn't auto-disable any feature when LoliASM is present.
+- VintageFix's dynamic texture pass (`TextureCollector`) only stitches PNGs under fixed folders (`textures/block*`, `item*`, `model*`, `part*`, …, also under the instance's `resources/`) plus every quoted id it can follow from blockstate and inventory item model JSONs. A texture used only by a model a mod loads itself at bake time misses the atlas: `Texture <id> was not discovered during texture pass` (WARN), and it renders as the missing texture. Fix: override one of the mod's item model JSONs under `resources/<modid>/models/item/` and list the texture ids in an extra key (`resources/evilcraft/models/item/broom.json` does this for EvilCraft's broom parts).
 
 ## StellarCore extras
 
