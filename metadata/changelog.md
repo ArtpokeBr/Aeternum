@@ -44,6 +44,7 @@
 - Joining a Dedicated Server no longer shows a Mixin error in chat about Nether Backport.
 - AE2 Storage Buses no longer crash the game when attached to a misbehaving modded inventory.
 - Glass Panes and Iron Bars no longer connect to Cooking for Blockheads counters, cabinets, cutting boards and other kitchen blocks.
+- Rather Enough Immersive Multiblocks showing no multiblock structures in JEI; Immersive Engineering and Immersive Petroleum structures are back (Immersive Technology's stay covered by Immersive Convergence).
 
 ---
 
