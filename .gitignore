@@ -53,3 +53,4 @@ config/relauncher.json
 config/cleanroom_mod_list_favourites.txt
 ESM/
 llibrary/debug/
+serverpack/__pycache__/
