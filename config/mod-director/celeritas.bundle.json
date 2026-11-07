@@ -22,6 +22,27 @@
 				"supersede": "celeritas-forge-mc12.2-2.4.0-dev.jar",
 				"continueOnFailedDownload": true
 			}
+		},
+		{
+			"url": "https://edge.forgecdn.net/files/9182/637/celeritasextra-0.9.3.jar",
+			"fileName": "celeritasextra-0.9.3.jar",
+			"inject": false,
+			"metadata":
+			{
+				"side": "CLIENT",
+				"hash":
+				{
+					"MD5": "0b5c7acce15e4d61dadb93c6858b51be"
+				}
+			},
+			"installationPolicy":
+			{
+				"optionalKey": "celeritas",
+				"selectedByDefault": true,
+				"name": "Celeritas",
+				"description": "Optional renderer rewrite for much higher FPS. Celeritas Extra and Dynamic Lights hook into it. Untick to keep the vanilla renderer. Takes effect after you restart the game once.",
+				"continueOnFailedDownload": true
+			}
 		}
 	]
 }

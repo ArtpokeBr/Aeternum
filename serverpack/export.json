@@ -21,9 +21,11 @@
     "config/brandon3055/ProjectIntelligence/manifest.json"
   ],
   "unmanagedJars": [
-    "celeritas-forge-*-dev.jar"
+    "celeritas-forge-*-dev.jar",
+    "celeritasextra-*.jar"
   ],
   "excludeProjects": [
-    1766350
+    1766350,
+    1451214
   ]
 }
