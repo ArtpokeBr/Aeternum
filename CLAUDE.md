@@ -40,7 +40,7 @@ At the end of a change that alters how the pack works, run the `docs-keeper` age
 ## Hazards
 
 - **Never name a client-only class in a `#loader mixin` script**, even a `#sideonly server` one: Cleanroom blacklists the class and an unrelated mod crashes later. Recipe and mixin code must also avoid client-only calls (`Minecraft.getMinecraft()` etc.) or the dedicated server crashes.
-- Changing `config/relauncher.json` `selectedVersion` means updating `installerUrl` and `startFile` in `serverpack/server-setup-config.yaml`.
+- Changing `config/relauncher.json` `selectedVersion` means updating `installerUrl` and `startFile` in `serverpack/server-setup-config.yaml`. The file is gitignored; `export.py` ships a cleaned-up copy pinning players to that version, with update checks off.
 - A new client-only mod needs its CurseForge project ID in `ignoreProject` in `serverpack/server-setup-config.yaml`.
 - New files under `config/`, `scripts/`, `groovy/` must be tracked in git to ship; `serverpack/export.py` warns about untracked ones.
 - Bumping the pack version: version and changelog strings (Ender Modpack Tweaks, FancyMenu main menu) must stay in sync.

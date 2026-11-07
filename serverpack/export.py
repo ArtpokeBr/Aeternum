@@ -103,6 +103,40 @@ def override_paths(config):
     return [p for p in tracked if p not in missing]
 
 
+RELAUNCHER_CONFIG = "config/relauncher.json"
+
+
+def relauncher_config():
+    """Pinned Cleanroom Relauncher config for players, built from the local (gitignored) one.
+
+    Without it a fresh install opens the Relauncher GUI with the newest Cleanroom pre-selected,
+    and fetchUpdates offers every new release. This pins selectedVersion, turns the update
+    check off, and blanks this machine's javaPath (autoSetup provisions Java on first launch).
+    """
+    config = json.loads((INSTANCE / RELAUNCHER_CONFIG).read_text(encoding="utf-8"))
+    version = config.get("selectedVersion")
+    if not version:
+        sys.exit(f"{RELAUNCHER_CONFIG} has no selectedVersion; launch the client once to pick one")
+
+    server = (HERE / "server-setup-config.yaml").read_text(encoding="utf-8")
+    for key in ("installerUrl", "startFile"):
+        line = next((l for l in server.splitlines() if l.strip().startswith(key + ":")), "")
+        if version not in line:
+            sys.exit(f"server-setup-config.yaml {key} does not match {RELAUNCHER_CONFIG} "
+                     f"selectedVersion {version}:\n  {line.strip()}")
+
+    config.update({
+        "latestVersion": version,
+        "javaPath": "",
+        "autoSetup": True,
+        "enableRelauncher": True,
+        "fetchUpdates": False,
+        "clearCleanroomFolder": False,
+        "clearJavaProvisionFolder": False,
+    })
+    return version, json.dumps(config, indent=2)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--version", help="pack version (default: metadata/pack_version.txt)")
@@ -118,6 +152,7 @@ def main():
         print("Instance is not ready to export:", *errors, sep="\n  ", file=sys.stderr)
         sys.exit(1)
     overrides = override_paths(config)
+    cleanroom, relauncher = relauncher_config()
 
     out_dir = HERE / "build"
     out_dir.mkdir(exist_ok=True)
@@ -128,9 +163,11 @@ def main():
         dst.write(INSTANCE / config["image"], manifest["image"])
         for rel in overrides:
             dst.write(INSTANCE / rel, "overrides/" + rel)
+        dst.writestr("overrides/" + RELAUNCHER_CONFIG, relauncher)
 
     print(f"Built {out.relative_to(INSTANCE)} ({out.stat().st_size / 1e6:.1f} MB): "
-          f"{len(manifest['files'])} mods in manifest, {len(overrides)} override files")
+          f"{len(manifest['files'])} mods in manifest, {len(overrides)} override files, "
+          f"Cleanroom pinned to {cleanroom}")
 
     if not args.no_server:
         build_server(out, version)

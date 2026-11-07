@@ -13,7 +13,7 @@ install:
   loaderVersion: ~
 
   # The server runs Cleanroom directly (the client reaches it through Cleanroom Relauncher instead).
-  # Keep this in sync with "selectedVersion" in config/relauncher.json.
+  # Keep this in sync with "selectedVersion" in config/relauncher.json (export.py checks it).
   installerUrl: 'https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.12-alpha/cleanroom-0.7.12-alpha-installer.jar'
   installerArguments:
     - --installServer
