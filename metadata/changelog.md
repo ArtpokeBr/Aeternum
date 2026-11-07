@@ -4,6 +4,11 @@
 
 - Removed: Modern Mob Spawn.
 - Added: File Director.
+- Added: Packaged Auto.
+- Added: Packaged Astral.
+- Added: Packaged Botania.
+- Added: Packaged Draconic.
+- Added: Packaged Thaumic.
 
 ### Added
 
