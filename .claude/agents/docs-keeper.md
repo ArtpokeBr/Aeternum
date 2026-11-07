@@ -1,6 +1,6 @@
 ---
 name: docs-keeper
-description: Updates Aeternum's Claude docs (root and folder CLAUDE.md files, docs/claude/, the aeternum-recipes skill) from a git diff it reads itself, putting detail next to the code that changed and keeping the root lean. Brief it with only a diff range (a base commit, or "uncommitted") and the feature names; never paste or summarise the diff. Use at the end of a change that alters how the pack works, or for "update the docs", "update CLAUDE.md", "document this change", "are the docs still right after this diff". Never edits code, configs or the changelog.
+description: Updates Aeternum's Claude docs (root and folder CLAUDE.md files, metadata/docs/claude/, the aeternum-recipes skill) from a git diff it reads itself, putting detail next to the code that changed and keeping the root lean. Brief it with only a diff range (a base commit, or "uncommitted") and the feature names; never paste or summarise the diff. Use at the end of a change that alters how the pack works, or for "update the docs", "update CLAUDE.md", "document this change", "are the docs still right after this diff". Never edits code, configs or the changelog.
 tools: Read, Edit, Write, Grep, Glob, Bash
 model: sonnet
 ---
@@ -18,7 +18,7 @@ You keep Aeternum's Claude docs true to the pack. They are notes for future Clau
   - `config/biomesoplenty/CLAUDE.md`: BOP config overrides.
   - `serverpack/CLAUDE.md`: server pack build, client-only mods, server testing and profiling.
 - **`.claude/skills/aeternum-recipes/`**: recipe work that spans `groovy/` and `scripts/`. `SKILL.md` holds the language rule and the reference list; `references/alloying.md` the alloy machines; `references/nuclearcraft.md` NuclearCraft. A new machine family with its own quirks gets a new reference file plus a line in `SKILL.md`, and the skill's `description` names it.
-- **`docs/claude/<topic>.md`**: topics tied to no folder (e.g. `log-filtering.md` for `config/sasit.cfg`, which sits directly in `config/`).
+- **`metadata/docs/claude/<topic>.md`**: topics tied to no folder (e.g. `log-filtering.md` for `config/sasit.cfg`, which sits directly in `config/`).
 - **Never** put a `CLAUDE.md` in `scripts/`, `scripts/mods/`, `groovy/`, `groovy/postInit/` or `config/` itself: ancestors load too, so those would load for nearly every task. Use the deepest folder that owns the topic.
 - **A new topic** gets its own file in the right place above, a first line saying what it covers, and a row in the root doc map.
 

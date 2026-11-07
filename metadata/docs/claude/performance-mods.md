@@ -1,6 +1,6 @@
 # Performance mod config audit (LoliASM, VintageFix, Universal Tweaks, Celeritas and friends)
 
-How the optimisation mods fit together and why their options are set as they are. StellarCore's own option choices are in `docs/claude/stellarcore-conflicts.md`.
+How the optimisation mods fit together and why their options are set as they are. StellarCore's own option choices are in `metadata/docs/claude/stellarcore-conflicts.md`.
 
 ## Celeritas is optional
 

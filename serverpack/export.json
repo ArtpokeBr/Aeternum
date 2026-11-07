@@ -17,6 +17,7 @@
   ],
   "exclude": [
     "*/CLAUDE.md",
+    "metadata/docs/*",
     "config/brandon3055/ProjectIntelligence/manifest.json"
   ],
   "unmanagedJars": [

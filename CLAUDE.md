@@ -8,10 +8,15 @@ Personal 1.12.2 kitchen-sink modpack ("Artpoke Presents: Aeternum") on [CurseFor
 ## Layout
 
 - `config/`: one config per mod. `scripts/`: [CraftTweaker](https://docs.blamejared.com/1.12/en/) (ZenScript), with `mods/`, `loot/`, `jei/`, `nc_script_addons/`. `groovy/`: [GroovyScript](https://cleanroommc.com/groovy-script/), with `preInit/`, `postInit/`, `assets/`.
-- `patchouli_books/`: the in-game guidebook. `resourcepacks/`, `shaderpacks/`: client assets. `saves/`: local worlds, irrelevant.
+- `patchouli_books/`: the in-game guidebook. `resourcepacks/`, `shaderpacks/`: client assets. `saves/`, `logs/`, `crash-reports/`, `cache/`, `journeymap/`, `xaero/`: local or generated, irrelevant.
 - `metadata/changelog.md`: changelog shown in game by Ender Modpack Tweaks, all versions newest first; add lines with `changelog_add.py`, only ever to the top block. `metadata/pack_version.txt`: version string.
-- `serverpack/`: dedicated server pack sources and `build.py`.
+- `serverpack/`: export and server pack tooling. `python serverpack/export.py [--version X] [--no-server]` builds the client export and server zip into `serverpack/build/`.
+- `metadata/docs/`: Claude docs tied to no folder (`claude/`) and old plans (`plans/`); excluded from the export.
 - `minecraftinstance.json`: CurseForge app metadata, one 1.5 MB line. **Never read or grep it**; use `python serverpack/modinfo.py <query>`.
+
+## Verifying
+
+There is no build, test or lint suite. Scripts are verified by the user launching the game; then grep `crafttweaker.log` and the latest log in `logs/`, never read them whole.
 
 ## Doc map
 
@@ -26,8 +31,8 @@ Detail lives next to the code. A folder's `CLAUDE.md` loads once a file in that 
 | Lang, models, textures for custom items | `groovy/assets/CLAUDE.md` |
 | Biomes O'Plenty biome configs | `config/biomesoplenty/CLAUDE.md` |
 | Server pack, client-only mods, server testing and profiling | `serverpack/CLAUDE.md` |
-| Log noise, `config/sasit.cfg` | `docs/claude/log-filtering.md` |
-| Performance mods (Celeritas, LoliASM, VintageFix, UT), StellarCore options | `docs/claude/performance-mods.md`, `docs/claude/stellarcore-conflicts.md` |
+| Log noise, `config/sasit.cfg` | `metadata/docs/claude/log-filtering.md` |
+| Performance mods (Celeritas, LoliASM, VintageFix, UT), StellarCore options | `metadata/docs/claude/performance-mods.md`, `metadata/docs/claude/stellarcore-conflicts.md` |
 | Changelog entries (layout, which version block, style) | `metadata/CLAUDE.md` |
 
 At the end of a change that alters how the pack works, run the `docs-keeper` agent with the base commit (or "uncommitted") and the feature names.
