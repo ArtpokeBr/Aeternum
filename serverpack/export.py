@@ -36,7 +36,11 @@ def excluded(path, patterns):
 def build_manifest(instance, config, version):
     errors = []
     mods_dir = INSTANCE / "mods"
-    addons = sorted(instance["installedAddons"], key=lambda a: a["name"].lower())
+    # Projects the CurseForge app tracks but that must not ship in the manifest
+    # (their jars are then checked against unmanagedJars like any untracked jar).
+    skip = set(config.get("excludeProjects", []))
+    addons = sorted((a for a in instance["installedAddons"] if a["addonID"] not in skip),
+                    key=lambda a: a["name"].lower())
 
     managed = {a["fileNameOnDisk"] for a in addons}
     for jar in sorted(p.name for p in mods_dir.iterdir() if p.suffix in (".jar", ".disabled")):

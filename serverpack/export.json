@@ -22,5 +22,8 @@
   ],
   "unmanagedJars": [
     "celeritas-forge-*-dev.jar"
+  ],
+  "excludeProjects": [
+    1766350
   ]
 }
