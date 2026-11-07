@@ -36,6 +36,7 @@
 - The /time set day and /time set night commands skip ahead to the next day or night again instead of resetting world time.
 - AE2's in-world Fluix Crystal recipe (Charged Certus Quartz, Redstone and Nether Quartz dropped into water) now shows in JEI, and a new variant using Electrotine Dust instead of Redstone gives 4 Fluix Crystals instead of 2.
 - Deep Mob Learning's Glitch-Infused Ingot recipe (Glitch Fragment, Gold Ingot and Lapis Lazuli dropped into water) now shows in JEI.
+- HEI now collapses item families into expandable groups (click a group to open it): about 580 groups covering colour, wood and material variants, Chisel and Xtones blocks, Tinkers' tools and parts, filled tanks and cells, AE2 facades, microblocks, furniture and more.
 
 ### Fixed
 
