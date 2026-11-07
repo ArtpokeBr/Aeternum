@@ -1,3 +1,19 @@
+# Aeternum 1.6.4
+
+### Mod Changes
+
+- 
+
+### Changed
+
+- 
+
+### Fixed
+
+- The first launch after installing no longer crashes with "Celeritas Extra requires exactly one renderer": Celeritas Extra is now downloaded together with the optional Celeritas.
+
+---
+
 # Aeternum 1.6.3
 
 ### Mod Changes
