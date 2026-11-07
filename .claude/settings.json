@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./minecraftinstance.json)",
+      "Read(./llibrary/**)",
+      "Read(./saves/**)",
+      "Read(./dumps/**)"
+    ]
+  }
+}

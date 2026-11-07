@@ -13,8 +13,8 @@ install:
   loaderVersion: ~
 
   # The server runs Cleanroom directly (the client reaches it through Cleanroom Relauncher instead).
-  # Keep this in sync with "selectedVersion" in config/relauncher.json.
-  installerUrl: 'https://github.com/CleanroomMC/Cleanroom/releases/download/0.6.13-alpha/cleanroom-0.6.13-alpha-installer.jar'
+  # Keep this in sync with "selectedVersion" in config/relauncher.json (export.py checks it).
+  installerUrl: 'https://github.com/CleanroomMC/Cleanroom/releases/download/0.7.12-alpha/cleanroom-0.7.12-alpha-installer.jar'
   installerArguments:
     - --installServer
 
@@ -64,8 +64,8 @@ install:
       - 1052470 # Extreme Sound Muffler: Legacy
       - 367706 # FancyMenu
       - 410295 # Konkrete (FancyMenu library)
+      - 650242 # File Director (only downloads the client-only Celeritas jar)
       - 618947 # FreeCam by Zergatul
-      - 454215 # Just Enough Drags
       - 1234162 # Lumenized
       - 1073925 # Rather Enough Immersive Multiblocks
       - 624967 # RenderLib
@@ -107,7 +107,7 @@ launch:
   preJavaArgs: ~
 
   # Name of the jar the Cleanroom installer produces.
-  startFile: cleanroom-0.6.13-alpha.jar
+  startFile: cleanroom-0.7.12-alpha.jar
   startCommand:
     - -jar
     - '{{@startFile@}}'

@@ -1,3 +1,61 @@
+# Aeternum 1.6.3
+
+### Mod Changes
+
+- Removed: Modern Mob Spawn.
+- Added: File Director.
+- Added: Packaged Auto.
+- Added: Packaged Astral.
+- Added: Packaged Botania.
+- Added: Packaged Draconic.
+- Added: Packaged Thaumic.
+
+### Added
+
+- Fossils & Archeology's Permafrost can now be processed in an Ender IO Enhanced Sag Mill into Bone (guaranteed), with chance-based bonus outputs of Fern Seeds, Iced Meat and Skulls, scaling with grinding balls.
+- Added a JEI Tab for Fossils & Archeology Permafrost Drops.
+- Added a JEI Tab for Deep Mob Learning's left-click recipes: Soot-covered Redstone (Redstone on a Block of Coal) and Glitch Fragments (Glitch Heart on Obsidian).
+
+### Changed
+
+- Red Alloy can now be made in every alloying machine (Ender IO Alloy Smelter, Thermal Induction Smelter, Mekanism Metallurgic Infuser and NuclearCraft Alloy Furnace), and Electrotine Alloy (1 Silver + 4 Electrotine) was added to all of them, including the IE Alloy Kiln and Arc Furnace. Electrotine Dust is now a Metallurgic Infuser source.
+- Electrotine now works like Redstone in the Metallurgic Infuser: it has its own infuse texture, Blocks of Electrotine give 90, and a new Compressed Electrotine (made from Electrotine Dust in the Enrichment Chamber) gives 80.
+- ProjectRed's Infused, Energized and Electrotine Silicon can now be made in one step from Silicon + 8 Redstone, Glowstone or Electrotine Dust in the IE Alloy Kiln and Arc Furnace, Ender IO Alloy Smelter, Thermal Induction Smelter and NuclearCraft Alloy Furnace, and from Silicon with Redstone or Electrotine infuse in the Mekanism Metallurgic Infuser.
+- Glowstone is now a Metallurgic Infuser infuse type (Glowstone Dust 10, Glowstone block 40, new Compressed Glowstone 80, made from Glowstone Dust in the Enrichment Chamber), so Energized Silicon can be made there too.
+- Electrotine Ore now processes in every machine Redstone Ore does, at the same yields (SAG Mill, Induction Smelter, Enrichment Chamber, XU2 Crusher and more), with Electrum as a byproduct.
+- Added Crushing Recipes for Thaumcraft's Crystal Clusters in every Crusher, Pulverizer and Grinder.
+- The Angel Ring now accepts a Cursed Lasso holding any kind of Ghast, including Special Mobs' Ghast variants and Twilight Forest's Ghasts, and a Thaumcraft Firebat (in a Cursed Lasso) in place of the Bat. Angel Rings now have a tooltip saying so.
+- Traveler's Titles dimension names now use the same purple as The One Probe overlay.
+- Thaumcraft's Cinnabar Ore can now be doubled: every Crusher, Pulverizer and Grinder turns it into the new Quicksilver Dust (with Redstone and Sulfur byproducts), which smelts into Quicksilver. The Induction Smelter gives up to 3 Quicksilver, the Mekanism Combiner turns 8 Quicksilver Dust back into Cinnabar Ore, and Quicksilver can be crushed back into dust.
+- The Thermal Transposer recipe that turns Cinnabar Ore and Cryotheum into 4 Cinnabar now also works in the NuclearCraft Fluid Infuser.
+- Infernal Furnace bonuses no longer overlap: ores now only give their nugget (Rare Earth stays only on Redstone and Lapis Ore, which have no nugget), and Native and Eldritch Clusters only give Rare Earth (Eldritch Clusters keep their Flux crystal).
+- Immersive Engineering's Metal Blocks (Copper, Aluminum, Lead, Silver, Nickel, Uranium, Electrum and Steel), hidden by unification, can now be made again in a Chisel from any Block of the same metal. Constantan gets its own Chisel group with Thermal's and Immersive Engineering's Blocks of Constantan.
+- Deep Mob Learning's Polymer Clay is now made like the real thing: Rockhounding Chemistry's Chloride Compound (the PVC) and Coal Tar Compound (the plasticizer), with Clay and Lapis Lazuli. It no longer needs Gold or Iron.
+- Celeritas is now offered on first launch (ticked by default, untick it to keep the vanilla renderer) and updated to 2.5.0. No more installing it by hand.
+- Blocks now break at normal speed while flying (jetpacks, Angel Ring, flight armour).
+- The /time set day and /time set night commands skip ahead to the next day or night again instead of resetting world time.
+- AE2's in-world Fluix Crystal recipe (Charged Certus Quartz, Redstone and Nether Quartz dropped into water) now shows in JEI, and a new variant using Electrotine Dust instead of Redstone gives 4 Fluix Crystals instead of 2.
+- Deep Mob Learning's Glitch-Infused Ingot recipe (Glitch Fragment, Gold Ingot and Lapis Lazuli dropped into water) now shows in JEI.
+- HEI now collapses item families into expandable groups (click a group to open it): about 580 groups covering colour, wood and material variants, Chisel and Xtones blocks, Tinkers' tools and parts, filled tanks and cells, AE2 facades, microblocks, furniture and more.
+
+### Fixed
+
+- Environmental Tech's Void Ore Miner never producing Aer and Ignis Crystal Clusters.
+- Extra Utilities 2's JEI Blocks tab (Water, Lava, Fire and Dragon Egg Mill build patterns) having no icon or catalysts.
+- Dragging items from JEI into filters with Just Enough Drags not saving on servers (the mod was missing from the server pack).
+- Dragging items and fluids from JEI into AE2 buses, interfaces, level emitters, the Cell Workbench and the Pattern Terminal now uses AE2's own handler again, instead of Just Enough Drags' older one overriding it.
+- Dedicated servers crashing on boot because of the new Electrotine and Glowstone infuse types.
+- Just Enough Drags crashing dedicated servers on boot (its XNet support now only loads on the client).
+- Infernal Furnace bonuses still showing duplicates on dedicated servers (the de-duplication script failed there).
+- Joining a Dedicated Server no longer shows a Mixin error in chat about Nether Backport.
+- AE2 Storage Buses no longer crash the game when attached to a misbehaving modded inventory.
+- Glass Panes and Iron Bars no longer connect to Cooking for Blockheads counters, cabinets, cutting boards and other kitchen blocks.
+- Rather Enough Immersive Multiblocks showing no multiblock structures in JEI; Immersive Engineering and Immersive Petroleum structures are back (Immersive Technology's stay covered by Immersive Convergence).
+- Oceanic Expanse's JEI info pages (Barnacle Shells, Conduit, Guardian Spike, Sea Oats, Sea Pickle and Shell Sand) missing, and its double slabs showing in JEI.
+- EvilCraft Brooms no longer render parts with the missing (purple and black) texture.
+
+---
+
 # Aeternum 1.6.2
 
 ### Mod Changes

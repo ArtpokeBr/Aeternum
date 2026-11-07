@@ -303,12 +303,12 @@
     {
       "target": "yellow",
       "weight": 111,
-      "id": "thaumcraft:crystal_air"
+      "id": "thaumcraft:crystal_aer"
     },
     {
       "target": "orange",
       "weight": 111,
-      "id": "thaumcraft:crystal_fire"
+      "id": "thaumcraft:crystal_ignis"
     },
     {
       "target": "black",

@@ -38,6 +38,7 @@ journeymap/server
 servers.dat
 loading-log.log
 config/cleanroom_load_timings.dat
+config/stellarcore_vanilla_model_cache_*.dat
 tinkersplannerantique/planner_bookmarks_tools.dat
 visualores/
 config/rc_cache/
@@ -51,3 +52,5 @@ fancymenu_data/last_world.fmdata
 config/relauncher.json
 config/cleanroom_mod_list_favourites.txt
 ESM/
+llibrary/debug/
+serverpack/__pycache__/
