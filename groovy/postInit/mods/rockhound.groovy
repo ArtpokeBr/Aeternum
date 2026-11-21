@@ -137,3 +137,17 @@ mods.ic2.metal_former.add(1, ore('ingotNimonic'), item('rockhounding_chemistry:m
 mods.ic2.metal_former.add(1, ore('blockGlass'), item('rockhounding_chemistry:misc_items', 7) * 4)
 
 //=================================================================================================
+
+//Crushing Gear ===================================================================================
+//The Profiling Bench's Gear Pattern is gone (scripts/mods/rockhounding.zs). The Crushing Gear is a
+//Mineral Sizer consumable that stacks to 1, so it can't be batched: 1 Iron Plate in the Gear Mold
+//(an Iron Ingot there already presses into IE's Iron Gear). Don't raise its stack size: the Mineral
+//Sizer copies a whole cabinet stack into a tank slot (dupe) and damages a slot's stack as one.
+mods.immersiveengineering.metal_press.recipeBuilder()
+    .input(ore('plateIron'))
+    .output(item('rockhounding_chemistry:crushing_gear'))
+    .mold(item('immersiveengineering:mold', 1))
+    .energy(2400)
+.register()
+
+//=================================================================================================

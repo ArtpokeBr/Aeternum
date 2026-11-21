@@ -39,3 +39,36 @@ for coil in profilingBenchCoils {
 }
 
 // ================================================================================================
+
+// Coins: removed from the Profiling Bench =========================================================
+// Thermal Expansion's Compactor (Mint) already presses every coinX that has an ingotX, at the same
+// 1 ingot -> 3 coins, so the Coin Pattern recipes go without a replacement. removeByPattern drops
+// one recipe per call: 31 calls for the 31 EnumAlloyPart coins (Coin Pattern = EnumCasting 9).
+
+for i in 0 .. 31 {
+    mods.rockhounding_chemistry.ProfilingBench.removeByPattern(9);
+}
+
+// ================================================================================================
+
+// Gears: removed from the Profiling Bench =========================================================
+// The 31 EnumAlloyPart gears (blockX -> 2) are already made elsewhere from their ingots: IE Metal
+// Press (Gear Mold), TE Compactor (Gear) and the UniDict gear template (scripts/mods/unidict.zs).
+// The 32nd Gear Pattern recipe is the Crushing Gear (Iron Ingot -> 1), which moves to the Metal
+// Press in groovy/postInit/mods/rockhound.groovy. Gear Pattern = EnumCasting 6; one per call.
+
+for i in 0 .. 32 {
+    mods.rockhounding_chemistry.ProfilingBench.removeByPattern(6);
+}
+
+// ================================================================================================
+
+// Plates: removed from the Profiling Bench ========================================================
+// The 31 EnumAlloyPart plates (ingotX -> 1) are already made 1:1 from their ingots in the IE Metal
+// Press (Plate Mold) and the TE Compactor (Plate). Plate Pattern = EnumCasting 10; one per call.
+
+for i in 0 .. 31 {
+    mods.rockhounding_chemistry.ProfilingBench.removeByPattern(10);
+}
+
+// ================================================================================================

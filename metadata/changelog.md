@@ -8,6 +8,9 @@
 
 - Rockhounding Chemistry's rods are now made in the Immersive Engineering Metal Press with a Rod Mold (2 per ingot) instead of the Profiling Bench; its Iron Rod is replaced by Immersive Engineering's Iron Rod.
 - Rockhounding Chemistry's Iron Coil, Nimonic Coil and Glass Pipe are now made in the Immersive Engineering Metal Press with the new Metal Press Mold: Coil (from the Molds blueprint) and in the IC2 Metal Former's Extruding mode (the Iron Coil from an Iron Rod there), instead of the Profiling Bench.
+- The Profiling Bench no longer makes coins; Rockhounding Chemistry's coins are made in the Thermal Expansion Compactor's Mint mode instead.
+- The Profiling Bench no longer makes gears; Rockhounding Chemistry's alloy gears are made like other gears (Metal Press, Compactor, crafting), and the Crushing Gear is pressed from an Iron Plate in the Metal Press with a Gear Mold.
+- The Profiling Bench no longer makes plates; Rockhounding Chemistry's alloy plates are made in the Metal Press and the Compactor like other plates.
 
 ### Fixed
 
