@@ -163,3 +163,52 @@ mods.immersiveengineering.metal_press.recipeBuilder()
 .register()
 
 //=================================================================================================
+
+//Casings =========================================================================================
+//The Profiling Bench's Casing Pattern is gone (scripts/mods/rockhounding.zs); casings follow IC2's
+//rates: 1 plate + Forge Hammer -> 2 casings, and 1 plate -> 2 casings in the Metal Former (Rolling).
+
+//Iron Casing: IC2's Iron Item Casing replaces it (crafting uses swapped in rockhounding.zs)
+mods.jei.ingredient.hide(item('rockhounding_chemistry:misc_items', 5))
+crafting.shapelessBuilder()
+    .name('aeternum:rockhounding_iron_casing_to_ic2')
+    .input([item('rockhounding_chemistry:misc_items', 5)])
+    .output(item('ic2:casing', 3))
+.register()
+
+//Casings only Rockhounding makes
+def rockhound_casings = [
+    'Hydronalium': 17,
+    'Hastelloy'  : 18,
+    'Nimonic'    : 29
+]
+for (casing in rockhound_casings) {
+    crafting.shapelessBuilder()
+        .name('aeternum:rockhounding_' + casing.key.toLowerCase() + '_casing')
+        .input([ore('plate' + casing.key), ore('craftingToolForgeHammer')])
+        .output(item('rockhounding_chemistry:misc_items', casing.value) * 2)
+    .register()
+    mods.ic2.metal_former.add(2, ore('plate' + casing.key), item('rockhounding_chemistry:misc_items', casing.value) * 2)
+}
+
+//=================================================================================================
+
+//Foils ===========================================================================================
+//The Profiling Bench's Foil Pattern (1 ingot -> 8, removed in scripts/mods/rockhounding.zs) becomes
+//sawing the matching plate into 8 foils in the IC2 Block Cutter and the TE Sawmill. A plate is one
+//ingot, so the cost is unchanged. No hardness tag on the Block Cutter recipe: any blade cuts foil.
+def rockhound_foils = [
+    'Iron'    : 3,
+    'Aluminum': 33,
+    'Stellite': 34
+]
+for (foil in rockhound_foils) {
+    mods.ic2.block_cutter.add(ore('plate' + foil.key), item('rockhounding_chemistry:misc_items', foil.value) * 8)
+    mods.thermalexpansion.sawmill.recipeBuilder()
+        .input(ore('plate' + foil.key))
+        .output(item('rockhounding_chemistry:misc_items', foil.value) * 8)
+        .energy(2000)
+    .register()
+}
+
+//=================================================================================================

@@ -12,6 +12,8 @@
 - The Profiling Bench no longer makes gears; Rockhounding Chemistry's alloy gears are made like other gears (Metal Press, Compactor, crafting), and the Crushing Gear is pressed from an Iron Plate in the Metal Press with a Gear Mold.
 - The Profiling Bench no longer makes plates; Rockhounding Chemistry's alloy plates are made in the Metal Press and the Compactor like other plates.
 - Rockhounding Chemistry's Iron Arm is now made in the Immersive Engineering Metal Press from 2 Iron Rods with a Rod Mold (2 Iron Arms) instead of the Profiling Bench.
+- Rockhounding Chemistry's casings are no longer made in the Profiling Bench: its Iron Casing is replaced by IC2's Iron Item Casing, and its Hydronalium, Hastelloy and Nimonic Casings are made like IC2 casings (a plate and a Forge Hammer, or the Metal Former's Rolling mode, 2 per plate).
+- Rockhounding Chemistry's Iron, Aluminum and Stellite Foils are now cut from their plates (8 per plate) in the IC2 Block Cutter and the Thermal Expansion Sawmill instead of the Profiling Bench.
 
 ### Fixed
 

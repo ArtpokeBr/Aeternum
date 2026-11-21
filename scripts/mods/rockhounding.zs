@@ -79,3 +79,27 @@ for i in 0 .. 31 {
 mods.rockhounding_chemistry.ProfilingBench.removeByOutput(<rockhounding_chemistry:misc_items:4>);
 
 // ================================================================================================
+
+// Casings: Profiling Bench -> IC2 recipes ==========================================================
+// The 4 Casing Pattern recipes (blockX -> 20: Iron, Hydronalium, Hastelloy, Nimonic) go; casings are
+// made the IC2 way in groovy/postInit/mods/rockhound.groovy. Rockhounding's Iron Casing
+// (misc_items:5) duplicates IC2's Iron Item Casing, which takes over its crafting uses. IC2 casings
+// have no ore-dict entry, so the swap is item to item. Casing Pattern = EnumCasting 5; one per call.
+
+for i in 0 .. 4 {
+    mods.rockhounding_chemistry.ProfilingBench.removeByPattern(5);
+}
+
+recipes.replaceAllOccurences(<rockhounding_chemistry:misc_items:5>, <ic2:casing:3>);
+
+// ================================================================================================
+
+// Foils: Profiling Bench -> IC2 Block Cutter and TE Sawmill =========================================
+// The 3 Foil Pattern recipes (ingotX -> 8: Iron, Aluminum, Stellite) go; groovy/postInit/mods/
+// rockhound.groovy saws plates into foils instead. Foil Pattern = EnumCasting 3; one per call.
+
+for i in 0 .. 3 {
+    mods.rockhounding_chemistry.ProfilingBench.removeByPattern(3);
+}
+
+// ================================================================================================
