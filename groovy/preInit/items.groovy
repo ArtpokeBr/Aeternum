@@ -8,3 +8,8 @@ content.createItem("quicksilver_dust").register()
 def moldCoil = content.createItem("mold_coil")
 moldCoil.setMaxStackSize(1)
 moldCoil.register()
+
+//IE Metal Press mold for Rockhounding Chemistry gauze catalysts (recipes in groovy/postInit/mods/rockhound.groovy)
+def moldGauze = content.createItem("mold_gauze")
+moldGauze.setMaxStackSize(1)
+moldGauze.register()

@@ -103,3 +103,14 @@ for i in 0 .. 3 {
 }
 
 // ================================================================================================
+
+// Gauze catalysts: Profiling Bench -> IE Metal Press (Gauze Mold) =================================
+// The last 14 recipes (ingotX -> 1 catalyst) move to aeternum:mold_gauze in groovy/postInit/mods/
+// rockhound.groovy. With them gone the Profiling Bench is empty; rockhound.groovy also removes its
+// crafting recipe and hides it. Gauze Pattern = EnumCasting 8; one per call.
+
+for i in 0 .. 14 {
+    mods.rockhounding_chemistry.ProfilingBench.removeByPattern(8);
+}
+
+// ================================================================================================

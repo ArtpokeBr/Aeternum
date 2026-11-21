@@ -14,10 +14,15 @@
 - Rockhounding Chemistry's Iron Arm is now made in the Immersive Engineering Metal Press from 2 Iron Rods with a Rod Mold (2 Iron Arms) instead of the Profiling Bench.
 - Rockhounding Chemistry's casings are no longer made in the Profiling Bench: its Iron Casing is replaced by IC2's Iron Item Casing, and its Hydronalium, Hastelloy and Nimonic Casings are made like IC2 casings (a plate and a Forge Hammer, or the Metal Former's Rolling mode, 2 per plate).
 - Rockhounding Chemistry's Iron, Aluminum and Stellite Foils are now cut from their plates (8 per plate) in the IC2 Block Cutter and the Thermal Expansion Sawmill instead of the Profiling Bench.
+- Rockhounding Chemistry's gauze catalysts are now made in the Immersive Engineering Metal Press with the new Metal Press Mold: Gauze (from the Molds blueprint), 1 ingot per catalyst.
 
 ### Fixed
 
 - The first launch after installing no longer crashes with "Celeritas Extra requires exactly one renderer": Celeritas Extra is now downloaded together with the optional Celeritas.
+
+### Removed
+
+- Rockhounding Chemistry's Profiling Bench: all of its recipes now live in other machines, so it can no longer be crafted and is hidden in JEI.
 
 ---
 

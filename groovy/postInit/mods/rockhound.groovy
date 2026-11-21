@@ -212,3 +212,52 @@ for (foil in rockhound_foils) {
 }
 
 //=================================================================================================
+
+//Gauze Catalysts =================================================================================
+//The Profiling Bench's Gauze Pattern (1 ingot -> 1 catalyst, removed in scripts/mods/rockhounding.zs)
+//moves to the IE Metal Press with the pack's Gauze Mold (aeternum:mold_gauze). Catalysts are
+//consumables that stack to 1, so 1 per ingot as before.
+mods.immersiveengineering.blueprint.recipeBuilder()
+    .category('molds')
+    .input(ore('plateSteel'), ore('plateSteel'), ore('plateSteel'), ore('plateSteel'), ore('plateSteel'),
+           item('immersiveengineering:tool', 1))
+    .output(item('aeternum:mold_gauze'))
+.register()
+
+def rockhound_catalysts = [
+    'Iron'     : 'fe',
+    'Molybdenum': 'mo',
+    'Graphite' : 'gr',
+    'Vanadium' : 'va',
+    'Platinum' : 'pt',
+    'Whitegold': 'wg',
+    'Nial'     : 'nl',
+    'Gold'     : 'au',
+    'Nickel'   : 'ni',
+    'Osmium'   : 'os',
+    'Zeolite'  : 'ze',
+    'Zinc'     : 'zn',
+    'Cobalt'   : 'co',
+    'Inconel'  : 'in'
+]
+for (catalyst in rockhound_catalysts) {
+    mods.immersiveengineering.metal_press.recipeBuilder()
+        .input(ore('ingot' + catalyst.key))
+        .output(item('rockhounding_chemistry:' + catalyst.value + '_catalyst'))
+        .mold(item('aeternum:mold_gauze'))
+        .energy(2400)
+    .register()
+}
+
+//=================================================================================================
+
+//Profiling Bench: removed ========================================================================
+//Every recipe it had now lives in other machines (see the blocks above), so the bench
+//(machines_a:11) loses its crafting recipe and is hidden with its now-unused pattern icons.
+crafting.remove('rockhounding_chemistry:profiling_bench')
+mods.jei.ingredient.hide(item('rockhounding_chemistry:machines_a', 11))
+for (i in 0..10) {
+    mods.jei.ingredient.hide(item('rockhounding_chemistry:pattern_items', i))
+}
+
+//=================================================================================================
