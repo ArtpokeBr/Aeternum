@@ -11,6 +11,7 @@
 - The Profiling Bench no longer makes coins; Rockhounding Chemistry's coins are made in the Thermal Expansion Compactor's Mint mode instead.
 - The Profiling Bench no longer makes gears; Rockhounding Chemistry's alloy gears are made like other gears (Metal Press, Compactor, crafting), and the Crushing Gear is pressed from an Iron Plate in the Metal Press with a Gear Mold.
 - The Profiling Bench no longer makes plates; Rockhounding Chemistry's alloy plates are made in the Metal Press and the Compactor like other plates.
+- Rockhounding Chemistry's Iron Arm is now made in the Immersive Engineering Metal Press from 2 Iron Rods with a Rod Mold (2 Iron Arms) instead of the Profiling Bench.
 
 ### Fixed
 

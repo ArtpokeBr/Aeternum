@@ -72,3 +72,10 @@ for i in 0 .. 31 {
 }
 
 // ================================================================================================
+
+// Iron Arm: Profiling Bench -> IE Metal Press (Rod Mold) ==========================================
+// The Arm Pattern's only recipe; groovy/postInit/mods/rockhound.groovy presses it from Iron Rods.
+
+mods.rockhounding_chemistry.ProfilingBench.removeByOutput(<rockhounding_chemistry:misc_items:4>);
+
+// ================================================================================================

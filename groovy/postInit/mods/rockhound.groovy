@@ -151,3 +151,15 @@ mods.immersiveengineering.metal_press.recipeBuilder()
 .register()
 
 //=================================================================================================
+
+//Iron Arm ========================================================================================
+//The Profiling Bench's Arm Pattern recipe (1 Iron Ingot -> 2, removed in scripts/mods/rockhounding.zs)
+//becomes 2 Iron Rods in the Rod Mold -> 2 Iron Arms: 2 rods are 1 ingot, so the cost is unchanged
+mods.immersiveengineering.metal_press.recipeBuilder()
+    .input(ore('stickIron') * 2)
+    .output(item('rockhounding_chemistry:misc_items', 4) * 2)
+    .mold(item('immersiveengineering:mold', 2))
+    .energy(2400)
+.register()
+
+//=================================================================================================
