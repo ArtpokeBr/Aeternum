@@ -7,6 +7,7 @@
 ### Changed
 
 - Rockhounding Chemistry's rods are now made in the Immersive Engineering Metal Press with a Rod Mold (2 per ingot) instead of the Profiling Bench; its Iron Rod is replaced by Immersive Engineering's Iron Rod.
+- Rockhounding Chemistry's Iron Coil, Nimonic Coil and Glass Pipe are now made in the Immersive Engineering Metal Press with the new Metal Press Mold: Coil (from the Molds blueprint) and in the IC2 Metal Former's Extruding mode (the Iron Coil from an Iron Rod there), instead of the Profiling Bench.
 
 ### Fixed
 

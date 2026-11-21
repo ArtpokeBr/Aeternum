@@ -101,3 +101,39 @@ for (rod in rockhound_rods) {
 }
 
 //=================================================================================================
+
+//Coils ===========================================================================================
+//The Profiling Bench's Coil Pattern recipes (scripts/mods/rockhounding.zs removes them) move to the
+//IE Metal Press with the pack's Coil Mold (aeternum:mold_coil, groovy/preInit/items.groovy) and to
+//the IC2 Metal Former's Extruding mode, at the Profiling Bench's yields.
+
+//Coil Mold: same Engineer's Blueprint (Molds) recipe as IE's own molds
+mods.immersiveengineering.blueprint.recipeBuilder()
+    .category('molds')
+    .input(ore('plateSteel'), ore('plateSteel'), ore('plateSteel'), ore('plateSteel'), ore('plateSteel'),
+           item('immersiveengineering:tool', 1))
+    .output(item('aeternum:mold_coil'))
+.register()
+
+//Metal Press (Coil Mold)
+def rockhound_coils = [
+    [ore('ingotIron'),    item('rockhounding_chemistry:misc_items', 8) * 2],  //Iron Coil
+    [ore('ingotNimonic'), item('rockhounding_chemistry:misc_items', 28) * 2], //Nimonic Coil
+    [ore('blockGlass'),   item('rockhounding_chemistry:misc_items', 7) * 4]   //Glass Pipe
+]
+for (coil in rockhound_coils) {
+    mods.immersiveengineering.metal_press.recipeBuilder()
+        .input(coil[0])
+        .output(coil[1])
+        .mold(item('aeternum:mold_coil'))
+        .energy(2400)
+    .register()
+}
+
+//Metal Former (Extruding = type 1). An Iron Ingot already extrudes into Iron Cable, and the
+//Metal Former takes one recipe per input, so the Iron Coil comes from an IE Iron Rod instead
+mods.ic2.metal_former.add(1, ore('stickIron'), item('rockhounding_chemistry:misc_items', 8))
+mods.ic2.metal_former.add(1, ore('ingotNimonic'), item('rockhounding_chemistry:misc_items', 28) * 2)
+mods.ic2.metal_former.add(1, ore('blockGlass'), item('rockhounding_chemistry:misc_items', 7) * 4)
+
+//=================================================================================================

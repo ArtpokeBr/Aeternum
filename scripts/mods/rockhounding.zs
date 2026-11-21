@@ -23,3 +23,19 @@ for rod in profilingBenchRods {
 recipes.replaceAllOccurences(<rockhounding_chemistry:misc_items:2>, <ore:stickIron>);
 
 // ================================================================================================
+
+// Coils: Profiling Bench -> IE Metal Press (Coil Mold) and IC2 Metal Former (Extruding) ============
+// The Coil Pattern's recipes move to the pack's Coil Mold (aeternum:mold_coil) and the Extruder;
+// both sides live in groovy/postInit/mods/rockhound.groovy.
+
+val profilingBenchCoils = [
+    <rockhounding_chemistry:misc_items:8>,  // Iron Coil
+    <rockhounding_chemistry:misc_items:28>, // Nimonic Coil
+    <rockhounding_chemistry:misc_items:7>   // Glass Pipe
+] as crafttweaker.item.IItemStack[];
+
+for coil in profilingBenchCoils {
+    mods.rockhounding_chemistry.ProfilingBench.removeByOutput(coil);
+}
+
+// ================================================================================================
