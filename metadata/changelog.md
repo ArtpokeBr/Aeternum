@@ -6,7 +6,7 @@
 
 ### Changed
 
-- 
+- Rockhounding Chemistry's rods are now made in the Immersive Engineering Metal Press with a Rod Mold (2 per ingot) instead of the Profiling Bench; its Iron Rod is replaced by Immersive Engineering's Iron Rod.
 
 ### Fixed
 

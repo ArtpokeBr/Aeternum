@@ -68,3 +68,36 @@ mods.jei.ingredient.hide(item('rockhounding_chemistry:metal_items', 7))
 ore_dict.remove('ingotGraphite', item('rockhounding_chemistry:metal_items', 7))
 
 //=================================================================================================
+
+//Rod Unification =================================================================================
+//Rods come from the IE Metal Press (Rod Mold) at IE's rate, 2 per ingot; scripts/mods/rockhounding.zs
+//takes them out of the Profiling Bench. IE's own ingot -> rod press loop runs during recipe
+//registration, before these ore entries exist, so the press recipes are added here by hand.
+
+//Iron Rod: IE's stickIron replaces it (its crafting uses are swapped in rockhounding.zs)
+mods.jei.ingredient.hide(item('rockhounding_chemistry:misc_items', 2))
+crafting.shapelessBuilder()
+    .name('aeternum:rockhounding_iron_rod_to_ie')
+    .input([item('rockhounding_chemistry:misc_items', 2)])
+    .output(item('immersiveengineering:material', 1))
+.register()
+
+//Rods only Rockhounding makes: ore-dicted like IE's (stickX) and pressed from their ingot
+def rockhound_rods = [
+    'Nichrome' : 14,
+    'Copper'   : 24,
+    'Nib'      : 25,
+    'Cosm'     : 26,
+    'Hastelloy': 27
+]
+for (rod in rockhound_rods) {
+    ore_dict.add('stick' + rod.key, item('rockhounding_chemistry:misc_items', rod.value))
+    mods.immersiveengineering.metal_press.recipeBuilder()
+        .input(ore('ingot' + rod.key))
+        .output(item('rockhounding_chemistry:misc_items', rod.value) * 2)
+        .mold(item('immersiveengineering:mold', 2))
+        .energy(2400)
+    .register()
+}
+
+//=================================================================================================
