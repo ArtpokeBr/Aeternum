@@ -213,6 +213,22 @@ for (foil in rockhound_foils) {
 
 //=================================================================================================
 
+//Basic Logic Chip ================================================================================
+//Alternative to Rockhounding's own recipe: an AE2 Logic Processor ringed by 4 Iron Foils and
+//4 Quartz Slivers (Thaumcraft's nuggetQuartz) gives 2 chips
+crafting.shapedBuilder()
+    .name('aeternum:rockhounding_base_chip_from_logic_processor')
+    .output(item('rockhounding_chemistry:misc_items', 1) * 2)
+    .shape('FQF',
+           'QPQ',
+           'FQF')
+    .key([F: item('rockhounding_chemistry:misc_items', 3),
+          Q: ore('nuggetQuartz'),
+          P: item('appliedenergistics2:material', 22)])
+.register()
+
+//=================================================================================================
+
 //Gauze Catalysts =================================================================================
 //The Profiling Bench's Gauze Pattern (1 ingot -> 1 catalyst, removed in scripts/mods/rockhounding.zs)
 //moves to the IE Metal Press with the pack's Gauze Mold (aeternum:mold_gauze). Catalysts are
