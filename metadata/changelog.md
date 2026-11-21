@@ -15,6 +15,7 @@
 - Rockhounding Chemistry's casings are no longer made in the Profiling Bench: its Iron Casing is replaced by IC2's Iron Item Casing, and its Hydronalium, Hastelloy and Nimonic Casings are made like IC2 casings (a plate and a Forge Hammer, or the Metal Former's Rolling mode, 2 per plate).
 - Rockhounding Chemistry's Iron, Aluminum and Stellite Foils are now cut from their plates (8 per plate) in the IC2 Block Cutter and the Thermal Expansion Sawmill instead of the Profiling Bench.
 - Rockhounding Chemistry's gauze catalysts are now made in the Immersive Engineering Metal Press with the new Metal Press Mold: Gauze (from the Molds blueprint), 1 ingot per catalyst.
+- Rockhounding Chemistry's Basic Logic Chip has a new alternative recipe: an AE2 Logic Processor surrounded by 4 Iron Foils and 4 Quartz Slivers makes 2 chips.
 
 ### Fixed
 
