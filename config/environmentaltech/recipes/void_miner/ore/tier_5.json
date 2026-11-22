@@ -1,0 +1,30 @@
+{
+  "_readme": "Changes to environmentaltech:void_miner/ore/tier_5's default recipes. \"remove\" lists the ids of defaults to drop. \"add\" adds recipes, each replacing the recipe with its id. \"replace_defaults\": true starts from no defaults at all. tier_5.effective.json lists the recipes in effect; it's rewritten every launch.",
+  "replace_defaults": false,
+  "remove": [
+    "thaumcraft:crystal_air",
+    "thaumcraft:crystal_fire"
+  ],
+  "add": [
+    {
+      "id": "OD:oreFossil",
+      "target": "gray",
+      "weight": 416
+    },
+    {
+      "id": "fossil:permafrost",
+      "target": "light_blue",
+      "weight": 392
+    },
+    {
+      "id": "thaumcraft:crystal_aer",
+      "target": "yellow",
+      "weight": 111
+    },
+    {
+      "id": "thaumcraft:crystal_ignis",
+      "target": "orange",
+      "weight": 111
+    }
+  ]
+}

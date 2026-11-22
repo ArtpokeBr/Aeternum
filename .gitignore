@@ -39,6 +39,9 @@ servers.dat
 loading-log.log
 config/cleanroom_load_timings.dat
 config/stellarcore_vanilla_model_cache_*.dat
+config/stellarcore_blockstate_cache_*.dat
+config/*/recipes/**/*.effective.json
+config/**/*.json.migrated
 tinkersplannerantique/planner_bookmarks_tools.dat
 visualores/
 config/rc_cache/

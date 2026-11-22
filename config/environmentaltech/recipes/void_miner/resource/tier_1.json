@@ -1,0 +1,12 @@
+{
+  "_readme": "Changes to environmentaltech:void_miner/resource/tier_1's default recipes. \"remove\" lists the ids of defaults to drop. \"add\" adds recipes, each replacing the recipe with its id. \"replace_defaults\": true starts from no defaults at all. tier_1.effective.json lists the recipes in effect; it's rewritten every launch.",
+  "replace_defaults": false,
+  "remove": [],
+  "add": [
+    {
+      "id": "fossil:iced_stone",
+      "target": "light_blue",
+      "weight": 24
+    }
+  ]
+}
