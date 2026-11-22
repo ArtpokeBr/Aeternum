@@ -16,6 +16,7 @@
 - Rockhounding Chemistry's Iron, Aluminum and Stellite Foils are now cut from their plates (8 per plate) in the IC2 Block Cutter and the Thermal Expansion Sawmill instead of the Profiling Bench.
 - Rockhounding Chemistry's gauze catalysts are now made in the Immersive Engineering Metal Press with the new Metal Press Mold: Gauze (from the Molds blueprint), 1 ingot per catalyst.
 - Rockhounding Chemistry's Basic Logic Chip has a new alternative recipe: an AE2 Logic Processor surrounded by 4 Iron Foils and 4 Quartz Slivers makes 2 chips.
+- Embers' Ember Modifier for Environmental Tech Void Miners is disabled for now: Embers doesn't support the updated Environmental Tech yet.
 
 ### Fixed
 

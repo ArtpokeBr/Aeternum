@@ -17,6 +17,7 @@ LoliASM is `mods/chibi-5.34.jar` (modid `loliasm`), easy to miss in a grep for "
 - `ChunkTileEntityMapImprovements`: UT's "Tile Entity Map" (`LINKED_HASHMAP`) owns that field. Must stay off.
 - `ParallelModelLoader`, `StitcherCache`: incompatible with VintageFix DynamicResources. Must stay off.
 - `AsyncItemStackCapabilityInit`: conflicts with LoliASM `delayItemStackCapabilityInit`. Must stay off.
+- `ParticleCulling` (added in 1.6.9): the Particle Culling mod (`particleculling`) `@Redirect`s the same `Particle.renderParticle` call in `ParticleManager.renderParticles`/`renderLitParticles`, so CleanMix logged "@Redirect conflict. Skipping … stellar_core_minecraft_particle.json:MixinParticleManager" and StellarCore's version never ran. Particle Culling also culls particles hidden behind blocks, not just outside the frustum.
 - nuclearcraftoverhauled `BasicRecipeSearchImprovements`: it only speeds up NuclearCraft's simple slot check, which runs when `smart_processor_input=false`. The pack keeps `smart_processor_input=true` (`config/nuclearcraft.cfg`) so pipes can't jam processors with mismatched inputs, so the option would never run.
 
 ## Checked and left on
@@ -24,6 +25,8 @@ LoliASM is `mods/chibi-5.34.jar` (modid `loliasm`), easy to miss in a grep for "
 - `OreDictionaryPrimitiveCollections`: UniDict/WanionLib, CraftTweaker and GroovyScript reach OreDictionary's fields only through `Map`/`List` interfaces, and GroovyScript's `List<Integer>.remove(Integer)` works on fastutil `IntList`.
 - ChunkTileEntity Cache/Queue, `EntityTrackerImprovements`, WorldServer/World tweaks, Vanilla/OBJ model caches: share classes with VintageFix or UT but patch different methods or fields.
 - `BoundingBoxIntersectCheck` is skipped automatically on Cleanroom.
+- `ItemModelMesherCapacity` (1.6.9): VintageFix `dynamic_resources` `@Overwrite`s `ItemModelMesherForge.register`/`rebuildCache`; StellarCore's `require = 0` redirect (priority 1100) applies after and still shrinks the `new Int2ObjectOpenHashMap()` in VintageFix's `register`.
+- buildcraft `SpriteFluidFrozenFixes` (1.6.9): no other mod touches `SpriteFluidFrozen`.
 
 ## Open
 
