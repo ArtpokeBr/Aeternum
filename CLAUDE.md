@@ -47,7 +47,7 @@ At the end of a change that alters how the pack works, run the `docs-keeper` age
 
 ## Conventions
 
-- Commit prefixes: `📈 Mod Addition: <name>`, `✏️ Config Tweak: <what>`, `📄 Recipe Tweak: <what>`, `🛠️ Refactor: <what>` (fixing something added earlier), `✨ New Feature: <name>`, `🔧 Internal: <what>` (packaging, versioning, tooling), `⚙️ Bump: <what>`. One logical change per commit.
+- Commit prefixes: read them from the user's VS Code commit++ config, key `commit++.additionalCommitPrefixes` in `C:/Users/Arthur/AppData/Roaming/Code/User/settings.json` (each entry has `prefix` and `description`); don't copy the list here. One logical change per commit.
 - Branches: `main` is the released version (what players and the server run). Work happens on `dev`, which carries the next version (bumped in `pack_version.txt` with a new changelog section right after a release) and merges into `main` when it ships.
 - **Kitchen-sink, not expert:** a chill experience with mods talking to each other. Don't port balancing, progression gating or difficulty recipe replacements from expert packs; port only genuine cross-mod integrations and bug/exploit fixes.
 - [Enigmatica2Expert-Extended](https://github.com/Krutoy242/Enigmatica2Expert-Extended) is a good reference for cross-mod recipes, mixins and JEI tabs, but much of it is expert gating or relies on E2EE-only mods and data. Verify every mod, item and ore-dict tag exists in this pack's jars (moddig) before porting, and don't trust its config values: some "default" cfgs (Astral Sorcery's `mineralis_ritual.cfg`) are templates never checked against installed mods.
