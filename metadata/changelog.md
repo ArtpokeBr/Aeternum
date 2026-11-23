@@ -21,6 +21,7 @@
 ### Fixed
 
 - The first launch after installing no longer crashes with "Celeritas Extra requires exactly one renderer": Celeritas Extra is now downloaded together with the optional Celeritas.
+- MrCrayfish's Furniture Washing Machine no longer shuts off at the end of a wash cycle while Soapy Water is still in its soap slot.
 
 ### Removed
 
