@@ -1,5 +1,9 @@
 {
   "permissions": {
+    "allow": [
+      "Read(//e/Documents/Black Mesa Vault/**)",
+      "Bash(hermes -p librarian -z:*)"
+    ],
     "deny": [
       "Read(./minecraftinstance.json)",
       "Read(./llibrary/**)",

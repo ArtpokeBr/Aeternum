@@ -10,7 +10,7 @@ description: How to write recipes in the Aeternum 1.12.2 pack - which language e
 - Write recipes in GroovyScript: `groovy/postInit/mods/<mod>.groovy` (`groovy/preInit/` for registrations).
 - Fall back to CraftTweaker (`scripts/mods/<mod>.zs`) only for machines GroovyScript 1.4.3 has no compat for. Check by listing `com/cleanroommc/groovyscript/compat/mods/` in `mods/groovyscript-1.4.3.jar` with moddig.
 - CraftTweaker extras: MoreTweaker ([wiki](https://bitbucket.org/noeppi_noeppi/moretweaker/wiki/Home)) and Roids Tweaker ([wiki](https://github.com/roidrole/Roids-Tweaker/wiki)).
-- Block drops go through Dropt ([docs](https://dropt.readthedocs.io/en/latest/)); unification through UniDict (`config/unidict/CLAUDE.md`).
+- Block drops go through Dropt ([docs](https://dropt.readthedocs.io/en/latest/)); unification through UniDict (wiki page `E:/Documents/Black Mesa Vault/Concepts/Aeternum UniDict Unification.md`).
 - Any code in a recipe script must stay server-safe: no client-only calls (see the Mekanism infuse-type note in `references/alloying.md`).
 
 ## References

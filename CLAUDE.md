@@ -11,7 +11,7 @@ Personal 1.12.2 kitchen-sink modpack ("Artpoke Presents: Aeternum") on [CurseFor
 - `patchouli_books/`: the in-game guidebook. `resourcepacks/`, `shaderpacks/`: client assets. `saves/`, `logs/`, `crash-reports/`, `cache/`, `journeymap/`, `xaero/`: local or generated, irrelevant.
 - `metadata/changelog.md`: changelog shown in game by Ender Modpack Tweaks, all versions newest first; add lines with `changelog_add.py`, only ever to the top block. `metadata/pack_version.txt`: version string.
 - `serverpack/`: export and server pack tooling. `python serverpack/export.py [--version X] [--no-server]` builds the client export and server zip into `serverpack/build/`.
-- `metadata/docs/`: Claude docs tied to no folder (`claude/`) and old plans (`plans/`); excluded from the export.
+- `metadata/docs/plans/`: old plans; excluded from the export.
 - `minecraftinstance.json`: CurseForge app metadata, one 1.5 MB line. **Never read or grep it**; use `python serverpack/modinfo.py <query>`.
 
 ## Verifying
@@ -20,22 +20,22 @@ There is no build, test or lint suite. Scripts are verified by the user launchin
 
 ## Doc map
 
-Detail lives next to the code. A folder's `CLAUDE.md` loads once a file in that folder is read; **when starting new work in a folder, read its doc first.**
+Detail lives in the Obsidian LLM Wiki, `E:/Documents/Black Mesa Vault/Concepts/` (hub: `Entities/Aeternum.md`). **When starting new work on a topic, read its page first** (direct reads are fine). Never edit the vault: the Librarian (Hermes profile `librarian`) is its only writer.
 
 | Task | Read |
 |---|---|
 | Any recipe, alloy or machine recipe (which language, which API) | `aeternum-recipes` skill |
-| CraftTweaker mixins, server-only crashes | `scripts/mods/mixins/CLAUDE.md` |
-| Unification, plate/gear templates | `config/unidict/CLAUDE.md` |
-| Custom JEI tabs (Requious) | `scripts/jei/CLAUDE.md` |
-| Lang, models, textures for custom items | `groovy/assets/CLAUDE.md` |
-| Biomes O'Plenty biome configs | `config/biomesoplenty/CLAUDE.md` |
-| Server pack, client-only mods, server testing and profiling | `serverpack/CLAUDE.md` |
-| Log noise, `config/sasit.cfg` | `metadata/docs/claude/log-filtering.md` |
-| Performance mods (Celeritas, LoliASM, VintageFix, UT), StellarCore options | `metadata/docs/claude/performance-mods.md`, `metadata/docs/claude/stellarcore-conflicts.md` |
-| Changelog entries (layout, which version block, style) | `metadata/CLAUDE.md` |
+| CraftTweaker mixins, server-only crashes | `Aeternum Mixins and Server-Safe Code.md` |
+| Unification, plate/gear templates | `Aeternum UniDict Unification.md` |
+| Custom JEI tabs (Requious) | `Aeternum JEI Tabs (Requious).md` |
+| Lang, models, textures for custom items | `Aeternum Asset Overlay.md` |
+| Biomes O'Plenty biome configs | `Aeternum Biomes O'Plenty Configs.md` |
+| Server pack, client-only mods, server testing and profiling | `Aeternum Server Pack and Export.md` |
+| Log noise, `config/sasit.cfg` | `Aeternum Log Filtering.md` |
+| Performance mods (Celeritas, LoliASM, VintageFix, UT), StellarCore options | `Aeternum Performance Mods.md`, `Aeternum StellarCore Conflicts.md` |
+| Changelog entries (layout, which version block, style) | `Aeternum Changelog.md` |
 
-At the end of a change that alters how the pack works, run the `docs-keeper` agent with the base commit (or "uncommitted") and the feature names.
+At the end of a change that alters how the pack works, run the `docs-keeper` agent with the base commit (or "uncommitted") and the feature names; it briefs the Librarian. Don't add folder `CLAUDE.md` files or `metadata/docs/claude/` notes.
 
 ## Hazards
 
