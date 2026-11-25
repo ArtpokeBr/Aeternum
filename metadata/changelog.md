@@ -4,6 +4,10 @@
 
 - 
 
+### Added
+
+- Environmental Materials' stones (Hardened Stone, Granodiorite, Pumice, Travertine, Taconite, Blueschist and Greenschist) can be chiseled between their plain, Bricks, Paver and Tiles blocks, and its Marble blocks now join Chisel's Marble group.
+
 ### Changed
 
 - Rockhounding Chemistry's rods are now made in the Immersive Engineering Metal Press with a Rod Mold (2 per ingot) instead of the Profiling Bench; its Iron Rod is replaced by Immersive Engineering's Iron Rod.
