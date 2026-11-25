@@ -3,7 +3,8 @@
 Usage:
     python tools/flare_report.py                 # newest report URL in config/flare/activity/
     python tools/flare_report.py <url|key|file>  # spark.lucko.me URL, bytebin key, or .sparkprofile
-    options: --thread NAME (default: "Client thread", "all" for every thread), --top N
+    options: --thread NAME (default: "Client thread", "all" for every thread), --top N,
+             --callers PATTERN [--depth N] (who calls a hot class/method, e.g. --callers JeiStarter.start)
 
 Flare's stage profiling (S:stages in config/flare/flare.cfg) can only upload to spark's
 bytebin; the activity log records the URL. The raw profile is fetched back from bytebin
@@ -27,6 +28,21 @@ INSTANCE = Path(__file__).resolve().parent.parent
 ACTIVITY = INSTANCE / "config" / "flare" / "activity"
 BYTEBIN = "https://spark-usercontent.lucko.me/"
 UNOWNED = "(minecraft/forge/jvm)"
+# Shaded libraries spark credits to whichever jars bundle them, e.g. Mixin to four unrelated mods.
+LIBRARIES = {"org.spongepowered.asm.": "Mixin (library)"}
+# Profiler and idle threads that dominate "all threads" without being boot work.
+SKIP_THREADS = ("flare-", "Reference Handler", "Signal Dispatcher", "Finalizer")
+
+
+def owner_name(cls, sources):
+    for prefix, name in LIBRARIES.items():
+        if cls.startswith(prefix):
+            return name
+    mod = sources.get(cls)
+    if mod and ", " in mod:
+        first, *rest = mod.split(", ")
+        return f"{first} (+{len(rest)} jar mods)"
+    return mod
 
 
 def varint(buf, i):
@@ -143,7 +159,7 @@ def attribute(thread, sources, per_mod, per_method):
 
     def walk(idx, owner, depth=0):
         node = nodes[idx]
-        mod = sources.get(node["cls"]) or owner
+        mod = owner_name(node["cls"], sources) or owner
         child_time = 0.0
         for ref in node["refs"]:
             child_time += nodes[ref]["time"]
@@ -161,11 +177,44 @@ def fmt(ms):
     return f"{ms / 1000:8.1f} s"
 
 
+def callers(threads, pattern, depth, top):
+    """Total time under frames matching `pattern`, grouped by the call chain above the outermost match."""
+    chains = defaultdict(float)
+    for thread in threads:
+        nodes, parent = thread["nodes"], {}
+        for i, node in enumerate(nodes):
+            for ref in node["refs"]:
+                parent[ref] = i
+
+        def label(n):
+            return f'{n["cls"].rsplit(".", 1)[-1]}.{n["method"]}'
+
+        for i, node in enumerate(nodes):
+            if pattern not in f'{node["cls"]}.{node["method"]}':
+                continue
+            above, j = [], i
+            while j in parent:
+                j = parent[j]
+                above.append(nodes[j])
+            if any(pattern in f'{n["cls"]}.{n["method"]}' for n in above):
+                continue  # counted at the outermost match
+            chain = " <- ".join([label(node)] + [label(n) for n in above[:depth]])
+            chains[f'[{thread["name"]}] {chain}'] += node["time"]
+    if not chains:
+        sys.exit(f'no frame matches "{pattern}"')
+    print(f'\ntime under "{pattern}", by caller chain:')
+    for chain, ms in sorted(chains.items(), key=lambda kv: -kv[1])[:top]:
+        print(f"  {fmt(ms)}  {chain}")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("source", nargs="?", help="spark URL, bytebin key or .sparkprofile path")
     ap.add_argument("--thread", default="Client thread", help='thread name, or "all"')
     ap.add_argument("--top", type=int, default=30)
+    ap.add_argument("--callers", metavar="PATTERN",
+                    help="instead of the summary, show who calls frames whose class.method contains PATTERN")
+    ap.add_argument("--depth", type=int, default=8, help="caller chain length for --callers")
     args = ap.parse_args()
 
     if args.source:
@@ -179,9 +228,15 @@ def main():
     for t in sorted(threads, key=lambda t: -t["time"])[:12]:
         print(f"  {fmt(t['time'])}  {t['name']}")
 
-    chosen = threads if args.thread == "all" else [t for t in threads if t["name"] == args.thread]
+    if args.thread == "all":
+        chosen = [t for t in threads if not t["name"].startswith(SKIP_THREADS)]
+    else:
+        chosen = [t for t in threads if t["name"] == args.thread]
     if not chosen:
         sys.exit(f'no thread named "{args.thread}"; pick one from the list above or use --thread all')
+    if args.callers:
+        callers(chosen, args.callers, args.depth, args.top)
+        return
     total = sum(t["time"] for t in chosen)
     per_mod, per_method = defaultdict(float), defaultdict(float)
     for t in chosen:
