@@ -6,7 +6,8 @@
 
 ### Added
 
-- Environmental Materials' stones (Hardened Stone, Granodiorite, Pumice, Travertine, Taconite, Blueschist and Greenschist) can be chiseled between their plain, Bricks, Paver and Tiles blocks, and its Marble blocks now join Chisel's Marble group.
+- Environmental Materials' stones (Hardened Stone, Granodiorite, Pumice, Travertine, Taconite, Blueschist and Greenschist) can be chiseled between their plain, Bricks, Paver and Tiles blocks, and its Marble and Basalt blocks now join Chisel's Marble and Basalt groups.
+- Environmental Materials' Basalt is enabled again, with its Bricks, Paver, Tiles, slabs, stairs and walls.
 
 ### Changed
 
