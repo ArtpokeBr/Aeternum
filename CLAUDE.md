@@ -11,6 +11,7 @@ Personal 1.12.2 kitchen-sink modpack ("Artpoke Presents: Aeternum") on [CurseFor
 - `patchouli_books/`: the in-game guidebook. `resourcepacks/`, `shaderpacks/`: client assets. `saves/`, `logs/`, `crash-reports/`, `cache/`, `journeymap/`, `xaero/`: local or generated, irrelevant.
 - `metadata/changelog.md`: changelog shown in game by Ender Modpack Tweaks, all versions newest first; add lines with `changelog_add.py`, only ever to the top block. `metadata/pack_version.txt`: version string.
 - `serverpack/`: export and server pack tooling. `python serverpack/export.py [--version X] [--no-server]` builds the client export and server zip into `serverpack/build/`.
+- `tools/`: local diagnostics, not exported. `boot_history.py` records boot times from the logs; `flare_report.py` turns a Flare (spark) profile into per-mod time.
 - `metadata/docs/plans/`: old plans; excluded from the export.
 - `minecraftinstance.json`: CurseForge app metadata, one 1.5 MB line. **Never read or grep it**; use `python serverpack/modinfo.py <query>`.
 

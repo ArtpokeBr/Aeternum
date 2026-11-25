@@ -57,3 +57,5 @@ config/cleanroom_mod_list_favourites.txt
 ESM/
 llibrary/debug/
 serverpack/__pycache__/
+tools/boot_history.csv
+config/flare/activity/
